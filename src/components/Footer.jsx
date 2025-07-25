@@ -22,61 +22,58 @@ function Footer() {
             </h3>
             <div className="space-y-3">
               <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Artikel</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Berita Terkini</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Kegiatan</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Informasi</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Pengumuman</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Informasi Perkembangan Harga Pangan</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Informasi Harga Pangan</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Realisasi Anggaran</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Resep Pangan Lokal</span>
                 <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Statistik</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Pedoman Umum</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Bidang Ketersediaan dan Kerawanan Pangan</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Galar Pangan Nusantara 2018</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Info pengadaan</span>
                 <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Bidang Distribusi dan Cadangan Pangan</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Kegiatan</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Resep Kemandiran Pangan</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">LPTD - Balai Pengawasan Mutu dan Keamanan Pangan</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Pengumuman</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Resep Pangan Lokal</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Aplikasi/Teknologi</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Pertanian</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Pedoman Umum</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Artikel</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Berita Terkini</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Laporan Kinerja</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Rensira</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Buletin Harga Pangan</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Sekretariat</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Galar Pangan Nusantara 2018</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Download</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Info TTIC Prov. Sumbar</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Bidang Konsumsi dan Keamanan Pangan</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">LPTD Distribusi, Akses, dan Pasokan Pangan</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Info TTIC Prov. Sumbar</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Bidang Konsumsi dan Keamanan Pangan</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Pertanian</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Bidang Ketersediaan dan Kerawanan Pangan</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Buletin Harga Pangan</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Download</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Info pengadaan</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Rensira</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Informasi Perkembangan Harga Pangan</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Aplikasi/Teknologi</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Penanfaatan Pangan</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Sekretariat</span>
-                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Laporan Kinerja</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Realisasi Anggaran</span>
+                <span className="bg-gradient-to-r from-green-600 to-green-700 text-white px-3 py-1.5 rounded-full text-xs font-medium hover:from-green-700 hover:to-green-800 transition-all duration-300 cursor-pointer shadow-lg">Informasi Harga Pangan</span>
               </div>
             </div>
           </div>
