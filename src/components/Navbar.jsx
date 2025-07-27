@@ -445,104 +445,13 @@ function Navbar() {
                 {activeDropdown === 'ppid-mobile' && (
                   <div className="pl-4 mt-2">
                     <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'profil-singkat-ppid' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('profil-singkat-ppid')}
-                      >
-                        {activeMenuItem === 'profil-singkat-ppid' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Profil Singkat PPID
-                      </a>
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'visi-misi-ppid' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('visi-misi-ppid')}
-                      >
-                        {activeMenuItem === 'visi-misi-ppid' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Visi Misi PPID
-                      </a>
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'tugas-fungsi-ppid' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('tugas-fungsi-ppid')}
-                      >
-                        {activeMenuItem === 'tugas-fungsi-ppid' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Tugas dan Fungsi PPID
-                      </a>
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'informasi-berkala' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('informasi-berkala')}
-                      >
-                        {activeMenuItem === 'informasi-berkala' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Informasi Secara Berkala
-                      </a>
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'informasi-saat' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('informasi-saat')}
-                      >
-                        {activeMenuItem === 'informasi-saat' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Informasi Secara Saat
-                      </a>
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'informasi-serta-merta' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('informasi-serta-merta')}
-                      >
-                        {activeMenuItem === 'informasi-serta-merta' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Informasi Serta Merta
-                      </a>
-                      <a 
-                        href="#ppid" 
-                        className={`block text-sm py-2 px-4 rounded-md transition-colors relative ${
-                          activeMenuItem === 'struktur-organisasi-ppid' 
-                            ? 'bg-green-600 text-white font-medium' 
-                            : 'text-gray-800 hover:bg-footer hover:text-white'
-                        }`}
-                        onClick={() => handleMenuItemClick('struktur-organisasi-ppid')}
-                      >
-                        {activeMenuItem === 'struktur-organisasi-ppid' && (
-                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400 rounded-r"></div>
-                        )}
-                        Struktur Organisasi PPID
-                      </a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Profil Singkat PPID</a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Visi Misi PPID</a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Tugas dan Fungsi PPID</a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Secara Berkala</a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Setiap Saat</a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Serta Merta</a>
+                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Struktur Organisasi PPID</a>
                     </div>
                   </div>
                 )}
