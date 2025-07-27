@@ -32,27 +32,27 @@ function Navbar() {
 
   return (
     <nav className="w-full bg-footer sticky top-0 z-50 border-b border-primary shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
+        <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center h-16 sm:h-20">
             <div className="flex items-center flex-shrink-0">
-              <a href='' className="flex items-center gap-3 no-underline">
-                <img src="/logo-sumbar.png" alt="Logo Dinas Pangan Sumbar" className="h-12 w-auto sm:h-14"/>
+              <a href='' className="flex items-center gap-2 sm:gap-3 no-underline">
+                <img src="/logo-sumbar.png" alt="Logo Dinas Pangan Sumbar" className="h-10 w-auto sm:h-12 md:h-14"/>
                 <div className="text-white">
-                  <div className="font-semibold text-base sm:text-lg leading-tight">Dinas Pangan</div>
+                  <div className="font-semibold text-sm sm:text-base md:text-lg leading-tight">Dinas Pangan</div>
                   <div className="font-medium text-sm sm:text-base">Provinsi Sumatera Barat</div>
                 </div>
               </a>
             </div>
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-2 flex-1 justify-center">
-                <ul className="flex items-center gap-1 list-none">
-                    <li><a href="#home" className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Beranda</a></li>
+            <div className="hidden lg:flex items-center flex-1 justify-center">
+                <ul className="flex items-center flex-wrap gap-x-0.5 list-none">
+                    <li><a href="#home" className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Beranda</a></li>
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('profil', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Profil
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -69,10 +69,10 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('data', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Data
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -86,10 +86,10 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('bidang', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Bidang
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -106,10 +106,10 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('media', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Media
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -124,10 +124,10 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('program', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Program
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -141,10 +141,10 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('kegiatan', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Kegiatan
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -163,10 +163,10 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('informasi', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Informasi
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -182,124 +182,33 @@ function Navbar() {
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('ppid', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             PPID
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
                         {activeDropdown === 'ppid' && (
-                            <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'profil-singkat-ppid' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('profil-singkat-ppid')}
-                                >
-                                  {activeMenuItem === 'profil-singkat-ppid' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Profil Singkat PPID
-                                </a>
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'visi-misi-ppid' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('visi-misi-ppid')}
-                                >
-                                  {activeMenuItem === 'visi-misi-ppid' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Visi Misi PPID
-                                </a>
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'tugas-fungsi-ppid' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('tugas-fungsi-ppid')}
-                                >
-                                  {activeMenuItem === 'tugas-fungsi-ppid' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Tugas dan Fungsi PPID
-                                </a>
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'informasi-berkala' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('informasi-berkala')}
-                                >
-                                  {activeMenuItem === 'informasi-berkala' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Informasi Secara Berkala
-                                </a>
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'informasi-saat' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('informasi-saat')}
-                                >
-                                  {activeMenuItem === 'informasi-saat' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Informasi Secara Saat
-                                </a>
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'informasi-serta-merta' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('informasi-serta-merta')}
-                                >
-                                  {activeMenuItem === 'informasi-serta-merta' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Informasi Serta Merta
-                                </a>
-                                <a 
-                                  href="#ppid" 
-                                  className={`block px-4 py-2 text-sm transition-colors relative ${
-                                    activeMenuItem === 'struktur-organisasi-ppid' 
-                                      ? 'bg-green-600 text-white font-medium' 
-                                      : 'text-gray-700 hover:bg-footer hover:text-white'
-                                  }`}
-                                  onClick={() => handleMenuItemClick('struktur-organisasi-ppid')}
-                                >
-                                  {activeMenuItem === 'struktur-organisasi-ppid' && (
-                                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-400"></div>
-                                  )}
-                                  Struktur Organisasi PPID
-                                </a>
+                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Profil Singkat PPID</a>
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Visi Misi PPID</a>
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Tugas dan Fungsi PPID</a>
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Informasi Secara Berkala</a>
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Informasi Setiap Saat</a>
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Informasi Serta Merta</a>
+                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Struktur Organisasi PPID </a>
                             </div>
                         )}
                     </li>
-                    <li><a href="https://www.lapor.go.id/" className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Lapor</a></li>
+                    <li><a href="https://www.lapor.go.id/" className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Lapor</a></li>
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('informasi-layanan', e)}
-                            className="text-white font-medium text-sm px-3 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
+                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
                         >
                             Informasi Layanan
-                            <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
@@ -316,14 +225,14 @@ function Navbar() {
             </div>
             
             {/* Search Bar */}
-            <div className="hidden lg:flex items-center flex-shrink-0">
+            <div className="hidden lg:flex items-center flex-shrink-0 ml-2">
                 <div className="relative flex">
                   <input 
                     type="text" 
                     placeholder="Pencarian Data"
-                    className="bg-white text-gray-800 placeholder-gray-500 px-4 py-2 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-footer border border-gray-300 transition-all duration-200 w-48"
+                    className="bg-white text-gray-800 placeholder-gray-500 px-3 py-1.5 rounded-l-md text-sm focus:outline-none focus:ring-1 focus:ring-footer border border-gray-300 transition-all duration-200 w-32 sm:w-40 lg:w-44"
                   />
-                  <button className="bg-footer hover:bg-footer/90 text-white px-4 py-2 rounded-r-md border border-footer transition-colors flex items-center justify-center">
+                  <button className="bg-footer hover:bg-footer/90 text-white px-2 py-1.5 rounded-r-md border border-footer transition-colors flex items-center justify-center">
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
@@ -333,11 +242,11 @@ function Navbar() {
             
             {/* Mobile Hamburger Button */}
             <button 
-              className="lg:hidden text-white p-2 rounded-md hover:bg-primary/20 transition-colors"
+              className="lg:hidden text-white p-1.5 rounded-md hover:bg-primary/20 transition-colors ml-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
