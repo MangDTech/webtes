@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ function Navbar() {
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center flex-1 justify-center">
                 <ul className="flex items-center flex-wrap gap-x-0.5 list-none">
-                    <li><a href="#home" className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Beranda</a></li>
+                    <li><Link to="/" className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Beranda</Link></li>
                     <li className="relative group">
                         <button 
                             onClick={(e) => toggleDropdown('profil', e)}
@@ -150,13 +151,13 @@ function Navbar() {
                         </button>
                         {activeDropdown === 'kegiatan' && (
                             <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">LDPM</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">KRPL</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Lumbung Pangan</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Demapan</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">PDRP</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Sertifikasi</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">SKPG</a>                               
+                                <Link to="/kegiatan-ldpm" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">LDPM</Link>
+                                <Link to="/kegiatan-krpl" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">KRPL</Link>
+                                <Link to="/kegiatan-lumbung-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Lumbung Pangan</Link>
+                                <Link to="/kegiatan-demapan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Demapan</Link>
+                                <Link to="/kegiatan-pdrp" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">PDRP</Link>
+                                <Link to="/kegiatan-sertifikasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Sertifikasi</Link>
+                                <Link to="/kegiatan-skpg" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">SKPG</Link>
                             </div>
                         )}
                     </li>
@@ -396,13 +397,13 @@ function Navbar() {
                 {activeDropdown === 'kegiatan-mobile' && (
                   <div className="pl-4 mt-2">
                     <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='ldpm'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('ldpm')}>LDPM</a>
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='krpl'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('krpl')}>KRPL</a>
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='lumbung'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('lumbung')}>Lumbung Pangan</a>
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='demapan'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('demapan')}>Demapan</a>
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='pdrp'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('pdrp')}>PDRP</a>
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='sertifikasi'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('sertifikasi')}>Sertifikasi</a>
-                      <a href="#galeri" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='skpg'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('skpg')}>SKPG</a>
+                      <Link to="/kegiatan-ldpm" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='ldpm'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('ldpm')}>LDPM</Link>
+                      <Link to="/kegiatan-krpl" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='krpl'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('krpl')}>KRPL</Link>
+                      <Link to="/kegiatan-lumbung-pangan" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='lumbung'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('lumbung')}>Lumbung Pangan</Link>
+                      <Link to="/kegiatan-demapan" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='demapan'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('demapan')}>Demapan</Link>
+                      <Link to="/kegiatan-pdrp" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='pdrp'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('pdrp')}>PDRP</Link>
+                      <Link to="/kegiatan-sertifikasi" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='sertifikasi'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('sertifikasi')}>Sertifikasi</Link>
+                      <Link to="/kegiatan-skpg" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='skpg'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('skpg')}>SKPG</Link>
                     </div>
                   </div>
                 )}
