@@ -1,12 +1,14 @@
-import KegiatanSertifikasi from './pages/KegiatanSertifikasi';
-import KegiatanPDRP from './pages/KegiatanPDRP';
-import KegiatanSKPG from './pages/KegiatanSKPG';
-import Home from './pages/Home';
-import KegiatanLDPM from './pages/KegiatanLDPM';
-import KegiatanKRPL from './pages/KegiatanKRPL';
-import KegiatanDemapan from './pages/KegiatanDemapan';
-import KegiatanLumbungPangan from './pages/KegiatanLumbungPangan';
+import KegiatanSertifikasi from './pages/kegiatan/KegiatanSertifikasi';
+import KegiatanPDRP from './pages/kegiatan/KegiatanPDRP';
+import KegiatanSKPG from './pages/kegiatan/KegiatanSKPG';
+import Home from './pages/beranda/Home';
+import KegiatanLDPM from './pages/kegiatan/KegiatanLDPM';
+import KegiatanKRPL from './pages/kegiatan/KegiatanKRPL';
+import KegiatanDemapan from './pages/kegiatan/KegiatanDemapan';
+import KegiatanLumbungPangan from './pages/kegiatan/KegiatanLumbungPangan';
 import ScrollToTop from './components/ScrollToTop';
+import VisiMisiTupoksi from './pages/profil/VisiMisiTupoksi';
+import SekapurSirih from './pages/profil/SekapurSirih';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/kegiatan-pdrp" element={<KegiatanPDRP />} />
         <Route path="/kegiatan-sertifikasi" element={<KegiatanSertifikasi />} />
         <Route path="/kegiatan-skpg" element={<KegiatanSKPG />} />
+        <Route path="/profil/visi-misi-tupoksi" element={<VisiMisiTupoksi />} />
+        <Route path="/profil/sekapur-sirih" element={<SekapurSirih />} />
       </Routes>
       <ScrollToTop />
     </Router>

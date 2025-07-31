@@ -32,486 +32,266 @@ function Navbar() {
   }, [activeDropdown]);
 
   return (
-    <nav className="w-full bg-footer sticky top-0 z-50 border-b border-primary shadow-sm">
-        <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center h-16 sm:h-20">
-            <div className="flex items-center flex-shrink-0">
-              <a href='' className="flex items-center gap-2 sm:gap-3 no-underline">
-                <img src="/logo-sumbar.png" alt="Logo Dinas Pangan Sumbar" className="h-10 w-auto sm:h-12 md:h-14"/>
-                <div className="text-white">
-                  <div className="font-semibold text-sm sm:text-base md:text-lg leading-tight">Dinas Pangan</div>
-                  <div className="font-medium text-sm sm:text-base">Provinsi Sumatera Barat</div>
-                </div>
-              </a>
+    <nav className="w-full sticky top-0 z-50">
+      {/* Top Header with Logo and Search */}
+      <div className="bg-[#0C3823] px-4 py-2">
+        <div className="container mx-auto flex justify-between items-center max-w-7xl">
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center no-underline">
+              <img src="/logo-sumbar.png" alt="Logo Dinas Pangan Sumbar" className="h-10 w-auto"/>
+              <div className="text-white ml-3">
+                <div className="font-semibold text-base">Dinas Pangan</div>
+                <div className="font-medium text-sm">Provinsi Sumatera Barat</div>
+              </div>
+            </Link>
+          </div>
+          
+          {/* Search Bar */}
+          <div className="hidden lg:flex items-center">
+            <div className="relative flex">
+              <input 
+                type="text" 
+                placeholder="Pencarian Data"
+                className="bg-white text-gray-800 placeholder-gray-500 px-4 py-2 rounded-l w-64 text-sm focus:outline-none"
+              />
+              <button className="bg-[#1B4332] hover:bg-[#2d5a46] text-white px-4 py-2 rounded-r flex items-center justify-center">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
             </div>
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center flex-1 justify-center">
-                <ul className="flex items-center flex-wrap gap-x-0.5 list-none">
-                    <li><Link to="/" className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Beranda</Link></li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('profil', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Profil
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'profil' && (
-                            <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#visi-misi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Visi, Misi dan Tupoksi</a>
-                                <a href="#sekapur-sirih" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Sekapur Sirih</a>
-                                <a href="#pejabat-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Pejabat Pangan</a>
-                                <a href="#struktur-jabatan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Struktur Jabatan</a>
-                                <a href="#contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Hubungi Kami</a>
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('data', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Data
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'data' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#berita" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Berita</a>
-                                <a href="#download" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Download</a>                                
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('bidang', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Bidang
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'bidang' && (
-                            <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Sekretariat</a>
-                                <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Distribusi dan Cadangan Pangan</a>
-                                <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Ketersediaan dan Kerawanan Pangan</a>
-                                <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Konsumsi dan Keamanan Pangan</a>
-                                <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">UPTD-BPSMP</a>                                
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('media', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Media
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'media' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#berita" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Foto</a>
-                                <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Video</a>
-                                <a href="#pengumuman" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Kegiatan</a>
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('program', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Program
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'program' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#program" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">APBN</a>
-                                <a href="#program" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">APBD</a>
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('kegiatan', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Kegiatan
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'kegiatan' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <Link to="/kegiatan-ldpm" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">LDPM</Link>
-                                <Link to="/kegiatan-krpl" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">KRPL</Link>
-                                <Link to="/kegiatan-lumbung-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Lumbung Pangan</Link>
-                                <Link to="/kegiatan-demapan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Demapan</Link>
-                                <Link to="/kegiatan-pdrp" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">PDRP</Link>
-                                <Link to="/kegiatan-sertifikasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Sertifikasi</Link>
-                                <Link to="/kegiatan-skpg" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">SKPG</Link>
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('informasi', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Informasi
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'informasi' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Pedoman Umum</a>
-                                <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Peraturan</a>
-                                <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Info Pengadaan</a>
-                                <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Laporan Kinerja</a>
-                            </div>
-                        )}
-                    </li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('ppid', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            PPID
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'ppid' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Profil Singkat PPID</a>
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Visi Misi PPID</a>
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Tugas dan Fungsi PPID</a>
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Informasi Secara Berkala</a>
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Informasi Setiap Saat</a>
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Informasi Serta Merta</a>
-                                <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Struktur Organisasi PPID </a>
-                            </div>
-                        )}
-                    </li>
-                    <li><a href="https://www.lapor.go.id/" className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors no-underline whitespace-nowrap">Lapor</a></li>
-                    <li className="relative group">
-                        <button 
-                            onClick={(e) => toggleDropdown('informasi-layanan', e)}
-                            className="text-white font-medium text-xs sm:text-sm px-1.5 sm:px-2 py-2 hover:text-accent transition-colors flex items-center whitespace-nowrap"
-                        >
-                            Informasi Layanan
-                            <svg className="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {activeDropdown === 'informasi-layanan' && (
-                            <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
-                                <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Standar Pelayanan Publik</a>
-                                <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Makhlumat Layanan</a>
-                                <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Pengelolaan Pengaduan</a>
-                                <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-footer hover:text-white transition-colors">Survey Kepuasan Masyarakat</a>                                
-                            </div>
-                        )}
-                    </li>
-                </ul>
-            </div>
-            
-            {/* Search Bar */}
-            <div className="hidden lg:flex items-center flex-shrink-0 ml-2">
-                <div className="relative flex">
-                  <input 
-                    type="text" 
-                    placeholder="Pencarian Data"
-                    className="bg-white text-gray-800 placeholder-gray-500 px-3 py-1.5 rounded-l-md text-sm focus:outline-none focus:ring-1 focus:ring-footer border border-gray-300 transition-all duration-200 w-32 sm:w-40 lg:w-44"
-                  />
-                  <button className="bg-footer hover:bg-footer/90 text-white px-2 py-1.5 rounded-r-md border border-footer transition-colors flex items-center justify-center">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </button>
-                </div>
-            </div>
-            
-            {/* Mobile Hamburger Button */}
-            <button 
-              className="lg:hidden text-white p-1.5 rounded-md hover:bg-primary/20 transition-colors ml-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+          </div>
         </div>
-        
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-footer border-t border-primary/20 max-h-96 overflow-y-auto">
-            <ul className="flex flex-col py-4 px-5 space-y-2">
-              <li>
-                <a 
-                  href="#home" 
-                  className="block text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors no-underline"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Beranda
-                </a>
-              </li>
+      </div>
+
+      {/* Navigation Menu */}
+      <div className="bg-[#0C3823] border-t border-[#2d5a46]">
+        <div className="container mx-auto px-4">
+          <div className="hidden lg:flex justify-center">
+            <ul className="flex items-center justify-between gap-1 list-none m-0 p-0 w-full max-w-7xl">
+              <li><Link to="/" className="text-white font-medium text-sm px-3 py-2 inline-block hover:bg-[#2d5a46] transition-colors no-underline">Beranda</Link></li>
               
-              {/* Profil Dropdown */}
-              <li>
+              {/* Profile Dropdown */}
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('profil-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('profil', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Profil
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'profil-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'profil-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                    <a href="#visi-misi" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Visi, Misi dan Tupoksi</a>
-                    <a href="#sekapur-sirih" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Sekapur Sirih</a>
-                    <a href="#pejabat-pangan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Pejabat Pangan</a>
-                    <a href="#struktur-jabatan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Struktur Jabatan</a>
-                    <a href="#contact" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Hubungi Kami</a>
-                    </div>
+                {activeDropdown === 'profil' && (
+                  <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <Link to="/profil/visi-misi-tupoksi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Visi, Misi dan Tupoksi</Link>
+                    <Link to="/profil/sekapur-sirih" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Sekapur Sirih</Link>
+                    <a href="#pejabat-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pejabat Pangan</a>
+                    <a href="#struktur-jabatan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Jabatan</a>
+                    <a href="#contact" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Hubungi Kami</a>
                   </div>
                 )}
               </li>
 
               {/* Data Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('data-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('data', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Data
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'data-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'data-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#berita" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Berita</a>
-                      <a href="#download" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Download</a>
-                    </div>
+                {activeDropdown === 'data' && (
+                  <div className="absolute top-full left-0 mt-0 w-52 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#berita" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Berita</a>
+                    <a href="#download" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Download</a>
                   </div>
                 )}
               </li>
 
               {/* Bidang Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('bidang-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('bidang', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Bidang
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'bidang-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'bidang-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Sekretariat</a>
-                      <a href="#layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Distribusi dan Cadangan Pangan</a>
-                      <a href="#layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Ketersediaan dan Kerawanan Pangan</a>
-                      <a href="#layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Konsumsi dan Keamanan Pangan</a>
-                      <a href="#layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>UPTD-BPSMP</a>
-                    </div>
+                {activeDropdown === 'bidang' && (
+                  <div className="absolute top-full left-0 mt-0 w-72 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Sekretariat</a>
+                    <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Distribusi dan Cadangan Pangan</a>
+                    <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Ketersediaan dan Kerawanan Pangan</a>
+                    <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Konsumsi dan Keamanan Pangan</a>
+                    <a href="#layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>UPTD-BPSMP</a>
                   </div>
                 )}
               </li>
 
               {/* Media Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('media-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('media', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Media
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'media-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'media-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#berita" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Foto</a>
-                      <a href="#galeri" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Video</a>
-                      <a href="#pengumuman" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Kegiatan</a>
-                    </div>
+                {activeDropdown === 'media' && (
+                  <div className="absolute top-full left-0 mt-0 w-52 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#berita" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Foto</a>
+                    <a href="#galeri" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Video</a>
+                    <a href="#pengumuman" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Kegiatan</a>
                   </div>
                 )}
               </li>
 
               {/* Program Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('program-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('program', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Program
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'program-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'program-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#program" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>APBN</a>
-                      <a href="#program" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>APBD</a>
-                    </div>
+                {activeDropdown === 'program' && (
+                  <div className="absolute top-full left-0 mt-0 w-52 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#program" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>APBN</a>
+                    <a href="#program" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>APBD</a>
                   </div>
                 )}
               </li>
 
               {/* Kegiatan Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('kegiatan-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('kegiatan', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Kegiatan
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'kegiatan-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'kegiatan-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <Link to="/kegiatan-ldpm" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='ldpm'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('ldpm')}>LDPM</Link>
-                      <Link to="/kegiatan-krpl" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='krpl'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('krpl')}>KRPL</Link>
-                      <Link to="/kegiatan-lumbung-pangan" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='lumbung'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('lumbung')}>Lumbung Pangan</Link>
-                      <Link to="/kegiatan-demapan" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='demapan'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('demapan')}>Demapan</Link>
-                      <Link to="/kegiatan-pdrp" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='pdrp'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('pdrp')}>PDRP</Link>
-                      <Link to="/kegiatan-sertifikasi" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='sertifikasi'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('sertifikasi')}>Sertifikasi</Link>
-                      <Link to="/kegiatan-skpg" className={`block text-gray-800 text-sm py-2 px-4 rounded-md transition-colors hover:bg-footer hover:text-white ${activeMenuItem==='skpg'?'bg-green-600 text-white':''}`} onClick={()=>handleMenuItemClick('skpg')}>SKPG</Link>
-                    </div>
+                {activeDropdown === 'kegiatan' && (
+                  <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <Link to="/kegiatan-ldpm" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>LDPM</Link>
+                    <Link to="/kegiatan-krpl" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>KRPL</Link>
+                    <Link to="/kegiatan-lumbung-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Lumbung Pangan</Link>
+                    <Link to="/kegiatan-demapan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Demapan</Link>
+                    <Link to="/kegiatan-pdrp" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>PDRP</Link>
+                    <Link to="/kegiatan-sertifikasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Sertifikasi</Link>
+                    <Link to="/kegiatan-skpg" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>SKPG</Link>
                   </div>
                 )}
               </li>
 
               {/* Informasi Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('informasi-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('informasi', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Informasi
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'informasi-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'informasi-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#informasi" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Pedoman Umum</a>
-                      <a href="#informasi" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Peraturan</a>
-                      <a href="#informasi" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Info Pengadaan</a>
-                      <a href="#informasi" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Laporan Kinerja</a>
-                    </div>
+                {activeDropdown === 'informasi' && (
+                  <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pedoman Umum</a>
+                    <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Peraturan</a>
+                    <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Info Pengadaan</a>
+                    <a href="#informasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Laporan Kinerja</a>
                   </div>
                 )}
               </li>
 
               {/* PPID Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('ppid-mobile', e)}
-                  className={`w-full text-left text-white font-medium py-3 px-4 rounded-md transition-colors flex items-center justify-between hover:bg-primary/20 ${activeDropdown === 'ppid-mobile' ? 'bg-primary/20' : ''}`}
+                  onClick={(e) => toggleDropdown('ppid', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   PPID
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'ppid-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'ppid-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Profil Singkat PPID</a>
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Visi Misi PPID</a>
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Tugas dan Fungsi PPID</a>
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Secara Berkala</a>
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Setiap Saat</a>
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Serta Merta</a>
-                      <a href="#ppid" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Struktur Organisasi PPID</a>
-                    </div>
+                {activeDropdown === 'ppid' && (
+                  <div className="absolute top-full right-0 mt-0 w-64 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Profil Singkat PPID</a>
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Visi Misi PPID</a>
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Tugas dan Fungsi PPID</a>
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Secara Berkala</a>
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Setiap Saat</a>
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Serta Merta</a>
+                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Organisasi PPID</a>
                   </div>
                 )}
               </li>
 
-              {/* Lapor */}
-              <li>
-                <a 
-                  href="https://www.lapor.go.id/" 
-                  className="block text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors no-underline"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Lapor
-                </a>
-              </li>
+              {/* Lapor Link */}
+              <li><a href="https://www.lapor.go.id/" className="text-white font-medium text-sm px-3 py-2 inline-block hover:bg-[#2d5a46] transition-colors no-underline">Lapor</a></li>
 
               {/* Informasi Layanan Dropdown */}
-              <li>
+              <li className="relative">
                 <button 
-                  onClick={(e) => toggleDropdown('informasi-layanan-mobile', e)}
-                  className="w-full text-left text-white font-medium py-3 px-4 hover:bg-primary/20 rounded-md transition-colors flex items-center justify-between"
+                  onClick={(e) => toggleDropdown('informasi-layanan', e)}
+                  className="text-white font-medium text-sm px-3 py-2 inline-flex items-center hover:bg-[#2d5a46] transition-colors"
                 >
                   Informasi Layanan
-                  <svg className={`w-4 h-4 transition-transform ${activeDropdown === 'informasi-layanan-mobile' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {activeDropdown === 'informasi-layanan-mobile' && (
-                  <div className="pl-4 mt-2">
-                    <div className="bg-white rounded-md shadow-lg p-2 space-y-1">
-                      <a href="#informasi-layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Standar Pelayanan Publik</a>
-                      <a href="#informasi-layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Makhlumat Layanan</a>
-                      <a href="#informasi-layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Pengelolaan Pengaduan</a>
-                      <a href="#informasi-layanan" className="block text-gray-800 text-sm py-2 px-4 hover:bg-footer hover:text-white rounded-md transition-colors" onClick={() => setIsMenuOpen(false)}>Survey Kepuasan Masyarakat</a>
-                    </div>
+                {activeDropdown === 'informasi-layanan' && (
+                  <div className="absolute top-full right-0 mt-0 w-64 bg-white rounded-b-lg shadow-lg py-2 z-50">
+                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Standar Pelayanan Publik</a>
+                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Makhlumat Layanan</a>
+                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pengelolaan Pengaduan</a>
+                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Survey Kepuasan Masyarakat</a>
                   </div>
                 )}
-              </li>
-
-              {/* Search Bar for Mobile */}
-              <li className="pt-4 border-t border-primary/20 mt-4">
-                <div className="relative flex">
-                  <input 
-                    type="text" 
-                    placeholder="Pencarian Data"
-                    className="bg-white text-gray-800 placeholder-gray-500 px-4 py-2 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-footer border border-gray-300 transition-all duration-200 flex-1"
-                  />
-                  <button className="bg-footer hover:bg-footer/90 text-white px-4 py-2 rounded-r-md border border-footer transition-colors flex items-center justify-center">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </button>
-                </div>
               </li>
             </ul>
           </div>
-        )}
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="lg:hidden text-white p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="lg:hidden bg-white">
+              {/* Add mobile menu items */}
+            </div>
+          )}
+        </div>
+      </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
