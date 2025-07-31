@@ -8,6 +8,14 @@ function VisiMisiTupoksi() {
       <main className="flex-1 max-w-4xl mx-auto px-4 py-10">
         <h1 className="text-3xl font-bold mb-4 text-footer">Visi, Misi dan Tupoksi</h1>
         <div className="text-sm text-gray-500 mb-2">Posted on 2017-04-03 10:45:40 | by : Dimas Dwi Randa | 6591 kali dibaca | Category:</div>
+        {/* Image Section */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src="/Poster_Visi_Misi_Dinas_Pangan.png" 
+            alt="Kepala Dinas Pangan Provinsi Sumatera Barat" 
+            className="w-64 h-80 object-cover rounded-lg shadow-lg"
+          />
+        </div>
         <section className="mb-6">
           <h2 className="text-xl font-semibold mb-2 text-footer">Visi</h2>
           <blockquote className="italic border-l-4 border-footer pl-4 text-lg text-gray-700">“ Menjadi Institusi yang handal dalam memantapkan kemandirian pangan masyarakat berbasis sumber daya lokal “.</blockquote>

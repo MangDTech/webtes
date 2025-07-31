@@ -9,6 +9,9 @@ import KegiatanLumbungPangan from './pages/kegiatan/KegiatanLumbungPangan';
 import ScrollToTop from './components/ScrollToTop';
 import VisiMisiTupoksi from './pages/profil/VisiMisiTupoksi';
 import SekapurSirih from './pages/profil/SekapurSirih';
+import StrukturJabatan from './pages/profil/StrukturJabatan';
+import Berita from './pages/data/Berita';
+import Download from './pages/data/Download';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -26,6 +29,9 @@ function App() {
         <Route path="/kegiatan-skpg" element={<KegiatanSKPG />} />
         <Route path="/profil/visi-misi-tupoksi" element={<VisiMisiTupoksi />} />
         <Route path="/profil/sekapur-sirih" element={<SekapurSirih />} />
+        <Route path="/profil/struktur-jabatan" element={<StrukturJabatan />} />
+        <Route path="/berita" element={<Berita />} />
+        <Route path="/download" element={<Download />} />
       </Routes>
       <ScrollToTop />
     </Router>

@@ -17,7 +17,7 @@ function Footer() {
           
           {/* Column 1 - Kategori Berita */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-6 text-yellow-300 border-b border-yellow-300 pb-2">
+            <h3 className="text-xl font-bold mb-6 text-white-300 border-b border-white-300 pb-2">
               🏷️ Kategori Berita
             </h3>
             <div className="space-y-3">
@@ -80,7 +80,7 @@ function Footer() {
 
           {/* Column 2 - Link Website */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-6 text-yellow-300 border-b border-yellow-300 pb-2">
+            <h3 className="text-xl font-bold mb-6 text-white-300 border-b border-white-300 pb-2">
               🔗 Link Website
             </h3>
             <div className="space-y-3">
@@ -113,7 +113,7 @@ function Footer() {
 
           {/* Column 3 - Statistik */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-6 text-yellow-300 border-b border-yellow-300 pb-2">
+            <h3 className="text-xl font-bold mb-6 text-white-300 border-b border-white-300 pb-2">
               📊 Statistik
             </h3>
             <div className="bg-black bg-opacity-30 rounded-lg p-4 backdrop-blur-sm">
@@ -148,7 +148,7 @@ function Footer() {
 
           {/* Column 4 - Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-6 text-yellow-300 border-b border-yellow-300 pb-2">
+            <h3 className="text-xl font-bold mb-6 text-white-300 border-b border-white-300 pb-2">
               🏢 Dinas Pangan Provinsi Sumatera Barat
             </h3>
             <div className="bg-black bg-opacity-30 rounded-lg p-4 backdrop-blur-sm">
@@ -156,7 +156,7 @@ function Footer() {
                 <div className="flex items-start gap-3">
                   <span className="text-blue-400 text-lg">📧</span>
                   <div>
-                    <p className="text-gray-300 mb-1">Email :</p>
+                    <p className="text-white mb-1">Email :</p>
                     <a href="mailto:pangan@sumbarprov.go.id" className="text-white leading-relaxed">
                       pangan@sumbarprov.go.id
                     </a>
@@ -165,7 +165,7 @@ function Footer() {
                 <div className="flex items-start gap-3">
                   <span className="text-green-400 text-lg">📞</span>
                   <div>
-                    <p className="text-gray-300 mb-1">Telp :</p>
+                    <p className="text-white mb-1">Telp :</p>
                     <a href="tel:+6275170515256" className="text-white leading-relaxed">
                       (0751) 7051526
                     </a>
@@ -174,7 +174,7 @@ function Footer() {
                 <div className="flex items-start gap-3">
                   <span className="text-red-400 text-lg">📍</span>
                   <div>
-                    <p className="text-gray-300 mb-1">Alamat :</p>
+                    <p className="text-white mb-1">Alamat :</p>
                     <p className="text-white leading-relaxed">
                       Jl. Jaksa Agung R.Soeprapto No.4,<br />
                       Flamboyan Baru, Kec. Padang Bar,<br />
@@ -191,7 +191,7 @@ function Footer() {
         <div className="border-t border-gray-600 mt-12 pt-6">
           <div className="bg-black bg-opacity-50 text-white py-4 px-6 rounded-lg text-center backdrop-blur-sm">
             <p className="text-sm">
-              &copy; 2025. <span className="font-bold text-yellow-300">Dinas Pangan Provinsi Sumatera Barat</span> - All Rights Reserved.
+              &copy; 2025. <span className="text-white-300">Dinas Pangan Provinsi Sumatera Barat</span> - All Rights Reserved.
             </p>
           </div>
         </div>
