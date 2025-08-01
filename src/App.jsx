@@ -32,6 +32,12 @@ import VisiMisiPPID from './pages/ppid/VisiMisiPPID';
 import TugasFungsiPPID from './pages/ppid/TugasFungsiPPID';
 import InformasiBerkala from './pages/ppid/InformasiBerkala';
 import InformasiSetiapSaat from './pages/ppid/InformasiSetiapSaat';
+import InformasiSertaMerta from './pages/ppid/InformasiSertaMerta';
+import StrukturOrganisasiPPID from './pages/ppid/StrukturOrganisasiPPID';
+import StandarPelayananPublik from './pages/informasi-layanan/StandarPelayananPublik';
+import MaklumatLayanan from './pages/informasi-layanan/MaklumatLayanan';
+import PengelolaanPengaduan from './pages/informasi-layanan/PengelolaanPengaduan';
+import SurveyKepuasanMasyarakat from './pages/informasi-layanan/SurveyKepuasanMasyarakat';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -71,6 +77,13 @@ function App() {
         <Route path="/ppid/tugas-fungsi" element={<TugasFungsiPPID />} />
         <Route path="/ppid/informasi-berkala" element={<InformasiBerkala />} />
         <Route path="/ppid/informasi-setiap-saat" element={<InformasiSetiapSaat />} />
+        <Route path="/ppid/informasi-serta-merta" element={<InformasiSertaMerta />} />
+        <Route path="/ppid/struktur-organisasi" element={<StrukturOrganisasiPPID />} />
+        <Route path="/informasi-layanan/standar-pelayanan-publik" element={<StandarPelayananPublik />} />
+        <Route path="/informasi-layanan/maklumat-layanan" element={<MaklumatLayanan />} />
+        <Route path="/informasi-layanan/pengelolaan-pengaduan" element={<PengelolaanPengaduan />} />
+        <Route path="/informasi-layanan/survey-kepuasan-masyarakat" element={<SurveyKepuasanMasyarakat />} />
+
       </Routes>
       <ScrollToTop />
     </Router>

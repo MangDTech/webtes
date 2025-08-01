@@ -236,8 +236,8 @@ function Navbar() {
                     <Link to="/ppid/tugas-fungsi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Tugas dan Fungsi PPID</Link>
                     <Link to="/ppid/informasi-berkala" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Secara Berkala</Link>
                     <Link to="/ppid/informasi-setiap-saat" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Setiap Saat</Link>
-                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Serta Merta</a>
-                    <a href="#ppid" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Organisasi PPID</a>
+                    <Link to="/ppid/informasi-serta-merta" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Informasi Serta Merta</Link>
+                    <Link to="/ppid/struktur-organisasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Organisasi PPID</Link>
                   </div>
                 )}
               </li>
@@ -258,10 +258,10 @@ function Navbar() {
                 </button>
                 {activeDropdown === 'informasi-layanan' && (
                   <div className="absolute top-full right-0 mt-0 w-64 bg-white rounded-b-lg shadow-lg py-2 z-50">
-                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Standar Pelayanan Publik</a>
-                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Makhlumat Layanan</a>
-                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pengelolaan Pengaduan</a>
-                    <a href="#informasi-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Survey Kepuasan Masyarakat</a>
+                    <Link to="/informasi-layanan/standar-pelayanan-publik" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Standar Pelayanan Publik</Link>
+                    <Link to="/informasi-layanan/maklumat-layanan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Maklumat Layanan</Link>
+                    <Link to="/informasi-layanan/pengelolaan-pengaduan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pengelolaan Pengaduan</Link>
+                    <Link to="/informasi-layanan/survey-kepuasan-masyarakat" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Survey Kepuasan Masyarakat</Link>
                   </div>
                 )}
               </li>
@@ -371,10 +371,10 @@ function Navbar() {
                 {/* Informasi Layanan Mobile */}
                 <div className="border-t border-gray-200 pt-2">
                   <div className="px-3 py-2 text-sm font-semibold text-gray-800">Informasi Layanan</div>
-                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Standar Pelayanan Publik</a>
-                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Makhlumat Layanan</a>
-                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pengelolaan Pengaduan</a>
-                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Survey Kepuasan Masyarakat</a>
+                  <Link to="/informasi-layanan/standar-pelayanan-publik" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Standar Pelayanan Publik</Link>
+                  <Link to="/informasi-layanan/maklumat-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Maklumat Layanan</Link>
+                  <Link to="/informasi-layanan/pengelolaan-pengaduan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pengelolaan Pengaduan</Link>
+                  <Link to="/informasi-layanan/survey-kepuasan-masyarakat" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Survey Kepuasan Masyarakat</Link>
                 </div>
               </div>
             </div>
