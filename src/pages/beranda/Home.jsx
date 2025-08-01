@@ -9,14 +9,14 @@ function Home() {
     {
       id: 1,
       image: "/slide1.png",
-      title: "Dinas Pangan Provinsi Sumatera Barat",
-      description: "Mewujudkan ketahanan pangan yang berkelanjutan untuk masyarakat Sumatera Barat"
+      title: "DISTRIBUSI CADANGAN PANGAN",
+      //description: "Mewujudkan ketahanan pangan yang berkelanjutan untuk masyarakat Sumatera Barat"
     },
     {
       id: 2,
       image: "/slide2.png", 
-      title: "Program Ketahanan Pangan",
-      description: "Berbagai program inovatif untuk meningkatkan ketersediaan dan kualitas pangan"
+      title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
+      //description: "Berbagai program inovatif untuk meningkatkan ketersediaan dan kualitas pangan"
     }
   ];
 
@@ -46,7 +46,7 @@ function Home() {
       <Navbar />
       
       {/* Hero Slider Section */}
-      <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+      <section className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
         <div className="relative w-full h-full">
           {slides.map((slide, index) => (
             <div
@@ -58,18 +58,22 @@ function Home() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover md:object-contain md:bg-gray-100"
+                className="w-full h-full object-contain bg-white"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent p-4 md:p-8">
-                <div className="max-w-4xl mx-auto text-center text-white">
-                  <h1 className="text-xl md:text-3xl lg:text-5xl font-bold mb-2 md:mb-3 drop-shadow-lg">
-                    {slide.title}
-                  </h1>
-                  <p className="text-xs md:text-base lg:text-xl drop-shadow-md">
-                    {slide.description}
-                  </p>
+              {slide.title && (
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-3 sm:p-4 md:p-8">
+                  <div className="max-w-4xl mx-auto text-center text-white">
+                    <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold drop-shadow-lg">
+                      {slide.title}
+                    </h1>
+                    {slide.description && (
+                      <p className="text-xs sm:text-sm md:text-base lg:text-xl drop-shadow-md mt-1 md:mt-3">
+                        {slide.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
@@ -77,29 +81,29 @@ function Home() {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          className="absolute left-1 sm:left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-1.5 sm:p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
         >
-          <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          className="absolute right-1 sm:right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-1.5 sm:p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
         >
-          <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
         {/* Dots Indicator */}
-        <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3">
+        <div className="absolute bottom-1 sm:bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2 md:space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 border-2 border-white ${
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 border border-white ${
                 index === currentSlide 
                   ? 'bg-white' 
                   : 'bg-transparent hover:bg-white hover:bg-opacity-50'
