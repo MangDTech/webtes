@@ -13,7 +13,7 @@ function VisiMisiTupoksi() {
           <img 
             src="/Poster_Visi_Misi_Dinas_Pangan.png" 
             alt="Kepala Dinas Pangan Provinsi Sumatera Barat" 
-            className="w-64 h-80 object-cover rounded-lg shadow-lg"
+            className="w-150 h-250 object-cover rounded-lg shadow-lg"
           />
         </div>
         <section className="mb-6">

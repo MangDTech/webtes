@@ -86,8 +86,8 @@ function Navbar() {
                   <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-lg py-2 z-50">
                     <Link to="/profil/visi-misi-tupoksi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Visi, Misi dan Tupoksi</Link>
                     <Link to="/profil/sekapur-sirih" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Sekapur Sirih</Link>
+                    <Link to="/profil/struktur-organisasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Organisasi</Link>
                     <Link to="/profil/pejabat-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pejabat Pangan</Link>
-                    <Link to="/profil/struktur-jabatan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Jabatan</Link>
                     <Link to="/profil/hubungi-kami" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Hubungi Kami</Link>
                   </div>
                 )}
@@ -284,8 +284,44 @@ function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="lg:hidden bg-white">
-              {/* Add mobile menu items */}
+            <div className="lg:hidden bg-white shadow-lg rounded-b-lg">
+              <div className="px-4 py-2 space-y-1">
+                <Link to="/" className="block px-3 py-2 text-gray-700 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Beranda</Link>
+                
+                {/* Profil Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Profil</div>
+                  <Link to="/profil/visi-misi-tupoksi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Visi, Misi dan Tupoksi</Link>
+                  <Link to="/profil/sekapur-sirih" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Sekapur Sirih</Link>
+                  <Link to="/profil/pejabat-pangan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pejabat Pangan</Link>
+                  <Link to="/profil/struktur-jabatan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Struktur Jabatan</Link>
+                  <Link to="/profil/hubungi-kami" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Hubungi Kami</Link>
+                </div>
+
+                {/* Data Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Data</div>
+                  <Link to="/berita" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Berita</Link>
+                  <Link to="/download" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Download</Link>
+                </div>
+
+                {/* Kegiatan Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Kegiatan</div>
+                  <Link to="/kegiatan-ldpm" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>LDPM</Link>
+                  <Link to="/kegiatan-krpl" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>KRPL</Link>
+                  <Link to="/kegiatan-lumbung-pangan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Lumbung Pangan</Link>
+                  <Link to="/kegiatan-demapan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Demapan</Link>
+                  <Link to="/kegiatan-pdrp" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>PDRP</Link>
+                  <Link to="/kegiatan-sertifikasi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Sertifikasi</Link>
+                  <Link to="/kegiatan-skpg" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>SKPG</Link>
+                </div>
+
+                {/* Lapor Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <a href="https://www.lapor.go.id/" className="block px-3 py-2 text-gray-700 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Lapor</a>
+                </div>
+              </div>
             </div>
           )}
         </div>
