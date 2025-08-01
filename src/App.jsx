@@ -16,7 +16,7 @@ import Sekretariat from './pages/bidang/Sekretariat';
 import DistribusiCadanganPangan from './pages/bidang/DistribusiCadanganPangan';
 import KetersediaanKerawananPangan from './pages/bidang/KetersediaanKerawananPangan';
 import KonsumsiKeamananPangan from './pages/bidang/KonsumsiKeamananPangan';
-import TupoksiUPTDBPSMP from './pages/bidang/TupoksiUPTDBPSMP';
+import UPTDBPSMP from './pages/bidang/UPTDBPSMP';
 import Foto from './pages/media/Foto';
 import Video from './pages/media/Video';
 import Berita from './pages/data/Berita';
@@ -28,6 +28,10 @@ import Peraturan from './pages/informasi/Peraturan';
 import InfoPengadaan from './pages/informasi/InfoPengadaan';
 import LaporanKinerja from './pages/informasi/LaporanKinerja';
 import ProfilSingkatPPID from './pages/ppid/ProfilSingkatPPID';
+import VisiMisiPPID from './pages/ppid/VisiMisiPPID';
+import TugasFungsiPPID from './pages/ppid/TugasFungsiPPID';
+import InformasiBerkala from './pages/ppid/InformasiBerkala';
+import InformasiSetiapSaat from './pages/ppid/InformasiSetiapSaat';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -51,7 +55,7 @@ function App() {
         <Route path="/bidang/distribusi-cadangan-pangan" element={<DistribusiCadanganPangan />} />
         <Route path="/bidang/ketersediaan-kerawanan-pangan" element={<KetersediaanKerawananPangan />} />
         <Route path="/bidang/konsumsi-keamanan-pangan" element={<KonsumsiKeamananPangan />} />
-        <Route path="/bidang/uptd-bpsmp" element={<TupoksiUPTDBPSMP />} />
+        <Route path="/bidang/uptd-bpsmp" element={<UPTDBPSMP />} />
         <Route path="/media/foto" element={<Foto />} />
         <Route path="/media/video" element={<Video />} />       
         <Route path="/berita" element={<Berita />} />
@@ -63,6 +67,10 @@ function App() {
         <Route path="/informasi/info-pengadaan" element={<InfoPengadaan />} />
         <Route path="/informasi/laporan-kinerja" element={<LaporanKinerja />} />
         <Route path="/ppid/profil-singkat" element={<ProfilSingkatPPID />} />
+        <Route path="/ppid/visi-misi" element={<VisiMisiPPID />} />
+        <Route path="/ppid/tugas-fungsi" element={<TugasFungsiPPID />} />
+        <Route path="/ppid/informasi-berkala" element={<InformasiBerkala />} />
+        <Route path="/ppid/informasi-setiap-saat" element={<InformasiSetiapSaat />} />
       </Routes>
       <ScrollToTop />
     </Router>

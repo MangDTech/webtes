@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-function TupoksiUPTDBPSMP() {
+function UPTDBPSMP() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -246,4 +246,4 @@ function TupoksiUPTDBPSMP() {
   );
 }
 
-export default TupoksiUPTDBPSMP;
+export default UPTDBPSMP;
