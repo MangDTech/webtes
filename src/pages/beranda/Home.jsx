@@ -362,61 +362,7 @@ function Home() {
 
           </div>
         </div>
-      </section>
-
-      {/* Statistik Section */}
-      {/* <section id="statistik">
-        <Statistik StatistikList={StatistikList}/>
-      </section> */}
-
-      {/* Program Section */}
-      {/* <section id="program" className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-            <div className="flex-1">
-              <div className="prose prose-lg max-w-none">
-                {parse(CourseSection.content)}
-              </div>
-            </div>
-            <div className="flex-1">
-              <img 
-                src={CourseSection.image} 
-                alt="Program Dinas Pangan"
-                className="w-full h-auto object-cover rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Berita Section */}
-      {/* <section id="berita">
-        <Berita BeritaList={BeritaList}/>
-      </section> */}
-
-      {/* Layanan Section */}
-      {/* <section id="layanan">
-        <Layanan LayananList={LayananList}/>
-      </section> */}
-
-      {/* Galeri Section */}
-      {/* <section id="galeri">
-        <Galeri GaleriList={GaleriList}/>
-      </section> */}
-
-      {/* Partners Section */}
-      {/* <section id="kemitraan">
-        <Partners PartnersList={Partnerlist}/>
-      </section> */}
-
-      {/* Tim Section */}
-      {/* <section id="struktur">
-        <Tutors Tutorlist={Tutorlist}/>
-      </section> */}
-
-      {/* Contact Section */}
-      {/* <Contact ContactSection={ContactSection}/> */}
-
+      </section>    
       {/* Footer */}
       <Footer />
     </div>
