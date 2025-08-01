@@ -9,13 +9,13 @@ function Home() {
     {
       id: 1,
       image: "/slide1.png",
-      title: "DISTRIBUSI CADANGAN PANGAN",
+      //title: "DISTRIBUSI CADANGAN PANGAN",
       //description: "Mewujudkan ketahanan pangan yang berkelanjutan untuk masyarakat Sumatera Barat"
     },
     {
       id: 2,
       image: "/slide2.png", 
-      title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
+      //title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
       //description: "Berbagai program inovatif untuk meningkatkan ketersediaan dan kualitas pangan"
     }
   ];
