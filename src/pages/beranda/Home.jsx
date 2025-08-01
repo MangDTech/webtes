@@ -46,7 +46,7 @@ function Home() {
       <Navbar />
       
       {/* Hero Slider Section */}
-      <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+      <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
         <div className="relative w-full h-full">
           {slides.map((slide, index) => (
             <div
@@ -58,14 +58,14 @@ function Home() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-contain bg-gray-100"
+                className="w-full h-full object-cover md:object-contain md:bg-gray-100"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/70 to-transparent p-4 md:p-8">
                 <div className="max-w-4xl mx-auto text-center text-white">
-                  <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-3 drop-shadow-lg">
+                  <h1 className="text-xl md:text-3xl lg:text-5xl font-bold mb-2 md:mb-3 drop-shadow-lg">
                     {slide.title}
                   </h1>
-                  <p className="text-sm md:text-lg lg:text-xl drop-shadow-md">
+                  <p className="text-xs md:text-base lg:text-xl drop-shadow-md">
                     {slide.description}
                   </p>
                 </div>
@@ -77,29 +77,29 @@ function Home() {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          className="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+          className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 md:p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
         {/* Dots Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+        <div className="absolute bottom-2 md:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 border-2 border-white ${
+              className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 border-2 border-white ${
                 index === currentSlide 
                   ? 'bg-white' 
                   : 'bg-transparent hover:bg-white hover:bg-opacity-50'
@@ -109,26 +109,6 @@ function Home() {
         </div>
       </section>
       
-      {/* Hero Section
-      <section id="home" className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 py-16">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="flex-1 order-2 lg:order-1">
-              <div className="prose prose-lg max-w-none">
-                {parse(HomeSection.content)}
-              </div>
-            </div>
-            <div className="flex-1 order-1 lg:order-2">
-              <img 
-                src={HomeSection.image} 
-                alt="Dinas Pangan Sumatera Barat"
-                className="w-full h-auto object-cover rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Main Content Section - Berita dan Sidebar */}
       <section className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-4">

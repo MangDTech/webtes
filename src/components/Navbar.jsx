@@ -86,7 +86,7 @@ function Navbar() {
                   <div className="absolute top-full left-0 mt-0 w-64 bg-white rounded-b-lg shadow-lg py-2 z-50">
                     <Link to="/profil/visi-misi-tupoksi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Visi, Misi dan Tupoksi</Link>
                     <Link to="/profil/sekapur-sirih" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Sekapur Sirih</Link>
-                    <Link to="/profil/struktur-organisasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Organisasi</Link>
+                    <Link to="/profil/struktur-jabatan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Struktur Jabatan</Link>
                     <Link to="/profil/pejabat-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Pejabat Pangan</Link>
                     <Link to="/profil/hubungi-kami" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors" onClick={() => setActiveDropdown(null)}>Hubungi Kami</Link>
                   </div>
@@ -284,7 +284,7 @@ function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="lg:hidden bg-white shadow-lg rounded-b-lg">
+            <div className="lg:hidden bg-white shadow-lg rounded-b-lg max-h-[80vh] overflow-y-auto">
               <div className="px-4 py-2 space-y-1">
                 <Link to="/" className="block px-3 py-2 text-gray-700 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Beranda</Link>
                 
@@ -305,6 +305,31 @@ function Navbar() {
                   <Link to="/download" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Download</Link>
                 </div>
 
+                {/* Bidang Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Bidang</div>
+                  <a href="#layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Sekretariat</a>
+                  <a href="#layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Distribusi dan Cadangan Pangan</a>
+                  <a href="#layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Ketersediaan dan Kerawanan Pangan</a>
+                  <a href="#layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Konsumsi dan Keamanan Pangan</a>
+                  <a href="#layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>UPTD-BPSMP</a>
+                </div>
+
+                {/* Media Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Media</div>
+                  <a href="#berita" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Foto</a>
+                  <a href="#galeri" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Video</a>
+                  <a href="#pengumuman" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Kegiatan</a>
+                </div>
+
+                {/* Program Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Program</div>
+                  <a href="#program" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>APBN</a>
+                  <a href="#program" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>APBD</a>
+                </div>
+
                 {/* Kegiatan Mobile */}
                 <div className="border-t border-gray-200 pt-2">
                   <div className="px-3 py-2 text-sm font-semibold text-gray-800">Kegiatan</div>
@@ -317,9 +342,39 @@ function Navbar() {
                   <Link to="/kegiatan-skpg" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>SKPG</Link>
                 </div>
 
+                {/* Informasi Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Informasi</div>
+                  <a href="#informasi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pedoman Umum</a>
+                  <a href="#informasi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Peraturan</a>
+                  <a href="#informasi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Info Pengadaan</a>
+                  <a href="#informasi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Laporan Kinerja</a>
+                </div>
+
+                {/* PPID Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">PPID</div>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Profil Singkat PPID</a>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Visi Misi PPID</a>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Tugas dan Fungsi PPID</a>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Secara Berkala</a>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Setiap Saat</a>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Informasi Serta Merta</a>
+                  <a href="#ppid" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Struktur Organisasi PPID</a>
+                </div>
+
                 {/* Lapor Mobile */}
                 <div className="border-t border-gray-200 pt-2">
                   <a href="https://www.lapor.go.id/" className="block px-3 py-2 text-gray-700 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Lapor</a>
+                </div>
+
+                {/* Informasi Layanan Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-800">Informasi Layanan</div>
+                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Standar Pelayanan Publik</a>
+                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Makhlumat Layanan</a>
+                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pengelolaan Pengaduan</a>
+                  <a href="#informasi-layanan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Survey Kepuasan Masyarakat</a>
                 </div>
               </div>
             </div>
