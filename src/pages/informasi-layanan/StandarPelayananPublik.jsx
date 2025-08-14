@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -16,7 +15,7 @@ function StandarPelayananPublik() {
                 Tentang Standar Pelayanan Publik
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Standar Pelayanan Publik adalah tolok ukur yang dipergunakan sebagai pedoman penyelenggaraan pelayanan dan acuan penilaian kualitas pelayanan sebagai kewajiban dan janji penyelenggara kepada masyarakat dalam rangka pelayanan yang berkualitas, cepat, mudah, terjangkau, dan terukur.
+                Standar Pelayanan Publik adalah tolak ukur yang dipergunakan sebagai pedoman penyelenggaraan pelayanan dan acuan penilaian kualitas pelayanan sebagai kewajiban dan janji penyelenggara kepada masyarakat dalam rangka pelayanan yang berkualitas, cepat, mudah, terjangkau, dan terukur.
               </p>
             </div>
 

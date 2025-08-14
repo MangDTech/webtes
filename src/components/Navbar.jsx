@@ -244,6 +244,9 @@ function Navbar() {
 
               {/* Lapor Link */}
               <li><a href="https://www.lapor.go.id/" className="text-white font-medium text-sm px-3 py-2 inline-block hover:bg-[#2d5a46] transition-colors no-underline">Lapor</a></li>
+              
+              {/* Lapor Link */}
+              <li><a href="https://sipangan-provsumbar.badanpangan.go.id/" className="text-white font-medium text-sm px-3 py-2 inline-block hover:bg-[#2d5a46] transition-colors no-underline">Aplikasi</a></li>
 
               {/* Informasi Layanan Dropdown */}
               <li className="relative">
@@ -366,6 +369,11 @@ function Navbar() {
                 {/* Lapor Mobile */}
                 <div className="border-t border-gray-200 pt-2">
                   <a href="https://www.lapor.go.id/" className="block px-3 py-2 text-gray-700 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Lapor</a>
+                </div>
+
+                {/* Aplikasi Mobile */}
+                <div className="border-t border-gray-200 pt-2">
+                  <a href="https://sipangan-provsumbar.badanpangan.go.id/" className="block px-3 py-2 text-gray-700 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Aplikasi</a>
                 </div>
 
                 {/* Informasi Layanan Mobile */}

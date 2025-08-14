@@ -14,7 +14,7 @@ function SekapurSirih() {
           <img 
             src="/kepaladps.jpeg" 
             alt="Kepala Dinas Pangan Provinsi Sumatera Barat" 
-            className="w-120 h-100 object-cover rounded-lg shadow-lg"
+            className="w-80 h-100 object-cover rounded-lg shadow-lg"
           />
         </div>
 
