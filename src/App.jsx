@@ -19,6 +19,7 @@ import KonsumsiKeamananPangan from './pages/bidang/KonsumsiKeamananPangan';
 import UPTDBPSMP from './pages/bidang/UPTDBPSMP';
 import Foto from './pages/media/Foto';
 import Video from './pages/media/Video';
+import Kegiatan from './pages/media/Kegiatan';
 import Berita from './pages/data/Berita';
 import Download from './pages/data/Download';
 import APBN from './pages/program/APBN';
@@ -63,7 +64,8 @@ function App() {
         <Route path="/bidang/konsumsi-keamanan-pangan" element={<KonsumsiKeamananPangan />} />
         <Route path="/bidang/uptd-bpsmp" element={<UPTDBPSMP />} />
         <Route path="/media/foto" element={<Foto />} />
-        <Route path="/media/video" element={<Video />} />       
+  <Route path="/media/video" element={<Video />} />
+  <Route path="/media/kegiatan" element={<Kegiatan />} />       
         <Route path="/berita" element={<Berita />} />
         <Route path="/download" element={<Download />} />
         <Route path="/program/apbn" element={<APBN />} />

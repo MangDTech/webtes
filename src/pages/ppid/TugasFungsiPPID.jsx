@@ -1,20 +1,22 @@
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Breadcrumb from '../../components/Breadcrumb';
 
 const TugasFungsiPPID = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <Breadcrumb />
       
       <main className="flex-grow">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white py-16">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
                 Tugas dan Fungsi PPID
               </h1>
-              <p className="text-xl md:text-2xl text-green-100">
+              <p className="text-xl md:text-2xl text-white/90 font-medium">
                 Pejabat Pengelola Informasi dan Dokumentasi
               </p>
             </div>
@@ -24,30 +26,11 @@ const TugasFungsiPPID = () => {
         {/* Content Section */}
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-6xl mx-auto">
-            {/* Breadcrumb */}
-            <div className="mb-8">
-              <nav className="flex text-sm text-gray-600">
-                <a href="/" className="hover:text-[#1B4332]">Home</a>
-                <span className="mx-2">/</span>
-                <a href="#" className="hover:text-[#1B4332]">PPID</a>
-                <span className="mx-2">/</span>
-                <span className="text-[#1B4332] font-medium">Tugas dan Fungsi PPID</span>
-              </nav>
-            </div>
-
-            {/* Article Info */}
-            <div className="bg-gray-50 p-4 rounded-lg mb-8">
-              <div className="flex flex-wrap items-center text-sm text-gray-600 gap-4">
-                <span>📅 Posted on 2021-01-07 15:07:34</span>
-                <span>👤 by : Rio Bayu Sentosa</span>
-                <span>👁️ 1401 kali dibaca</span>
-              </div>
-            </div>
 
             {/* PPID Pembantu Section */}
             <div className="mb-12">
               <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-2xl md:text-3xl font-bold">
+                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
                   PPID Pembantu
                 </h2>
               </div>
@@ -67,21 +50,21 @@ const TugasFungsiPPID = () => {
                       <div className="space-y-2">
                         <div className="flex items-start space-x-2">
                           <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-700">Informasi yang wajib disediakan dan diumumkan secara berkala</span>
+                          <span className="text-gray-800 font-medium">Informasi yang wajib disediakan dan diumumkan secara berkala</span>
                         </div>
                         <div className="flex items-start space-x-2">
                           <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-700">Informasi yang wajib diumumkan secara serta merta</span>
+                          <span className="text-gray-800 font-medium">Informasi yang wajib diumumkan secara serta merta</span>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-start space-x-2">
                           <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-700">Informasi yang wajib tersedia setiap saat</span>
+                          <span className="text-gray-800 font-medium">Informasi yang wajib tersedia setiap saat</span>
                         </div>
                         <div className="flex items-start space-x-2">
                           <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-700">Informasi yang dikecualikan</span>
+                          <span className="text-gray-800 font-medium">Informasi yang dikecualikan</span>
                         </div>
                       </div>
                     </div>
@@ -91,7 +74,7 @@ const TugasFungsiPPID = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
                       <h4 className="font-semibold text-[#1B4332] mb-2">2. Koordinasi dan Konsolidasi</h4>
-                      <p className="text-gray-700 text-sm">Mengkoordinasikan dan mengkonsolidasikan pengumpulan bahan informasi dan dokumentasi yang ada dilingkungannnya</p>
+                      <p className="text-gray-800 text-sm font-medium">Mengkoordinasikan dan mengkonsolidasikan pengumpulan bahan informasi dan dokumentasi yang ada dilingkungannnya</p>
                     </div>
 
                     <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
@@ -131,7 +114,7 @@ const TugasFungsiPPID = () => {
             {/* Definisi Section */}
             <div className="mb-12">
               <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-2xl md:text-3xl font-bold">
+                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
                   Definisi dan Pengertian
                 </h2>
               </div>
@@ -181,7 +164,7 @@ const TugasFungsiPPID = () => {
             {/* Kewajiban Badan Publik */}
             <div className="mb-12">
               <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-2xl md:text-3xl font-bold">
+                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
                   Kewajiban Badan Publik
                 </h2>
                 <p className="text-green-100 mt-2">Berdasarkan Pasal 7 UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik</p>
@@ -243,7 +226,7 @@ const TugasFungsiPPID = () => {
             {/* Jenis Informasi Publik */}
             <div className="mb-8">
               <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-2xl md:text-3xl font-bold">
+                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
                   Jenis Informasi Publik
                 </h2>
               </div>

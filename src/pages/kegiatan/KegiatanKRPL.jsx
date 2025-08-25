@@ -1,14 +1,13 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 const KegiatanKRPL = () => (
   <>
     <Navbar />
+    <Breadcrumb />
     <section id="krpl" className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 my-12">
-      <h1 className="text-2xl font-bold text-green-800 mb-2">Kawasan Rumah Pangan Lestari (KRPL)</h1>
-      <div className="text-xs text-gray-500 mb-4">
-        <span>Posted on 2017-04-03 12:13:47</span> | <span>by : Dimas Dwi Randa</span> | <span>7125 kali dibaca</span> | <span>Category:</span>
-      </div>
+      <h1 className="text-2xl font-bold text-green-800 mb-4">Kawasan Rumah Pangan Lestari (KRPL)</h1>
       <div className="prose max-w-none text-gray-800 text-justify space-y-4">
         <p>Sejak 5 tahun terakhir, konsumsi beras masyarakat Sumbar terus berkurang. Meski saat ini masih melebihi batas normal bahkan masuk 5 besar nasional, tapi penurunan konsumsi beras itu memperlihatkan pemerintah Provinsi Sumbar serius menggalakkan diversifikasi pangan untuk menurunkan konsumsi beras.</p>
         <p>Karena itu pula Gubernur mengajak semua pihak untuk mengurangi konsumsi beras dan beralih ke pangan non beras melalui gerakan diversifikasi pangan. Apalagi di daerah ini, potensi pangan non beras cukup banyak. tetapi belum dimaksimalkan.</p>

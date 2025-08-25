@@ -1,14 +1,13 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 const KegiatanSertifikasi = () => (
   <>
     <Navbar />
+    <Breadcrumb />
     <section id="sertifikasi" className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 my-12">
-      <h1 className="text-2xl font-bold text-green-800 mb-2">Sertifikasi Pangan Segar</h1>
-      <div className="text-xs text-gray-500 mb-4">
-        <span>Posted on 2017-04-03 12:15:13</span> | <span>by : Dimas Dwi Randa</span> | <span>9959 kali dibaca</span> | <span>Category:</span>
-      </div>
+      <h1 className="text-2xl font-bold text-green-800 mb-4">Sertifikasi Pangan Segar</h1>
       <div className="prose max-w-none text-gray-800 text-justify space-y-4">
         <p>PANGAN segar hasil pertanian saat ini sudah menjadi tuntutan konsumen. Pangan yang tercemar pestisida, tidak laku lagi di pasaran. Konsumen menginginkan pangan segar itu benar-benar bebas dari bahan kimia. Jaminan ini, terletak pada bersertifikat atau tidaknya pangan segar tersebut.</p>
         <p>Pangan yang tercemar pestisida memberi dampak negative pada kesehatan orang yang mengkonsumsinya. Beberapa penelitian sudah memperlihatkan hasil demikian. Oleh sebab itu, pemerintah perlu mengendalikan pemakaian bahan kimia dalam budidaya tanaman.</p>

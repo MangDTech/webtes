@@ -1,325 +1,228 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-function InformasiSertaMerta() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const allDocuments = [
-    { nama: "Informasi mengenai racun pada bahan makanan yang dikonsumsi pleh masyarakat", tahun: "2023" },
-    { nama: "Pengumuman Tender Penyediaan Beras Cadangan Pangan Pemerintah", tahun: "2024" },
-    { nama: "Informasi Kasus Keamanan Pangan Terkini", tahun: "2024" },
-    { nama: "Peringatan Dini Kontaminasi Bahan Pangan", tahun: "2024" },
-    { nama: "Hasil Inspeksi Mendadak Fasilitas Pangan", tahun: "2024" },
-    { nama: "Informasi Penarikan Produk Pangan dari Peredaran", tahun: "2024" },
-    { nama: "Laporan Insiden Keamanan Pangan", tahun: "2023" },
-    { nama: "Pengumuman Status Darurat Pangan Daerah", tahun: "2023" },
-    { nama: "Informasi Cuaca Ekstrem dan Dampak Ketahanan Pangan", tahun: "2024" },
-    { nama: "Hasil Pemeriksaan Laboratorium Sampel Pangan Mendesak", tahun: "2024" },
-    { nama: "Pengumuman Bantuan Pangan Darurat", tahun: "2023" },
-    { nama: "Informasi Gangguan Distribusi Pangan", tahun: "2024" },
-    { nama: "Laporan Kondisi Stok Pangan Strategis", tahun: "2024" },
-    { nama: "Peringatan Kontaminasi Air untuk Produksi Pangan", tahun: "2023" },
-    { nama: "Informasi Lonjakan Harga Pangan Pokok", tahun: "2024" }
-  ];
-
-  // Filter documents based on search term
-  const filteredDocuments = allDocuments.filter(doc =>
-    doc.nama.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    doc.tahun.includes(searchTerm)
-  );
-
-  // Calculate pagination
-  const totalItems = filteredDocuments.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentDocuments = filteredDocuments.slice(startIndex, endIndex);
-
-  // Pagination handlers
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const handleItemsPerPageChange = (e) => {
-    setItemsPerPage(parseInt(e.target.value));
-    setCurrentPage(1);
-  };
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    setCurrentPage(1);
-  };
-
+const InformasiSertaMerta = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Navbar />
-      
       <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Informasi Serta Merta
-              </h1>
-              <p className="text-xl md:text-2xl text-green-100">
-                PPID Dinas Ketahanan Pangan Provinsi Sumatera Barat
-              </p>
+        <div className="container mx-auto px-4 py-8">
+          {/* PPID Header */}
+          <div className="bg-white rounded-lg shadow-lg mb-8">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
+              <h2 className="text-3xl font-bold text-white drop-shadow-lg">PPID</h2>
+              <p className="mt-2 font-medium text-white/90">Pejabat Pengelola Informasi dan Dokumentasi</p>
+            </div>
+            
+            <div className="p-6">
+              <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 mb-6">
+                <h3 className="text-lg font-semibold text-red-800 mb-3 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
+                  </svg>
+                  Tentang Informasi Serta Merta
+                </h3>
+                <p className="text-gray-800 leading-relaxed font-medium">
+                  Informasi yang wajib diumumkan atau disediakan secara serta merta yang dapat mengancam hajat hidup orang banyak dan ketertiban umum.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Content Section */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-7xl mx-auto">
-            {/* Breadcrumb */}
-            <div className="mb-8">
-              <nav className="flex text-sm text-gray-600">
-                <a href="/" className="hover:text-[#1B4332]">Home</a>
-                <span className="mx-2">/</span>
-                <a href="#" className="hover:text-[#1B4332]">PPID</a>
-                <span className="mx-2">/</span>
-                <span className="text-[#1B4332] font-medium">Informasi Serta Merta</span>
-              </nav>
-            </div>
-
-            {/* PPID Header */}
-            <div className="bg-white rounded-lg shadow-lg mb-8">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-3xl font-bold">PPID</h2>
-                <p className="text-green-100 mt-2">Pejabat Pengelola Informasi dan Dokumentasi</p>
-              </div>
-              
-              <div className="p-6">
-                <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 mb-6">
-                  <h3 className="text-lg font-semibold text-red-700 mb-3">
-                    🚨 Tentang Informasi Serta Merta
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Informasi yang wajib disampaikan serta merta adalah informasi yang dapat mengancam hajat hidup orang banyak dan ketertiban umum. Informasi ini harus diumumkan secara berkala dan langsung saat terjadi peristiwa penting, termasuk informasi tentang keamanan pangan, kontaminasi bahan makanan, kondisi darurat pangan, dan peringatan dini terkait ketahanan pangan.
-                  </p>
-                </div>
-
-                {/* Table Controls */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-700">Show</span>
-                    <select 
-                      value={itemsPerPage} 
-                      onChange={handleItemsPerPageChange}
-                      className="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-                    >
-                      <option value={10}>10</option>
-                      <option value={25}>25</option>
-                      <option value={50}>50</option>
-                      <option value={100}>100</option>
-                    </select>
-                    <span className="text-gray-700">entries</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-700">Search:</span>
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      onChange={handleSearch}
-                      className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1B4332] w-64"
-                      placeholder="Cari dokumen..."
-                    />
-                  </div>
-                </div>
-
-                {/* Data Table */}
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">
-                          Nama Dokumen
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700 w-32">
-                          Tahun
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-700 w-32">
-                          #
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {currentDocuments.map((doc, index) => (
-                        <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                            {doc.nama}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                            {doc.tahun}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-center">
-                            <button className="bg-[#1B4332] text-white px-4 py-2 rounded hover:bg-[#2D5A27] transition-colors text-sm">
-                              Download
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Table Info and Pagination */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6 gap-4">
-                  <div className="text-gray-700">
-                    Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of {totalItems} entries
-                    {searchTerm && (
-                      <span className="text-[#1B4332]"> (filtered from {allDocuments.length} total entries)</span>
-                    )}
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => handlePageChange(currentPage - 1)}
-                      disabled={currentPage === 1}
-                      className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Previous
-                    </button>
-                    
-                    {[...Array(Math.min(5, totalPages))].map((_, index) => {
-                      let pageNumber;
-                      if (totalPages <= 5) {
-                        pageNumber = index + 1;
-                      } else if (currentPage <= 3) {
-                        pageNumber = index + 1;
-                      } else if (currentPage >= totalPages - 2) {
-                        pageNumber = totalPages - 4 + index;
-                      } else {
-                        pageNumber = currentPage - 2 + index;
-                      }
-                      
-                      return (
-                        <button
-                          key={pageNumber}
-                          onClick={() => handlePageChange(pageNumber)}
-                          className={`px-3 py-2 border rounded ${
-                            currentPage === pageNumber
-                              ? 'bg-[#1B4332] text-white border-[#1B4332]'
-                              : 'border-gray-300 text-gray-700 hover:bg-gray-100'
-                          }`}
-                        >
-                          {pageNumber}
-                        </button>
-                      );
-                    })}
-                    
-                    {totalPages > 5 && currentPage < totalPages - 2 && (
-                      <>
-                        <span className="px-2">...</span>
-                        <button
-                          onClick={() => handlePageChange(totalPages)}
-                          className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100"
-                        >
-                          {totalPages}
-                        </button>
-                      </>
-                    )}
-                    
-                    <button
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      disabled={currentPage === totalPages}
-                      className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Next
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Additional Info Sections */}
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {/* Karakteristik Informasi */}
-              <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
-                <h3 className="text-lg font-medium text-red-700 mb-4">
-                  ⚡ Karakteristik Informasi Serta Merta
+          {/* Alert Types */}
+          <div className="grid gap-6 md:grid-cols-3 mb-8">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
+                <h3 className="font-semibold flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clipRule="evenodd"/>
+                  </svg>
+                  Keamanan Pangan
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Mengancam hajat hidup orang banyak</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Berkaitan dengan ketertiban umum</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Harus diumumkan secara berkala</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-red-500 mt-1">•</span>
-                    <span>Disampaikan langsung saat terjadi</span>
-                  </li>
-                </ul>
               </div>
-
-              {/* Jenis Informasi */}
-              <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-r-lg">
-                <h3 className="text-lg font-medium text-orange-700 mb-4">
-                  📢 Jenis Informasi yang Diumumkan
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Kontaminasi dan keracunan pangan</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Penarikan produk dari peredaran</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Kondisi darurat pangan daerah</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-orange-500 mt-1">•</span>
-                    <span>Gangguan distribusi pangan</span>
-                  </li>
-                </ul>
+              <div className="p-4">
+                <p className="text-gray-800 text-sm mb-3 font-medium">
+                  Informasi terkait kontaminasi, recall produk, atau masalah keamanan pangan lainnya.
+                </p>
+                <div className="bg-blue-50 p-3 rounded text-sm text-blue-800 font-semibold">
+                  <strong>Status:</strong> Pemantauan Aktif
+                </div>
               </div>
             </div>
 
-            {/* Mekanisme Penyampaian */}
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="text-blue-600 text-2xl">
-                    📋
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4">
+                <h3 className="font-semibold flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2 1 1 0 000-2zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1z" clipRule="evenodd"/>
+                  </svg>
+                  Ketahanan Pangan
+                </h3>
+              </div>
+              <div className="p-4">
+                <p className="text-gray-800 text-sm mb-3 font-medium">
+                  Informasi ketersediaan, akses, dan stabilitas pangan di daerah.
+                </p>
+                <div className="bg-amber-50 p-3 rounded text-sm text-amber-800 font-semibold">
+                  <strong>Status:</strong> Stabil Terkendali
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-4">
+                <h3 className="font-semibold flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
+                  </svg>
+                  Bencana & Darurat
+                </h3>
+              </div>
+              <div className="p-4">
+                <p className="text-gray-800 text-sm mb-3 font-medium">
+                  Informasi kondisi darurat yang mempengaruhi ketersediaan dan distribusi pangan.
+                </p>
+                <div className="bg-red-50 p-3 rounded text-sm text-red-800 font-semibold">
+                  <strong>Status:</strong> Siaga Normal
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Recent Alerts */}
+          <div className="bg-white rounded-lg shadow-lg mb-8">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] px-6 py-4">
+              <h3 className="text-lg font-semibold text-white flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
+                </svg>
+                Peringatan Terkini
+              </h3>
+              <p className="text-green-100 text-sm mt-1">Informasi terbaru yang perlu diketahui masyarakat</p>
+            </div>
+
+            <div className="p-6">
+              <div className="space-y-4">
+                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <svg className="w-5 h-5 text-yellow-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <div className="ml-3 flex-1">
+                      <h4 className="text-sm font-semibold text-yellow-800">Himbauan Cuaca Ekstrem</h4>
+                      <p className="text-sm text-yellow-700 mt-1">
+                        Waspadai dampak cuaca ekstrem terhadap distribusi dan ketersediaan pangan. Pastikan stok pangan keluarga mencukupi.
+                      </p>
+                      <p className="text-xs text-yellow-600 mt-2">25 Agustus 2025, 10:30 WIB</p>
+                    </div>
                   </div>
                 </div>
-                <div className="ml-3">
-                  <h3 className="text-lg font-medium text-blue-700 mb-2">
-                    Mekanisme Penyampaian Informasi Serta Merta
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Informasi serta merta disampaikan melalui berbagai kanal untuk memastikan jangkauan yang luas:
-                  </p>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                    <li>Pengumuman melalui website resmi Dinas Ketahanan Pangan</li>
-                    <li>Siaran pers dan konferensi pers</li>
-                    <li>Media sosial dan aplikasi pesan instan</li>
-                    <li>Koordinasi dengan media massa lokal dan nasional</li>
-                    <li>Pemberitahuan langsung kepada stakeholder terkait</li>
-                    <li>Sistem peringatan dini melalui SMS broadcast</li>
-                  </ol>
+
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <svg className="w-5 h-5 text-blue-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <div className="ml-3 flex-1">
+                      <h4 className="text-sm font-semibold text-blue-800">Update Harga Pangan Strategis</h4>
+                      <p className="text-sm text-blue-700 mt-1">
+                        Pemantauan harga beras, gula, minyak goreng, dan komoditas strategis lainnya menunjukkan kondisi stabil.
+                      </p>
+                      <p className="text-xs text-blue-600 mt-2">24 Agustus 2025, 14:15 WIB</p>
+                    </div>
+                  </div>
                 </div>
+
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0">
+                      <svg className="w-5 h-5 text-green-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <div className="ml-3 flex-1">
+                      <h4 className="text-sm font-semibold text-green-800">Ketersediaan Pangan Aman</h4>
+                      <p className="text-sm text-green-700 mt-1">
+                        Stok pangan pokok di seluruh Sumatera Barat dalam kondisi aman dan memadai untuk 3 bulan ke depan.
+                      </p>
+                      <p className="text-xs text-green-600 mt-2">23 Agustus 2025, 09:00 WIB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Emergency Contacts */}
+          <div className="bg-white rounded-lg shadow-lg">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 px-6 py-4">
+              <h3 className="text-lg font-semibold text-white flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                Kontak Darurat
+              </h3>
+              <p className="text-red-100 text-sm mt-1">Hubungi segera jika menemukan masalah pangan yang mengancam masyarakat</p>
+            </div>
+
+            <div className="p-6">
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="bg-red-50 p-6 rounded-lg border border-red-200">
+                  <div className="text-center">
+                    <div className="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-red-800 mb-2">Hotline Darurat</h4>
+                    <p className="text-2xl font-bold text-red-600 mb-2">119</p>
+                    <p className="text-sm text-gray-600">24 Jam Siaga</p>
+                  </div>
+                </div>
+
+                <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                  <div className="text-center">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-blue-800 mb-2">Email Darurat</h4>
+                    <p className="text-sm font-medium text-blue-600 mb-2">darurat@disanpangan.sumbar.go.id</p>
+                    <p className="text-sm text-gray-600">Respons Cepat</p>
+                  </div>
+                </div>
+
+                <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                  <div className="text-center">
+                    <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-green-800 mb-2">Kantor PPID</h4>
+                    <p className="text-sm font-medium text-green-600 mb-2">(0751) 123456</p>
+                    <p className="text-sm text-gray-600">Senin - Jumat, 08:00 - 16:00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                <h4 className="font-semibold text-gray-800 mb-2">📍 Alamat Kantor</h4>
+                <p className="text-gray-700 text-sm">
+                  Jl. Khatib Sulaiman No. 45, Padang Utara, Kota Padang, Sumatera Barat 25173
+                </p>
               </div>
             </div>
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

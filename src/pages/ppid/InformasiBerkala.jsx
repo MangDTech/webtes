@@ -1,81 +1,101 @@
 import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Breadcrumb from '../../components/Breadcrumb';
 
-function InformasiBerkala() {
+const InformasiBerkala = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Sample documents data
   const allDocuments = [
-    { nama: "Profil Badan Publik", tahun: "2017" },
-    { nama: "ASN DINAS PANGAN 2018", tahun: "2019" },
-    { nama: "Bezetting", tahun: "2025" },
-    { nama: "Bezzeting 2023", tahun: "2023" },
-    { nama: "Brosur Toko Tani Indonesia Center (TTIC) Rumah Inflasi", tahun: "2018" },
-    { nama: "Buku Berita Ketahanan Pangan 2017", tahun: "2018" },
-    { nama: "Buku Ketahanan Pangan 2015", tahun: "2016" },
-    { nama: "Buku Pelaksanaan Program Ketahanan Pangan Tahun 2017", tahun: "2018" },
-    { nama: "Buku Saku 2017", tahun: "2018" },
-    { nama: "Cascading/Pohon Kinerja", tahun: "2025" },
-    { nama: "Data Pegawai Dinas Ketahanan Pangan", tahun: "2024" },
-    { nama: "DIP Tahun 2023", tahun: "2023" },
-    { nama: "DPA Tahun 2024", tahun: "2024" },
-    { nama: "E-Katalog Pengadaan Barang/Jasa", tahun: "2023" },
-    { nama: "Formulir Permohonan Informasi", tahun: "2022" },
-    { nama: "IKK Tahun 2023", tahun: "2023" },
-    { nama: "Indikator Kinerja Utama (IKU)", tahun: "2024" },
-    { nama: "Informasi Kegiatan", tahun: "2024" },
-    { nama: "Jadwal Pelayanan", tahun: "2024" },
-    { nama: "Kamus Data", tahun: "2023" },
-    { nama: "LAKIP Tahun 2022", tahun: "2023" },
-    { nama: "LAKIP Tahun 2023", tahun: "2024" },
-    { nama: "Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP)", tahun: "2024" },
-    { nama: "Laporan Keuangan", tahun: "2024" },
-    { nama: "Laporan Penyelenggaraan Pemerintahan Daerah (LPPD)", tahun: "2024" },
-    { nama: "Maklumat Pelayanan", tahun: "2024" },
-    { nama: "Mekanisme Pengaduan Masyarakat", tahun: "2023" },
-    { nama: "Pagu Anggaran SKPD", tahun: "2024" },
-    { nama: "Pejabat Struktural", tahun: "2024" },
-    { nama: "Penyediaan dan Pelayanan Informasi Publik", tahun: "2023" },
-    { nama: "Peraturan Kepala Daerah", tahun: "2024" },
-    { nama: "Peraturan, Keputusan, dan/atau Kebijakan", tahun: "2024" },
-    { nama: "Perjanjian Kerja Sama", tahun: "2023" },
-    { nama: "Prosedur Memperoleh Informasi", tahun: "2023" },
-    { nama: "Prosedur Pengaduan", tahun: "2023" },
-    { nama: "Program Kerja", tahun: "2024" },
-    { nama: "Putusan Komisioner", tahun: "2023" },
-    { nama: "Realisasi Anggaran", tahun: "2024" },
-    { nama: "Rencana Anggaran Biaya", tahun: "2024" },
-    { nama: "Rencana Strategis (Renstra)", tahun: "2024" },
-    { nama: "Ringkasan Informasi tentang Program Proyek", tahun: "2024" },
-    { nama: "RPJMD Provinsi Sumatera Barat", tahun: "2022" },
-    { nama: "Standar Operasional Prosedur (SOP)", tahun: "2024" },
-    { nama: "Standar Pelayanan", tahun: "2024" },
-    { nama: "Struktur Organisasi", tahun: "2024" },
-    { nama: "Surat Keputusan Kepala Dinas", tahun: "2024" },
-    { nama: "Tarif Layanan", tahun: "2024" },
-    { nama: "Tata Cara Memperoleh Informasi", tahun: "2023" },
-    { nama: "Tugas, Fungsi, dan Kewenangan", tahun: "2024" },
-    { nama: "Visi, Misi, dan Tujuan", tahun: "2024" }
+    {
+      title: "Profil Badan Publik",
+      date: "2024-01-15",
+      size: "2.5 MB",
+      link: "#",
+      description: "Profil lengkap badan publik dan struktur organisasi"
+    },
+    {
+      title: "Laporan Akuntabilitas Kinerja Instansi Pemerintah (LAKIP) 2023",
+      date: "2024-02-20",
+      size: "3.8 MB",
+      link: "#",
+      description: "Laporan kinerja tahun 2023 sesuai dengan target yang ditetapkan"
+    },
+    {
+      title: "Rencana Strategis (Renstra) 2021-2026",
+      date: "2024-01-10",
+      size: "4.2 MB",
+      link: "#",
+      description: "Dokumen perencanaan strategis jangka menengah"
+    },
+    {
+      title: "Laporan Keuangan Tahun 2023",
+      date: "2024-03-15",
+      size: "5.1 MB",
+      link: "#",
+      description: "Laporan keuangan audited tahun anggaran 2023"
+    },
+    {
+      title: "Daftar Informasi Publik (DIP)",
+      date: "2024-01-05",
+      size: "1.8 MB",
+      link: "#",
+      description: "Katalog lengkap informasi publik yang tersedia"
+    },
+    {
+      title: "Standar Operasional Prosedur (SOP) Pelayanan",
+      date: "2024-02-10",
+      size: "2.9 MB",
+      link: "#",
+      description: "Prosedur standar dalam memberikan pelayanan kepada masyarakat"
+    },
+    {
+      title: "Peraturan Perundang-undangan Terkait",
+      date: "2024-01-25",
+      size: "3.2 MB",
+      link: "#",
+      description: "Kumpulan peraturan yang menjadi dasar hukum operasional"
+    },
+    {
+      title: "Data Statistik Pelayanan Publik",
+      date: "2024-03-01",
+      size: "1.5 MB",
+      link: "#",
+      description: "Data statistik layanan publik dan tingkat kepuasan masyarakat"
+    },
+    {
+      title: "Rencana Kerja Anggaran Tahunan (RKAT)",
+      date: "2024-01-20",
+      size: "4.5 MB",
+      link: "#",
+      description: "Rencana anggaran dan target kinerja tahunan"
+    },
+    {
+      title: "Maklumat Pelayanan",
+      date: "2024-02-05",
+      size: "0.8 MB",
+      link: "#",
+      description: "Komitmen pelayanan dan standar kualitas layanan"
+    }
   ];
 
   // Filter documents based on search term
   const filteredDocuments = allDocuments.filter(doc =>
-    doc.nama.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    doc.tahun.includes(searchTerm)
+    doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    doc.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Calculate pagination
-  const totalItems = filteredDocuments.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentDocuments = filteredDocuments.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(filteredDocuments.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentDocuments = filteredDocuments.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Pagination handlers
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   const handleItemsPerPageChange = (e) => {
@@ -83,217 +103,285 @@ function InformasiBerkala() {
     setCurrentPage(1);
   };
 
-  const handleSearch = (e) => {
+  const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
     setCurrentPage(1);
   };
 
+  const renderPagination = () => {
+    const pageNumbers = [];
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    
+    if (endPage - startPage < maxVisiblePages - 1) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+      pageNumbers.push(i);
+    }
+
+    return (
+      <div className="flex items-center justify-between bg-white px-6 py-4 border-t border-gray-200">
+        <div className="flex items-center text-sm text-gray-700">
+          Menampilkan {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, filteredDocuments.length)} dari {filteredDocuments.length} dokumen
+        </div>
+        
+        <div className="flex items-center space-x-2">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            ← Sebelumnya
+          </button>
+          
+          {startPage > 1 && (
+            <>
+              <button
+                onClick={() => handlePageChange(1)}
+                className="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                1
+              </button>
+              {startPage > 2 && <span className="px-2 text-gray-500">...</span>}
+            </>
+          )}
+          
+          {pageNumbers.map(number => (
+            <button
+              key={number}
+              onClick={() => handlePageChange(number)}
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+                currentPage === number
+                  ? 'bg-[#1B4332] text-white border border-[#1B4332]'
+                  : 'text-gray-900 bg-white border border-gray-300 hover:bg-gray-50'
+              }`}
+            >
+              {number}
+            </button>
+          ))}
+          
+          {endPage < totalPages && (
+            <>
+              {endPage < totalPages - 1 && <span className="px-2 text-gray-500">...</span>}
+              <button
+                onClick={() => handlePageChange(totalPages)}
+                className="px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                {totalPages}
+              </button>
+            </>
+          )}
+          
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Selanjutnya →
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Navbar />
-      
       <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Informasi Secara Berkala
-              </h1>
-              <p className="text-xl md:text-2xl text-green-100">
-                PPID Dinas Ketahanan Pangan Provinsi Sumatera Barat
-              </p>
+        <div className="container mx-auto px-4 py-8">
+          <Breadcrumb />
+          
+          {/* PPID Header */}
+          <div className="bg-white rounded-lg shadow-lg mb-8">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
+              <h2 className="text-3xl font-bold text-white drop-shadow-lg">PPID</h2>
+              <p className="mt-2 font-medium text-white/90">Pejabat Pengelola Informasi dan Dokumentasi</p>
+            </div>
+            
+            <div className="p-6">
+              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mb-6">
+                <h3 className="text-lg font-semibold text-blue-800 mb-3 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clipRule="evenodd"/>
+                  </svg>
+                  Tentang Informasi Secara Berkala
+                </h3>
+                <p className="text-gray-800 leading-relaxed font-medium">
+                  Informasi yang wajib disediakan dan diumumkan secara berkala adalah informasi yang telah dikuasai dan didokumentasikan oleh Badan Publik untuk diumumkan secara teratur dan rutin tanpa ada permintaan dari masyarakat. Informasi ini mencakup berbagai dokumen penting yang berkaitan dengan penyelenggaraan pemerintahan dan pelayanan publik.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Content Section */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-7xl mx-auto">
-            {/* Breadcrumb */}
-            <div className="mb-8">
-              <nav className="flex text-sm text-gray-600">
-                <a href="/" className="hover:text-[#1B4332]">Home</a>
-                <span className="mx-2">/</span>
-                <a href="#" className="hover:text-[#1B4332]">PPID</a>
-                <span className="mx-2">/</span>
-                <span className="text-[#1B4332] font-medium">Informasi Secara Berkala</span>
-              </nav>
+          {/* Search and Filter Section */}
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+              {/* Search Box */}
+              <div className="flex-1 max-w-md">
+                <label className="block text-sm font-semibold text-gray-800 mb-2">Cari Dokumen</label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Masukkan kata kunci..."
+                    value={searchTerm}
+                    onChange={handleSearchChange}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B4332] focus:border-transparent transition-all text-gray-800"
+                  />
+                  <svg className="absolute left-3 top-3.5 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Results Per Page */}
+              <div className="flex items-center gap-2">
+                <label className="text-sm font-semibold text-gray-800 whitespace-nowrap">Tampilkan:</label>
+                <select 
+                  value={itemsPerPage} 
+                  onChange={handleItemsPerPageChange}
+                  className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#1B4332] focus:border-transparent transition-all bg-white"
+                >
+                  <option value={10}>10</option>
+                  <option value={25}>25</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+                <span className="text-sm text-gray-700 whitespace-nowrap">per halaman</span>
+              </div>
             </div>
 
-            {/* PPID Header */}
-            <div className="bg-white rounded-lg shadow-lg mb-8">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-3xl font-bold">PPID</h2>
-                <p className="text-green-100 mt-2">Pejabat Pengelola Informasi dan Dokumentasi</p>
+            {/* Results Summary */}
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <div className="flex items-center justify-between text-sm text-gray-600">
+                <span>
+                  Menampilkan {indexOfFirstItem + 1} - {Math.min(indexOfLastItem, filteredDocuments.length)} dari {filteredDocuments.length} dokumen
+                  {searchTerm && (
+                    <span className="ml-2 text-[#1B4332] font-medium">
+                      (hasil pencarian: "{searchTerm}")
+                    </span>
+                  )}
+                </span>
+                <span className="bg-[#1B4332] text-white px-3 py-1 rounded-full text-xs font-medium">
+                  Total: {allDocuments.length} dokumen
+                </span>
               </div>
-              
-              <div className="p-6">
-                <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mb-6">
-                  <h3 className="text-lg font-semibold text-blue-700 mb-3">
-                    📋 Tentang Informasi Secara Berkala
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Informasi yang wajib disediakan dan diumumkan secara berkala adalah informasi yang telah dikuasai dan didokumentasikan oleh Badan Publik untuk diumumkan secara teratur dan rutin tanpa ada permintaan dari masyarakat. Informasi ini mencakup berbagai dokumen penting yang berkaitan dengan penyelenggaraan pemerintahan dan pelayanan publik.
-                  </p>
-                </div>
+            </div>
+          </div>
 
-                {/* Table Controls */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-700">Show</span>
-                    <select 
-                      value={itemsPerPage} 
-                      onChange={handleItemsPerPageChange}
-                      className="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-                    >
-                      <option value={10}>10</option>
-                      <option value={25}>25</option>
-                      <option value={50}>50</option>
-                      <option value={100}>100</option>
-                    </select>
-                    <span className="text-gray-700">entries</span>
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-700">Search:</span>
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      onChange={handleSearch}
-                      className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1B4332] w-64"
-                      placeholder="Cari dokumen..."
-                    />
-                  </div>
-                </div>
+          {/* Documents Table */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] px-6 py-4">
+              <h3 className="text-lg font-semibold text-white flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clipRule="evenodd"/>
+                </svg>
+                Daftar Dokumen Informasi Berkala
+              </h3>
+              <p className="text-green-100 text-sm mt-1">Klik pada nama dokumen untuk mengunduh</p>
+            </div>
 
-                {/* Data Table */}
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">
-                          Nama Dokumen
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700 w-32">
-                          Tahun
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-700 w-32">
-                          #
-                        </th>
+            <div className="overflow-x-auto">
+              <table className="min-w-full">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b">
+                      No.
+                    </th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b">
+                      Nama Dokumen
+                    </th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b">
+                      Tanggal Upload
+                    </th>
+                    <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b">
+                      Ukuran File
+                    </th>
+                    <th className="px-6 py-4 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider border-b">
+                      Download
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {currentDocuments.length > 0 ? (
+                    currentDocuments.map((doc, index) => (
+                      <tr key={index} className="hover:bg-gray-50 transition-colors">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 border-b">
+                          {indexOfFirstItem + index + 1}
+                        </td>
+                        <td className="px-6 py-4 text-sm border-b">
+                          <div className="flex items-start">
+                            <svg className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clipRule="evenodd"/>
+                            </svg>
+                            <div>
+                              <a
+                                href={doc.link}
+                                className="text-[#1B4332] hover:text-[#2D5A27] font-medium transition-colors hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {doc.title}
+                              </a>
+                              {doc.description && (
+                                <p className="text-gray-500 text-xs mt-1 line-clamp-2">
+                                  {doc.description}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 border-b">
+                          {doc.date}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 border-b">
+                          <span className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs font-medium">
+                            {doc.size}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-center border-b">
+                          <a
+                            href={doc.link}
+                            className="inline-flex items-center px-3 py-2 bg-[#1B4332] text-white text-xs font-medium rounded-lg hover:bg-[#2D5A27] transition-colors"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Download
+                          </a>
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {currentDocuments.map((doc, index) => (
-                        <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                            {doc.nama}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                            {doc.tahun}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-center">
-                            <button className="bg-[#1B4332] text-white px-4 py-2 rounded hover:bg-[#2D5A27] transition-colors text-sm">
-                              Download
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Table Info and Pagination */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6 gap-4">
-                  <div className="text-gray-700">
-                    Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of {totalItems} entries
-                    {searchTerm && (
-                      <span className="text-[#1B4332]"> (filtered from {allDocuments.length} total entries)</span>
-                    )}
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => handlePageChange(currentPage - 1)}
-                      disabled={currentPage === 1}
-                      className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Previous
-                    </button>
-                    
-                    {[...Array(Math.min(5, totalPages))].map((_, index) => {
-                      let pageNumber;
-                      if (totalPages <= 5) {
-                        pageNumber = index + 1;
-                      } else if (currentPage <= 3) {
-                        pageNumber = index + 1;
-                      } else if (currentPage >= totalPages - 2) {
-                        pageNumber = totalPages - 4 + index;
-                      } else {
-                        pageNumber = currentPage - 2 + index;
-                      }
-                      
-                      return (
-                        <button
-                          key={pageNumber}
-                          onClick={() => handlePageChange(pageNumber)}
-                          className={`px-3 py-2 border rounded ${
-                            currentPage === pageNumber
-                              ? 'bg-[#1B4332] text-white border-[#1B4332]'
-                              : 'border-gray-300 text-gray-700 hover:bg-gray-100'
-                          }`}
-                        >
-                          {pageNumber}
-                        </button>
-                      );
-                    })}
-                    
-                    {totalPages > 5 && currentPage < totalPages - 2 && (
-                      <>
-                        <span className="px-2">...</span>
-                        <button
-                          onClick={() => handlePageChange(totalPages)}
-                          className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100"
-                        >
-                          {totalPages}
-                        </button>
-                      </>
-                    )}
-                    
-                    <button
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      disabled={currentPage === totalPages}
-                      className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Next
-                    </button>
-                  </div>
-                </div>
-              </div>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan="5" className="px-6 py-12 text-center">
+                        <div className="flex flex-col items-center">
+                          <svg className="w-12 h-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          <p className="text-gray-500 text-lg font-medium">Tidak ada dokumen ditemukan</p>
+                          {searchTerm && (
+                            <p className="text-gray-400 text-sm mt-2">
+                              Coba gunakan kata kunci lain atau hapus filter pencarian
+                            </p>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
             </div>
 
-            {/* Additional Info */}
-            <div className="bg-green-50 border-l-4 border-[#1B4332] p-6 rounded-r-lg">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="text-[#1B4332] text-2xl">
-                    ℹ️
-                  </div>
-                </div>
-                <div className="ml-3">
-                  <h3 className="text-lg font-medium text-[#1B4332] mb-2">
-                    Informasi Tambahan
-                  </h3>
-                  <p className="text-gray-700">
-                    Semua dokumen yang tercantum dalam daftar Informasi Secara Berkala ini tersedia untuk diakses oleh masyarakat sesuai dengan ketentuan Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik. Untuk informasi lebih lanjut atau bantuan dalam mengakses dokumen, silakan hubungi PPID Dinas Ketahanan Pangan Provinsi Sumatera Barat.
-                  </p>
-                </div>
-              </div>
-            </div>
+            {/* Pagination */}
+            {totalPages > 1 && renderPagination()}
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );

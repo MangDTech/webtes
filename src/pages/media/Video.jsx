@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 import { useState } from "react";
 
 function Video() {
@@ -121,6 +122,7 @@ function Video() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+      <Breadcrumb />
       
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}

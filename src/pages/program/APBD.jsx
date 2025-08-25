@@ -1,10 +1,12 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function APBD() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+      <Breadcrumb />
       
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
@@ -12,15 +14,7 @@ function APBD() {
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Program APBD
           </h1>
-          <div className="text-sm text-gray-600 mb-4">
-            <span>Posted on 2017-04-03 12:11:59</span>
-            <span className="mx-2">|</span>
-            <span>by : Dimas Dwi Randa</span>
-            <span className="mx-2">|</span>
-            <span>3113 kali dibaca</span>
-            <span className="mx-2">|</span>
-            <span>Category:</span>
-          </div>
+          {/* Meta removed as requested */}
         </div>
 
         {/* Content */}

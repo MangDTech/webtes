@@ -1,10 +1,12 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function SurveyKepuasanMasyarakat() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
+      <Breadcrumb />
       <main className="flex-1 max-w-6xl mx-auto px-4 py-10">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold mb-6 text-[#0C3823]">Survey Kepuasan Masyarakat</h1>

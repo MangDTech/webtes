@@ -1,10 +1,12 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function KonsumsiKeamananPangan() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+      <Breadcrumb />
       
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
@@ -12,13 +14,6 @@ function KonsumsiKeamananPangan() {
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Tupoksi Bidang Konsumsi dan Keamanan Pangan
           </h1>
-          <div className="text-sm text-gray-600 mb-4">
-            <span>Posted on 2017-04-03 11:40:51</span>
-            <span className="mx-2">|</span>
-            <span>by : Dimas Dwi Randa</span>
-            <span className="mx-2">|</span>
-            <span>8027 kali dibaca</span>
-          </div>
         </div>
 
         {/* Content */}

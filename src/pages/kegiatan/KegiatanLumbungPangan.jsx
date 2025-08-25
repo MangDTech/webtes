@@ -1,14 +1,13 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 const KegiatanLumbungPangan = () => (
   <>
     <Navbar />
+    <Breadcrumb />
     <section id="lumbung-pangan" className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8 my-12">
-      <h1 className="text-2xl font-bold text-green-800 mb-2">Lumbung Pangan</h1>
-      <div className="text-xs text-gray-500 mb-4">
-        <span>Posted on 2017-04-03 12:14:02</span> | <span>by : Dimas Dwi Randa</span> | <span>5354 kali dibaca</span> | <span>Category:</span>
-      </div>
+      <h1 className="text-2xl font-bold text-green-800 mb-4">Lumbung Pangan</h1>
       <div className="prose max-w-none text-gray-800 text-justify space-y-4">
         <p>Keberadaan lumbung pangan masyarakat (LPM) di Sumbar benar-benar dirasakan masyarakat. Saat keadaan darurat atau dilanda bencana seperti banjir, longsor dan kekeringan, kebutuhan pangan terpenuhi. Lumbung pangan hadir menjadi solusi.</p>
         <p>Lumbung pangan masyarakat ditumbuhkembangkan untuk menampung cadangan pangan. Jika terjadi bencana yang menyebabkan pasokan bahan pangan terputus, musim paceklik atau gagal panen, persediaan pangan tetap ada di tengah masyarakat.</p>

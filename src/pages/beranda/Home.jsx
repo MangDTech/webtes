@@ -8,15 +8,15 @@ function Home() {
   const slides = [
     {
       id: 1,
-      image: "/slide1.png",
-      //title: "DISTRIBUSI CADANGAN PANGAN",
-      //description: "Mewujudkan ketahanan pangan yang berkelanjutan untuk masyarakat Sumatera Barat"
+  image: "/slide1.png",
+  title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
+  description: "Mewujudkan ketahanan pangan yang berkelanjutan, aman, dan bergizi untuk masyarakat"
     },
     {
       id: 2,
-      image: "/slide2.png", 
-      //title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
-      //description: "Berbagai program inovatif untuk meningkatkan ketersediaan dan kualitas pangan"
+  image: "/slide2.png", 
+  title: "DISTRIBUSI DAN CADANGAN PANGAN",
+  description: "Program inovatif untuk meningkatkan ketersediaan, distribusi, dan kualitas pangan"
     }
   ];
 
@@ -58,19 +58,29 @@ function Home() {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-contain bg-white"
+                className="w-full h-full object-cover"
               />
               {slide.title && (
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/60 to-transparent p-3 sm:p-4 md:p-8">
-                  <div className="max-w-4xl mx-auto text-center text-white">
-                    <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold drop-shadow-lg">
-                      {slide.title}
-                    </h1>
-                    {slide.description && (
-                      <p className="text-xs sm:text-sm md:text-base lg:text-xl drop-shadow-md mt-1 md:mt-3">
-                        {slide.description}
-                      </p>
-                    )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-end">
+                  <div className="w-full p-3 sm:p-5 md:p-8">
+                    <div className="max-w-5xl mx-auto text-center text-white">
+                      <h1 className="text-base sm:text-2xl md:text-4xl lg:text-5xl font-extrabold drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
+                        {slide.title}
+                      </h1>
+                      {slide.description && (
+                        <p className="text-xs sm:text-sm md:text-lg lg:text-xl drop-shadow-md mt-2 md:mt-4 opacity-95">
+                          {slide.description}
+                        </p>
+                      )}
+                      <div className="mt-3 md:mt-6 flex items-center justify-center gap-3">
+                        <a href="/profil/sekapur-sirih" className="px-3 py-2 md:px-5 md:py-3 bg-footer text-white rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition">
+                          Lihat Profil
+                        </a>
+                        <a href="/profil/hubungi-kami" className="px-3 py-2 md:px-5 md:py-3 bg-white/10 border border-white/30 text-white rounded-lg text-xs md:text-sm font-semibold hover:bg-white/20 transition">
+                          Kontak Kami
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -113,6 +123,54 @@ function Home() {
         </div>
       </section>
       
+      {/* Profil Singkat & Layanan Kami */}
+      <section className="bg-white py-10 md:py-14">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            {/* Profil Singkat */}
+            <div className="bg-gradient-to-br from-green-50 to-white border border-green-100 rounded-xl p-6 md:p-8 shadow-sm">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Profil Singkat</h2>
+              <p className="text-gray-700 leading-relaxed mb-5">
+                Dinas Pangan Provinsi Sumatera Barat berkomitmen mewujudkan ketahanan pangan
+                yang berkelanjutan dan gizi seimbang untuk masyarakat. Kami menjalankan program
+                strategis mulai dari ketersediaan, distribusi, hingga keamanan pangan.
+              </p>
+              <a href="/profil/sekapur-sirih" className="inline-flex items-center gap-2 px-5 py-3 bg-footer text-white rounded-lg font-semibold hover:opacity-95 transition">
+                Lihat Profile
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            {/* Layanan Kami */}
+            <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-5">Layanan Kami</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="/informasi/info-pengadaan" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition bg-gradient-to-br from-green-50 to-white">
+                  <div className="text-green-700 text-2xl mb-2">📄</div>
+                  <div className="font-semibold text-gray-900 mb-1">Info Pengadaan</div>
+                  <div className="text-sm text-gray-600">Informasi pengadaan barang dan jasa</div>
+                </a>
+                <a href="/informasi/laporan-kinerja" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
+                  <div className="text-blue-700 text-2xl mb-2">📊</div>
+                  <div className="font-semibold text-gray-900 mb-1">Laporan Kinerja</div>
+                  <div className="text-sm text-gray-600">Capaian kinerja dinas secara berkala</div>
+                </a>
+                <a href="/media/kegiatan" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
+                  <div className="text-orange-700 text-2xl mb-2">🖼️</div>
+                  <div className="font-semibold text-gray-900 mb-1">Galeri Kegiatan</div>
+                  <div className="text-sm text-gray-600">Dokumentasi foto dan video kegiatan</div>
+                </a>
+                <a href="/profil/hubungi-kami" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition bg-gradient-to-br from-green-50 to-white">
+                  <div className="text-red-700 text-2xl mb-2">📞</div>
+                  <div className="font-semibold text-gray-900 mb-1">Hubungi Kami</div>
+                  <div className="text-sm text-gray-600">Informasi kontak dan alamat</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main Content Section - Berita dan Sidebar */}
       <section className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-4">
@@ -127,17 +185,52 @@ function Home() {
               
               {/* Grid Berita */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {BeritaList.slice(0, 6).map((berita, index) => (
+                {BeritaList.slice(0, 6).map((berita, index) => {
+                  // Determine fallback image based on content
+                  const getFallbackImage = (title) => {
+                    if (title.toLowerCase().includes('rapat') || title.toLowerCase().includes('koordinasi')) {
+                      return 'https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'; // meeting
+                    } else if (title.toLowerCase().includes('festival') || title.toLowerCase().includes('pangan')) {
+                      return 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'; // food
+                    } else if (title.toLowerCase().includes('penghargaan') || title.toLowerCase().includes('award')) {
+                      return 'https://images.unsplash.com/photo-1599493758267-c6c884c7071f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'; // award
+                    } else if (title.toLowerCase().includes('workshop') || title.toLowerCase().includes('pelatihan')) {
+                      return 'https://images.unsplash.com/photo-1531538606174-0f90ff5ffe66?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'; // workshop
+                    } else if (title.toLowerCase().includes('sertifikasi') || title.toLowerCase().includes('registrasi')) {
+                      return 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'; // documents
+                    } else {
+                      return 'https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'; // general news
+                    }
+                  };
+
+                  const fallbackImage = getFallbackImage(berita.title);
+
+                  return (
                   <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="h-40 bg-gray-200 flex items-center justify-center">
-                      {berita.image ? (
-                        <img src={berita.image} alt={berita.title} className="w-full h-full object-cover" />
-                      ) : (
-                        <div className="text-center text-gray-400">
-                          <div className="text-4xl mb-2">📷</div>
-                          <div className="text-sm">NO IMAGE<br/>AVAILABLE</div>
-                        </div>
-                      )}
+                    <div
+                      className="h-40 bg-gray-100 relative"
+                      role="img"
+                      aria-label={berita.title}
+                      style={{
+                        backgroundImage: berita.image ? `url(${berita.image})` : `url(${fallbackImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                      }}
+                    >
+                      {/* Backup img element untuk mendeteksi error */}
+                      <img
+                        src={berita.image || fallbackImage}
+                        alt={berita.title}
+                        className="absolute inset-0 w-full h-full object-cover opacity-0"
+                        onError={(e) => {
+                          // Ubah background parent jika image gagal load
+                          const parent = e.currentTarget.parentElement;
+                          parent.style.backgroundImage = `url(${fallbackImage})`;
+                          parent.style.backgroundSize = 'cover';
+                          parent.style.backgroundColor = '#f3f4f6';
+                        }}
+                      />
                     </div>
                     <div className="p-4">
                       <h3 className="font-semibold text-gray-800 mb-2 line-clamp-2">
@@ -147,14 +240,15 @@ function Home() {
                         {berita.excerpt}
                       </p>
                       <div className="flex justify-between items-center text-xs text-gray-500">
-                        <span>{berita.views} views | {berita.date}</span>
+                        <span>{berita.date}</span>
                         <span className="bg-blue-500 text-white px-2 py-1 rounded">
                           {berita.category}
                         </span>
                       </div>
                     </div>
                   </div>
-                ))}
+                );
+              })}
               </div>
             </div>
 
@@ -224,7 +318,26 @@ function Home() {
         </div>
       </section>
 
-      {/* Additional Content Sections */}
+      {/* Aplikasi Kami */}
+      <section className="bg-white py-10 md:py-14">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div className="md:col-span-2">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Aplikasi Kami</h2>
+              <p className="text-gray-700 mb-5">Pantau harga pangan dan informasi strategis melalui aplikasi web resmi kami.</p>
+              <a href="https://sipangan-provsumbar.badanpangan.go.id/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 bg-footer text-white rounded-lg font-semibold hover:opacity-95 transition">
+                Buka Aplikasi
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+            <div className="w-full h-48 md:h-60 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center shadow-inner">
+              <img src="/logo-sumbar.png" alt="Logo" className="w-28 h-28 object-contain opacity-90"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Content Sections (tetap ada) */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -363,6 +476,29 @@ function Home() {
           </div>
         </div>
       </section>    
+
+      {/* FAQ */}
+      <section className="bg-white py-10 md:py-14">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Pertanyaan yang Sering Diajukan</h2>
+          <div className="space-y-3">
+            {[
+              {q: 'Apa itu Dinas Pangan Provinsi Sumatera Barat?', a: 'Lembaga pemerintahan daerah yang bertanggung jawab dalam urusan ketahanan pangan dan distribusi bahan pangan di wilayah Provinsi Sumatera Barat.'},
+              {q: 'Bagaimana cara menghubungi Dinas Pangan?', a: 'Anda dapat menghubungi melalui telepon (0751) 7051526 atau email pangan@sumbarprov.go.id, serta kunjungi halaman Hubungi Kami.'},
+              {q: 'Apa saja layanan yang disediakan?', a: 'Informasi pengadaan, laporan kinerja, data dan statistik pangan, publikasi kegiatan, serta layanan pengaduan dan informasi publik.'},
+            ].map((item, idx) => (
+              <details key={idx} className="group border border-gray-200 rounded-lg p-4 open:shadow-sm">
+                <summary className="list-none cursor-pointer flex items-center justify-between font-semibold text-gray-900">
+                  {item.q}
+                  <span className="ml-2 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+                </summary>
+                <p className="mt-2 text-gray-700 leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <Footer />
     </div>

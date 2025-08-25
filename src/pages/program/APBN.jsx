@@ -1,10 +1,12 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function APBN() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+      <Breadcrumb />
       
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
@@ -12,13 +14,7 @@ function APBN() {
           <h1 className="text-3xl font-bold text-gray-800 mb-4">
             Program APBN
           </h1>
-          <div className="text-sm text-gray-600 mb-4">
-            <span>Posted on 2017-04-03 12:11:42</span>
-            <span className="mx-2">|</span>
-            <span>by : Dimas Dwi Randa</span>
-            <span className="mx-2">|</span>
-            <span>3393 kali dibaca</span>
-          </div>
+          {/* Meta removed as requested */}
         </div>
 
         {/* Content */}

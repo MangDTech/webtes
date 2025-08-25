@@ -1,13 +1,15 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function VisiMisiTupoksi() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Navbar />
+      <Breadcrumb />
       <main className="flex-1 max-w-4xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold mb-4 text-footer">Visi, Misi dan Tupoksi</h1>
-        <div className="text-sm text-gray-500 mb-2">Posted on 2017-04-03 10:45:40 | by : Dimas Dwi Randa | 6591 kali dibaca | Category:</div>
+  <h1 className="text-3xl font-bold mb-4 text-footer">Visi, Misi dan Tupoksi</h1>
+  {/* Meta removed as requested */}
         {/* Image Section */}
         <div className="flex justify-center mb-8">
           <img 

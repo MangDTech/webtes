@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Breadcrumb from '../../components/Breadcrumb';
 
 function Berita() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -112,6 +113,7 @@ function Berita() {
   return (
     <>
       <Navbar />
+      <Breadcrumb />
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8 max-w-7xl">
           {/* Header */}

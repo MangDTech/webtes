@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { useToast } from '../../components/ToastProvider';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Breadcrumb from "../../components/Breadcrumb";
 
 function HubungiKami() {
+  const { addToast } = useToast();
   const [formData, setFormData] = useState({
     email: '',
     nama: '',
@@ -21,7 +24,7 @@ function HubungiKami() {
     e.preventDefault();
     // Handle form submission logic here
     console.log('Form submitted:', formData);
-    alert('Pesan Anda telah dikirim!');
+  addToast({ type: 'success', title: 'Terkirim', description: 'Pesan Anda telah dikirim.' });
     // Reset form
     setFormData({
       email: '',
@@ -41,6 +44,7 @@ function HubungiKami() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
+      <Breadcrumb />
       
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}

@@ -1,348 +1,236 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 const InformasiSetiapSaat = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const allDocuments = [
-    { nama: "BUKU PETUNJUK TEKNIS AKP CETAK", tahun: "2019" },
-    { nama: "Data Sirup 2019", tahun: "2019" },
-    { nama: "DATABASE 2018", tahun: "2019" },
-    { nama: "DPA 19 Dinas Pangan", tahun: "2019" },
-    { nama: "INFORMASI PUBLIK CAD PANGAN 2018", tahun: "2019" },
-    { nama: "INFORMASI PUBLIK SEKSI CADANGAN PANGAN", tahun: "2019" },
-    { nama: "Informasi Tentang Profil Badan Publik a. Kedudukan/Domisili/Alamat Lengkap", tahun: "2025" },
-    { nama: "JUKLAKJUKNIS APBD 2018", tahun: "2019" },
-    { nama: "JUKLAKJUKNIS APBN 2018", tahun: "2019" },
-    { nama: "JUKNIS KRPL TAHUN 2018", tahun: "2019" },
-    { nama: "Juknis AKP Tahun 2019", tahun: "2020" },
-    { nama: "Juknis Beras Reserve 2019", tahun: "2020" },
-    { nama: "Juknis Cadangan Pangan Masyarakat 2019", tahun: "2020" },
-    { nama: "Juknis Gerakan Percepatan Penganekaragaman Konsumsi Pangan 2019", tahun: "2020" },
-    { nama: "Juknis Kawasan Rumah Pangan Lestari 2019", tahun: "2020" },
-    { nama: "Juknis Lumbung Pangan Masyarakat 2019", tahun: "2020" },
-    { nama: "Juknis Optimalisasi Pekarangan 2019", tahun: "2020" },
-    { nama: "Juknis PDRP 2019", tahun: "2020" },
-    { nama: "Juknis Penyediaan dan Distribusi Cadangan Pangan 2019", tahun: "2020" },
-    { nama: "Juknis Percepatan Diversifikasi Konsumsi Pangan Lokal 2019", tahun: "2020" },
-    { nama: "Keputusan Kepala Dinas tentang Penetapan Standar Operasional Prosedur (SOP)", tahun: "2023" },
-    { nama: "Laporan Akses Informasi Publik", tahun: "2024" },
-    { nama: "Laporan Kegiatan dan Kinerja", tahun: "2024" },
-    { nama: "Laporan Pengelolaan Lingkungan Hidup", tahun: "2024" },
-    { nama: "Mekanisme Keberatan atas Pelayanan", tahun: "2023" },
-    { nama: "Pedoman Pelaksanaan Program", tahun: "2024" },
-    { nama: "Pedoman Sistem Manajemen Mutu", tahun: "2023" },
-    { nama: "Peraturan Internal tentang Organisasi dan Tata Kerja", tahun: "2024" },
-    { nama: "Petunjuk Pelaksanaan Kegiatan", tahun: "2024" },
-    { nama: "Profil Pimpinan dan Pejabat Struktural", tahun: "2024" },
-    { nama: "Prosedur Operasional Standar Pelayanan", tahun: "2024" },
-    { nama: "Rencana Kerja dan Anggaran Tahunan (RKAT)", tahun: "2024" },
-    { nama: "Ringkasan Hasil Audit Internal", tahun: "2024" },
-    { nama: "Salinan Dokumen yang Diminta berdasarkan UU KIP", tahun: "2023" },
-    { nama: "Standar Pelayanan Minimum (SPM)", tahun: "2024" },
-    { nama: "Surat Keputusan tentang Kebijakan Teknis", tahun: "2024" },
-    { nama: "Data Agregat Statistik", tahun: "2024" },
-    { nama: "Informasi tentang Peraturan Perundang-undangan yang Berlaku", tahun: "2024" },
-    { nama: "Informasi tentang Hak dan Kewajiban Badan Publik dan Masyarakat", tahun: "2023" }
-  ];
-
-  // Filter documents based on search term
-  const filteredDocuments = allDocuments.filter(doc =>
-    doc.nama.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    doc.tahun.includes(searchTerm)
-  );
-
-  // Calculate pagination
-  const totalItems = filteredDocuments.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentDocuments = filteredDocuments.slice(startIndex, endIndex);
-
-  // Pagination handlers
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const handleItemsPerPageChange = (e) => {
-    setItemsPerPage(parseInt(e.target.value));
-    setCurrentPage(1);
-  };
-
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
-    setCurrentPage(1);
-  };
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Navbar />
-      
       <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Informasi Setiap Saat
-              </h1>
-              <p className="text-xl md:text-2xl text-green-100">
-                PPID Dinas Ketahanan Pangan Provinsi Sumatera Barat
-              </p>
+        <div className="container mx-auto px-4 py-8">
+          {/* PPID Header */}
+          <div className="bg-white rounded-lg shadow-lg mb-8">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
+              <h2 className="text-3xl font-bold text-white drop-shadow-lg">PPID</h2>
+              <p className="mt-2 font-medium text-white/90">Pejabat Pengelola Informasi dan Dokumentasi</p>
+            </div>
+            
+            <div className="p-6">
+              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mb-6">
+                <h3 className="text-lg font-semibold text-blue-800 mb-3 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
+                  </svg>
+                  Tentang Informasi Setiap Saat
+                </h3>
+                <p className="text-gray-800 leading-relaxed font-medium">
+                  Informasi yang wajib disediakan oleh Badan Publik secara berkala, informasi yang wajib diumumkan secara serta merta, dan informasi yang wajib tersedia setiap saat.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Content Section */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-7xl mx-auto">
-            {/* Breadcrumb */}
-            <div className="mb-8">
-              <nav className="flex text-sm text-gray-600">
-                <a href="/" className="hover:text-[#1B4332]">Home</a>
-                <span className="mx-2">/</span>
-                <a href="#" className="hover:text-[#1B4332]">PPID</a>
-                <span className="mx-2">/</span>
-                <span className="text-[#1B4332] font-medium">Informasi Setiap Saat</span>
-              </nav>
+          {/* Information Access Guide */}
+          <div className="bg-white rounded-lg shadow-lg mb-8">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] px-6 py-4">
+              <h3 className="text-lg font-semibold text-white flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clipRule="evenodd"/>
+                </svg>
+                Cara Mengakses Informasi
+              </h3>
+              <p className="text-green-100 text-sm mt-1">Panduan untuk mendapatkan informasi publik</p>
             </div>
 
-            {/* PPID Header */}
-            <div className="bg-white rounded-lg shadow-lg mb-8">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-3xl font-bold">PPID</h2>
-                <p className="text-green-100 mt-2">Pejabat Pengelola Informasi dan Dokumentasi</p>
-              </div>
-              
-              <div className="p-6">
-                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500 mb-6">
-                  <h3 className="text-lg font-semibold text-green-700 mb-3">
-                    🕐 Tentang Informasi Setiap Saat
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    Informasi yang wajib tersedia setiap saat adalah informasi yang telah dikuasai dan didokumentasikan oleh Badan Publik serta telah dinyatakan terbuka sebagai informasi yang dapat diakses oleh pengguna informasi bilamana ada permintaan. Informasi ini mencakup dokumen-dokumen teknis, laporan kegiatan, dan berbagai petunjuk pelaksanaan yang dapat diminta sewaktu-waktu oleh masyarakat.
+            <div className="p-6">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                      1
+                    </div>
+                    <h4 className="font-semibold text-green-800">Identifikasi Informasi</h4>
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium">
+                    Tentukan jenis informasi yang Anda butuhkan dari daftar informasi yang tersedia.
                   </p>
                 </div>
 
-                {/* Table Controls */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-700">Show</span>
-                    <select 
-                      value={itemsPerPage} 
-                      onChange={handleItemsPerPageChange}
-                      className="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-[#1B4332]"
-                    >
-                      <option value={10}>10</option>
-                      <option value={25}>25</option>
-                      <option value={50}>50</option>
-                      <option value={100}>100</option>
-                    </select>
-                    <span className="text-gray-700">entries</span>
+                <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                      2
+                    </div>
+                    <h4 className="font-semibold text-blue-800">Ajukan Permohonan</h4>
                   </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-700">Search:</span>
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      onChange={handleSearch}
-                      className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#1B4332] w-64"
-                      placeholder="Cari dokumen..."
-                    />
-                  </div>
-                </div>
-
-                {/* Data Table */}
-                <div className="overflow-x-auto">
-                  <table className="w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700">
-                          Nama Dokumen
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-left font-semibold text-gray-700 w-32">
-                          Tahun
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-center font-semibold text-gray-700 w-32">
-                          #
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {currentDocuments.map((doc, index) => (
-                        <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                            {doc.nama}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-gray-700">
-                            {doc.tahun}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-center">
-                            <button className="bg-[#1B4332] text-white px-4 py-2 rounded hover:bg-[#2D5A27] transition-colors text-sm">
-                              Download
-                            </button>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Table Info and Pagination */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6 gap-4">
-                  <div className="text-gray-700">
-                    Showing {startIndex + 1} to {Math.min(endIndex, totalItems)} of {totalItems} entries
-                    {searchTerm && (
-                      <span className="text-[#1B4332]"> (filtered from {allDocuments.length} total entries)</span>
-                    )}
-                  </div>
-                  
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => handlePageChange(currentPage - 1)}
-                      disabled={currentPage === 1}
-                      className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Previous
-                    </button>
-                    
-                    {[...Array(Math.min(5, totalPages))].map((_, index) => {
-                      let pageNumber;
-                      if (totalPages <= 5) {
-                        pageNumber = index + 1;
-                      } else if (currentPage <= 3) {
-                        pageNumber = index + 1;
-                      } else if (currentPage >= totalPages - 2) {
-                        pageNumber = totalPages - 4 + index;
-                      } else {
-                        pageNumber = currentPage - 2 + index;
-                      }
-                      
-                      return (
-                        <button
-                          key={pageNumber}
-                          onClick={() => handlePageChange(pageNumber)}
-                          className={`px-3 py-2 border rounded ${
-                            currentPage === pageNumber
-                              ? 'bg-[#1B4332] text-white border-[#1B4332]'
-                              : 'border-gray-300 text-gray-700 hover:bg-gray-100'
-                          }`}
-                        >
-                          {pageNumber}
-                        </button>
-                      );
-                    })}
-                    
-                    {totalPages > 5 && currentPage < totalPages - 2 && (
-                      <>
-                        <span className="px-2">...</span>
-                        <button
-                          onClick={() => handlePageChange(totalPages)}
-                          className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100"
-                        >
-                          {totalPages}
-                        </button>
-                      </>
-                    )}
-                    
-                    <button
-                      onClick={() => handlePageChange(currentPage + 1)}
-                      disabled={currentPage === totalPages}
-                      className="px-3 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      Next
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Additional Info Sections */}
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
-              {/* Karakteristik Informasi */}
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
-                <h3 className="text-lg font-medium text-blue-700 mb-4">
-                  📋 Karakteristik Informasi Setiap Saat
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Informasi yang sudah dikuasai dan didokumentasikan</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Dinyatakan terbuka untuk publik</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Dapat diakses berdasarkan permintaan</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-blue-500 mt-1">•</span>
-                    <span>Tersedia dalam format yang mudah diakses</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Jenis Dokumen */}
-              <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
-                <h3 className="text-lg font-medium text-green-700 mb-4">
-                  📄 Jenis Dokumen yang Tersedia
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-green-500 mt-1">•</span>
-                    <span>Petunjuk Teknis dan Pelaksanaan</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-green-500 mt-1">•</span>
-                    <span>Laporan Kegiatan dan Kinerja</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-green-500 mt-1">•</span>
-                    <span>Database dan Informasi Statistik</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-green-500 mt-1">•</span>
-                    <span>SOP dan Prosedur Operasional</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Cara Mengakses */}
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="text-yellow-600 text-2xl">
-                    💡
-                  </div>
-                </div>
-                <div className="ml-3">
-                  <h3 className="text-lg font-medium text-yellow-700 mb-2">
-                    Cara Mengakses Informasi Setiap Saat
-                  </h3>
-                  <p className="text-gray-700 mb-4">
-                    Untuk mengakses informasi setiap saat, masyarakat dapat:
+                  <p className="text-gray-800 text-sm font-medium">
+                    Isi formulir permohonan informasi publik dengan lengkap dan jelas.
                   </p>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                    <li>Mengajukan permohonan informasi secara tertulis kepada PPID</li>
-                    <li>Menyebutkan secara jelas informasi yang diminta</li>
-                    <li>Menyertakan identitas dan kontak yang dapat dihubungi</li>
-                    <li>Menunggu proses verifikasi dan persiapan dokumen</li>
-                    <li>Menerima informasi sesuai dengan ketentuan yang berlaku</li>
-                  </ol>
+                </div>
+
+                <div className="bg-amber-50 p-6 rounded-lg border border-amber-200">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-amber-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                      3
+                    </div>
+                    <h4 className="font-semibold text-amber-800">Proses Verifikasi</h4>
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium">
+                    Tunggu proses verifikasi dan validasi permohonan oleh petugas PPID.
+                  </p>
+                </div>
+
+                <div className="bg-purple-50 p-6 rounded-lg border border-purple-200">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                      4
+                    </div>
+                    <h4 className="font-semibold text-purple-800">Dapatkan Informasi</h4>
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium">
+                    Terima informasi yang diminta sesuai dengan ketentuan yang berlaku.
+                  </p>
+                </div>
+
+                <div className="bg-red-50 p-6 rounded-lg border border-red-200">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                      5
+                    </div>
+                    <h4 className="font-semibold text-red-800">Evaluasi Layanan</h4>
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium">
+                    Berikan feedback untuk meningkatkan kualitas layanan informasi publik.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-gray-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">
+                      ?
+                    </div>
+                    <h4 className="font-semibold text-gray-800">Butuh Bantuan?</h4>
+                  </div>
+                  <p className="text-gray-800 text-sm font-medium">
+                    Hubungi petugas PPID untuk mendapatkan bantuan dan informasi lebih lanjut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Information Categories */}
+          <div className="bg-white rounded-lg shadow-lg">
+            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] px-6 py-4">
+              <h3 className="text-lg font-semibold text-white flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm0 2h12v8H4V6z" clipRule="evenodd"/>
+                </svg>
+                Kategori Informasi yang Tersedia
+              </h3>
+              <p className="text-green-100 text-sm mt-1">Jenis-jenis informasi yang dapat diakses oleh masyarakat</p>
+            </div>
+
+            <div className="p-6">
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-gray-800 mb-4">Informasi Wajib Tersedia</h4>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h5 className="font-medium text-blue-800 mb-2">📋 Informasi Organisasi</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Profil dan struktur organisasi</li>
+                      <li>• Visi, misi, dan tujuan</li>
+                      <li>• Tugas dan fungsi</li>
+                      <li>• Data pejabat dan pegawai</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    <h5 className="font-medium text-green-800 mb-2">📊 Informasi Kinerja</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Laporan kinerja tahunan</li>
+                      <li>• Program dan kegiatan</li>
+                      <li>• Pencapaian target kinerja</li>
+                      <li>• Evaluasi dan rekomendasi</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                    <h5 className="font-medium text-yellow-800 mb-2">💰 Informasi Keuangan</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Laporan keuangan tahunan</li>
+                      <li>• Rencana anggaran</li>
+                      <li>• Realisasi anggaran</li>
+                      <li>• Audit keuangan</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-gray-800 mb-4">Informasi Wajib Diumumkan</h4>
+                  
+                  <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                    <h5 className="font-medium text-purple-800 mb-2">📢 Informasi Berkala</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Rencana strategis</li>
+                      <li>• Kebijakan dan peraturan</li>
+                      <li>• Prosedur operasional</li>
+                      <li>• Daftar informasi publik</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                    <h5 className="font-medium text-red-800 mb-2">⚡ Informasi Serta Merta</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Keadaan darurat atau krisis</li>
+                      <li>• Ancaman terhadap keamanan</li>
+                      <li>• Informasi lingkungan hidup</li>
+                      <li>• Peringatan dini masyarakat</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                    <h5 className="font-medium text-indigo-800 mb-2">📝 Informasi Lainnya</h5>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Layanan informasi publik</li>
+                      <li>• Standar operasional prosedur</li>
+                      <li>• Formulir permohonan</li>
+                      <li>• Mekanisme pengaduan</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-lg">
+                  <h4 className="font-semibold mb-4 flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
+                    </svg>
+                    Informasi Kontak PPID
+                  </h4>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    <div>
+                      <p className="text-green-100 text-sm">📧 Email</p>
+                      <p className="font-medium">ppid@disanpangan.sumbar.go.id</p>
+                    </div>
+                    <div>
+                      <p className="text-green-100 text-sm">📞 Telepon</p>
+                      <p className="font-medium">(0751) 123456</p>
+                    </div>
+                    <div>
+                      <p className="text-green-100 text-sm">⏰ Jam Layanan</p>
+                      <p className="font-medium">Senin - Jumat, 08:00 - 16:00 WIB</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
