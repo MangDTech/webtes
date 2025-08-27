@@ -1,11 +1,13 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import Breadcrumb from '../../components/Breadcrumb';
 
 const InformasiSetiapSaat = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Navbar />
+      <Breadcrumb />
       <main className="flex-grow">
         <div className="container mx-auto px-4 py-8">
           {/* PPID Header */}

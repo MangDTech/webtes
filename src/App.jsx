@@ -22,6 +22,7 @@ import Video from './pages/media/Video';
 import Kegiatan from './pages/media/Kegiatan';
 import Berita from './pages/data/Berita';
 import Download from './pages/data/Download';
+import SearchPage from './pages/data/SearchPage';
 import APBN from './pages/program/APBN';
 import APBD from './pages/program/APBD';
 import PedomanUmum from './pages/informasi/PedomanUmum';
@@ -64,10 +65,11 @@ function App() {
         <Route path="/bidang/konsumsi-keamanan-pangan" element={<KonsumsiKeamananPangan />} />
         <Route path="/bidang/uptd-bpsmp" element={<UPTDBPSMP />} />
         <Route path="/media/foto" element={<Foto />} />
-  <Route path="/media/video" element={<Video />} />
-  <Route path="/media/kegiatan" element={<Kegiatan />} />       
-        <Route path="/berita" element={<Berita />} />
-        <Route path="/download" element={<Download />} />
+        <Route path="/media/video" element={<Video />} />
+        <Route path="/media/kegiatan" element={<Kegiatan />} />       
+        <Route path="/data/berita" element={<Berita />} />
+        <Route path="/data/download" element={<Download />} />
+        <Route path="/data/search" element={<SearchPage />} />
         <Route path="/program/apbn" element={<APBN />} />
         <Route path="/program/apbd" element={<APBD />} />
         <Route path="/informasi/pedoman-umum" element={<PedomanUmum />} />

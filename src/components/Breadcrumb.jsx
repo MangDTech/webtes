@@ -56,10 +56,9 @@ function Breadcrumb() {
     
     // PPID
     'ppid': 'PPID',
-    'profil-singkat-ppid': 'Profil Singkat PPID',
-    'visi-misi-ppid': 'Visi Misi PPID',
-    'tugas-fungsi-ppid': 'Tugas dan Fungsi PPID',
-    'struktur-organisasi-ppid': 'Struktur Organisasi PPID',
+    'profil-singkat': 'Profil Singkat PPID',
+    'visi-misi': 'Visi Misi PPID',
+    'tugas-fungsi': 'Tugas dan Fungsi PPID',
     'informasi-berkala': 'Informasi Secara Berkala',
     'informasi-setiap-saat': 'Informasi Setiap Saat',
     'informasi-serta-merta': 'Informasi Serta Merta',
@@ -109,10 +108,10 @@ function Breadcrumb() {
     '/informasi/info-pengadaan': ['Home', 'Informasi', 'Info Pengadaan'],
     '/informasi/laporan-kinerja': ['Home', 'Informasi', 'Laporan Kinerja'],
     
-    '/ppid/profil-singkat-ppid': ['Home', 'PPID', 'Profil Singkat PPID'],
-    '/ppid/visi-misi-ppid': ['Home', 'PPID', 'Visi Misi PPID'],
-    '/ppid/tugas-fungsi-ppid': ['Home', 'PPID', 'Tugas dan Fungsi PPID'],
-    '/ppid/struktur-organisasi-ppid': ['Home', 'PPID', 'Struktur Organisasi PPID'],
+    '/ppid/profil-singkat': ['Home', 'PPID', 'Profil Singkat PPID'],
+    '/ppid/visi-misi': ['Home', 'PPID', 'Visi Misi PPID'],
+    '/ppid/tugas-fungsi': ['Home', 'PPID', 'Tugas dan Fungsi PPID'],
+    '/ppid/struktur-organisasi': ['Home', 'PPID', 'Struktur Organisasi PPID'],
     '/ppid/informasi-berkala': ['Home', 'PPID', 'Informasi Secara Berkala'],
     '/ppid/informasi-setiap-saat': ['Home', 'PPID', 'Informasi Setiap Saat'],
     '/ppid/informasi-serta-merta': ['Home', 'PPID', 'Informasi Serta Merta'],

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+import QuickSearch from "../../components/QuickSearch"
 import { BeritaList } from "../../data/BeritaSection"
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -122,6 +123,9 @@ function Home() {
           ))}
         </div>
       </section>
+      
+      {/* Quick Search Section */}
+      <QuickSearch />
       
       {/* Profil Singkat & Layanan Kami */}
       <section className="bg-white py-10 md:py-14">

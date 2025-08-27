@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBox from './SearchBox';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,18 +22,7 @@ function Navbar() {
           
           {/* Search Bar */}
           <div className="hidden lg:flex items-center">
-            <div className="relative flex">
-              <input 
-                type="text" 
-                placeholder="Pencarian Data"
-                className="bg-white text-gray-800 placeholder-gray-500 px-4 py-2 rounded-l w-64 text-sm focus:outline-none"
-              />
-              <button className="bg-[#1B4332] hover:bg-[#2d5a46] text-white px-4 py-2 rounded-r flex items-center justify-center">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
-            </div>
+            <SearchBox compact={true} />
           </div>
         </div>
       </div>
@@ -74,8 +64,9 @@ function Navbar() {
                   </svg>
                 </button>
                 <div className="absolute top-full left-0 mt-0 w-52 bg-white rounded-b-lg shadow-lg py-2 z-50 hidden group-hover:block group-focus-within:block">
-                  <Link to="/berita" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Berita</Link>
-                  <Link to="/download" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Download</Link>
+                  <Link to="/data/search" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Pencarian Data</Link>
+                  <Link to="/data/berita" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Berita</Link>
+                  <Link to="/data/download" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Download</Link>
                 </div>
               </li>
 
