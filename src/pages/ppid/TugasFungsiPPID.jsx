@@ -3,262 +3,116 @@ import Footer from '../../components/Footer';
 import Breadcrumb from '../../components/Breadcrumb';
 
 const TugasFungsiPPID = () => {
+  const tugasFungsiItems = [
+    {
+      id: 1,
+      title: "Tugas Utama PPID",
+      content: "Melaksanakan koordinasi dan konsolidasi pengumpulan bahan informasi dari seluruh unit kerja di lingkungan Dinas Pangan Provinsi Sumatera Barat.",
+      category: "Tugas PPID"
+    },
+    {
+      id: 2,
+      title: "Fungsi Pelayanan Informasi",
+      content: "Memberikan pelayanan informasi publik kepada masyarakat secara cepat, tepat waktu, dan akurat sesuai dengan ketentuan peraturan perundang-undangan.",
+      category: "Fungsi PPID"
+    },
+    {
+      id: 3,
+      title: "Pengelolaan Dokumentasi",
+      content: "Mengelola dokumentasi informasi secara sistematis untuk memudahkan akses dan pencarian informasi yang dibutuhkan masyarakat.",
+      category: "Tugas PPID"
+    },
+    {
+      id: 4,
+      title: "Koordinasi Internal",
+      content: "Melakukan koordinasi dengan unit kerja terkait dalam penyediaan informasi yang diperlukan untuk mendukung transparansi pemerintahan.",
+      category: "Fungsi PPID"
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Breadcrumb />
       
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg">
-                Tugas dan Fungsi PPID
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 font-medium">
-                Pejabat Pengelola Informasi dan Dokumentasi
-              </p>
-            </div>
-          </div>
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            Tugas dan Fungsi PPID
+          </h1>
+          <div className="w-32 h-1 bg-purple-600 mb-6"></div>
+          <p className="text-gray-600 text-lg">Tugas dan Fungsi Pejabat Pengelola Informasi dan Dokumentasi</p>
         </div>
 
-        {/* Content Section */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-6xl mx-auto">
-
-            {/* PPID Pembantu Section */}
-            <div className="mb-12">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
-                  PPID Pembantu
-                </h2>
-              </div>
-              
-              <div className="bg-white border-2 border-[#1B4332] p-8 rounded-b-lg shadow-lg">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Pejabat Pengelola Informasi dan Dokumentasi Pembantu (PPID Pembantu) adalah pejabat yang melaksanakan tugas dan fungsi sebagai PPID pada Satuan Organisasi Perangkat Daerah di lingkungan Pemerintah Daerah, berupa :
-                </p>
-
-                <div className="space-y-6">
-                  {/* Tugas 1 */}
-                  <div className="bg-green-50 p-6 rounded-lg border-l-4 border-[#1B4332]">
-                    <h3 className="text-xl font-semibold text-[#1B4332] mb-4">
-                      1. Pengklasifikasian Informasi
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <div className="flex items-start space-x-2">
-                          <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-800 font-medium">Informasi yang wajib disediakan dan diumumkan secara berkala</span>
-                        </div>
-                        <div className="flex items-start space-x-2">
-                          <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-800 font-medium">Informasi yang wajib diumumkan secara serta merta</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="flex items-start space-x-2">
-                          <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-800 font-medium">Informasi yang wajib tersedia setiap saat</span>
-                        </div>
-                        <div className="flex items-start space-x-2">
-                          <span className="text-[#1B4332] mt-1">•</span>
-                          <span className="text-gray-800 font-medium">Informasi yang dikecualikan</span>
-                        </div>
-                      </div>
+        {/* Content */}
+        <div className="space-y-6">
+          {tugasFungsiItems.map((item) => (
+            <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex">
+                {/* Document Icon */}
+                <div className="w-48 h-40 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0">
+                  <div className="relative">
+                    <svg className="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                    </svg>
+                    {/* Small icon overlay */}
+                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" />
+                      </svg>
                     </div>
-                  </div>
-
-                  {/* Tugas 2-8 */}
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">2. Koordinasi dan Konsolidasi</h4>
-                      <p className="text-gray-800 text-sm font-medium">Mengkoordinasikan dan mengkonsolidasikan pengumpulan bahan informasi dan dokumentasi yang ada dilingkungannnya</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">3. Pelayanan Informasi</h4>
-                      <p className="text-gray-700 text-sm">Menyimpan, mendokumentasikan, menyediakan dan memberi pelayanan informasi yang ada dilingkungannya kepada publik</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">4. Verifikasi Informasi</h4>
-                      <p className="text-gray-700 text-sm">Melakukan verifikasi bahan informasi publik yang ada di lingkungannya</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">5. Pemutakhiran</h4>
-                      <p className="text-gray-700 text-sm">Melakukan pemutakhiran informasi dan dokumentasi yang ada dilingkungannya</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">6. Akses Informasi</h4>
-                      <p className="text-gray-700 text-sm">Menyediakan informasi dan dokumentasi yang ada di lingkungannya untuk akses oleh masyarakat</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">7. Inventarisasi</h4>
-                      <p className="text-gray-700 text-sm">Melakukan inventerisasi informasi yang dikecualikan untuk disampaikan kepada PPID Utama</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                    <h4 className="font-semibold text-blue-700 mb-2">8. Pelaporan</h4>
-                    <p className="text-gray-700">Memberikan laporan tentang pengelolaan informasi yang ada di lingkungannya kepada PPID Utama secara berkala</p>
                   </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Definisi Section */}
-            <div className="mb-12">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
-                  Definisi dan Pengertian
-                </h2>
-              </div>
-              
-              <div className="bg-white border-2 border-[#1B4332] p-8 rounded-b-lg shadow-lg">
-                <div className="space-y-6">
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-[#1B4332] mb-3">📄 Informasi</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Informasi adalah keterangan, pernyataan, gagasan, dan tanda-tanda yang mengandung nilai, makna, dan pesan, baik data, fakta, maupun penjelasannya yang dapat dilihat, didengar, dan dibaca yang disajikan dalam berbagai kemasan dan format sesuai dengan perkembangan teknologi informasi dan komunikasi secara elektronik atau non elektronik.
-                    </p>
-                  </div>
-
-                  <div className="bg-green-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-[#1B4332] mb-3">🏛️ Informasi Publik</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Informasi Publik adalah informasi yang dihasilkan, disimpan, dikelola, dikirim, dan/ atau diterima oleh suatu badan publik yang berkaitan dengan penyelenggara dan penyelenggaraan negara dan/atau penyelenggara dan penyelenggaraan badan publik lainnya yang sesuai dengan Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik serta informasi lain yang berkaitan dengan kepentingan publik.
-                    </p>
-                  </div>
-
-                  <div className="bg-blue-50 p-6 rounded-lg">
-                    <h3 className="text-lg font-semibold text-[#1B4332] mb-3">🏢 Badan Publik</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Badan Publik adalah lembaga eksekutif, legislatif, yudikatif, dan badan lain yang fungsi dan tugas pokoknya berkaitan dengan penyelenggaraan negara, yang sebagian atau seluruh dananya bersumber dari APBN dan/ atau APBD, atau organisasi nonpemerintah sepanjang sebagian atau seluruh dananya bersumber dari APBN dan/ atau APBD, sumbangan masyarakat, dan/ atau luar negeri.
-                    </p>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-yellow-50 p-6 rounded-lg">
-                      <h3 className="text-lg font-semibold text-[#1B4332] mb-3">📋 Dokumen</h3>
-                      <p className="text-gray-700 leading-relaxed">
-                        Dokumen adalah data, catatan dan/atau keterangan yang dibuat dan/atau diterima oleh badan publik dalam rangka pelaksanaan kegiatannya, baik tertulis di atas kertas atau sarana lainnya maupun terekam dalam bentuk apapun, yang dapat dilihat, dibaca atau didengar.
-                      </p>
-                    </div>
-
-                    <div className="bg-purple-50 p-6 rounded-lg">
-                      <h3 className="text-lg font-semibold text-[#1B4332] mb-3">📁 Dokumentasi</h3>
-                      <p className="text-gray-700 leading-relaxed">
-                        Dokumentasi adalah kegiatan penyimpanan data, catatan dan/ atau keterangan yang dibuat dan/ atau diterima oleh badan publik.
+                {/* Content */}
+                <div className="flex-1 p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex-1">
+                      <div className="mb-2">
+                        <span className="inline-block bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">
+                          {item.category}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {item.content}
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Kewajiban Badan Publik */}
-            <div className="mb-12">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
-                  Kewajiban Badan Publik
-                </h2>
-                <p className="text-green-100 mt-2">Berdasarkan Pasal 7 UU No. 14 Tahun 2008 tentang Keterbukaan Informasi Publik</p>
-              </div>
-              
-              <div className="bg-white border-2 border-[#1B4332] p-8 rounded-b-lg shadow-lg">
-                <div className="grid gap-6">
-                  {/* Kewajiban Utama */}
-                  <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-                    <h3 className="text-lg font-semibold text-red-700 mb-4">Kewajiban Utama</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
-                        <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
-                        <p className="text-gray-700">Menyediakan, memberikan dan/atau menerbitkan Informasi Publik yang berada di bawah kewenangannya kepada Pemohon Informasi Publik, selain informasi yang dikecualikan</p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-600">
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <span>Dokumen Resmi</span>
                       </div>
-                      <div className="flex items-start space-x-3">
-                        <span className="flex-shrink-0 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
-                        <p className="text-gray-700">Menyediakan Informasi Publik yang akurat, benar, dan tidak menyesatkan</p>
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <span>Tugas & Fungsi</span>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Kewajiban Sistem */}
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">3. Sistem Informasi</h4>
-                      <p className="text-gray-700 text-sm">Membangun dan mengembangkan sistem informasi dan dokumentasi untuk mengelola Informasi Publik secara baik dan efisien</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">4. Pertimbangan Tertulis</h4>
-                      <p className="text-gray-700 text-sm">Membuat pertimbangan secara tertulis setiap kebijakan yang diambil untuk memenuhi hak setiap orang atas Informasi Publik</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">7. SOP Layanan</h4>
-                      <p className="text-gray-700 text-sm">Menetapkan peraturan mengenai standar prosedur operasional layanan Informasi Publik</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">9. Penunjukan PPID</h4>
-                      <p className="text-gray-700 text-sm">Menunjuk dan mengangkat PPID untuk melaksanakan tugas dan tanggung jawab serta wewenangnya</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">10. Anggaran</h4>
-                      <p className="text-gray-700 text-sm">Menganggarkan pembiayaan secara memadai bagi layanan Informasi Publik</p>
-                    </div>
-
-                    <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                      <h4 className="font-semibold text-[#1B4332] mb-2">11. Sarana Prasarana</h4>
-                      <p className="text-gray-700 text-sm">Menyediakan sarana dan prasarana layanan Informasi Publik, termasuk papan pengumuman dan situs resmi</p>
-                    </div>
+                    <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                      READ MORE
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Jenis Informasi Publik */}
-            <div className="mb-8">
-              <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-                <h2 className="text-xl md:text-3xl text-white/90 font-medium">
-                  Jenis Informasi Publik
-                </h2>
-              </div>
-              
-              <div className="bg-white border-2 border-[#1B4332] p-8 rounded-b-lg shadow-lg">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                    <h3 className="text-lg font-semibold text-blue-700 mb-3">📅 Informasi Berkala</h3>
-                    <p className="text-gray-700 text-sm">Informasi yang telah dikuasai dan didokumentasikan oleh Badan Publik untuk diumumkan secara teratur dan rutin tanpa ada permintaan</p>
-                  </div>
-
-                  <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-                    <h3 className="text-lg font-semibold text-red-700 mb-3">⚡ Informasi Serta Merta</h3>
-                    <p className="text-gray-700 text-sm">Informasi yang apabila tidak disampaikan dapat mengancam hajat hidup orang banyak dan ketertiban umum yang berhubungan dengan tupoksi Badan Publik tanpa ada permintaan</p>
-                  </div>
-
-                  <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-                    <h3 className="text-lg font-semibold text-green-700 mb-3">🕐 Informasi Setiap Saat</h3>
-                    <p className="text-gray-700 text-sm">Informasi yang telah dikuasasi dan didokumentasikan oleh Badan Publik serta telah dinyatakan terbuka sebagai informasi yang dapat diakses oleh pengguna informasi bilamana ada permintaan</p>
-                  </div>
-
-                  <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-500">
-                    <h3 className="text-lg font-semibold text-gray-700 mb-3">🚫 Informasi Dikecualikan</h3>
-                    <p className="text-gray-700 text-sm">Informasi yang dikuasai dan didokumentasikan oleh Badan Publik yang tidak dapat diakses oleh pemohon informasi berdasarkan alasan-alasan pengecualian</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </main>
-
+      </div>
+      
       <Footer />
     </div>
   );

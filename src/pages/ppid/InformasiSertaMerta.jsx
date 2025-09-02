@@ -1,229 +1,118 @@
-import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Breadcrumb from '../../components/Breadcrumb';
+
 const InformasiSertaMerta = () => {
+  const informasiItems = [
+    {
+      id: 1,
+      title: "Pengumuman Darurat Ketahanan Pangan",
+      content: "Informasi mengenai situasi darurat atau krisis yang berkaitan dengan ketahanan pangan yang perlu segera disampaikan kepada masyarakat.",
+      category: "Informasi Serta Merta"
+    },
+    {
+      id: 2,
+      title: "Peringatan Keamanan Pangan",
+      content: "Peringatan segera mengenai produk pangan yang tidak aman atau berbahaya bagi kesehatan masyarakat.",
+      category: "Informasi Serta Merta"
+    },
+    {
+      id: 3,
+      title: "Pengumuman Kebijakan Mendesak",
+      content: "Kebijakan atau peraturan baru yang bersifat mendesak dan perlu segera diketahui oleh masyarakat luas.",
+      category: "Informasi Serta Merta"
+    },
+    {
+      id: 4,
+      title: "Informasi Bencana dan Mitigasi",
+      content: "Informasi terkait bencana alam atau kejadian luar biasa yang berdampak pada ketahanan pangan daerah.",
+      category: "Informasi Serta Merta"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <Breadcrumb />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-8">
-          {/* PPID Header */}
-          <div className="bg-white rounded-lg shadow-lg mb-8">
-            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] text-white p-6 rounded-t-lg">
-              <h2 className="text-3xl font-bold text-white drop-shadow-lg">PPID</h2>
-              <p className="mt-2 font-medium text-white/90">Pejabat Pengelola Informasi dan Dokumentasi</p>
-            </div>
-            
-            <div className="p-6">
-              <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 mb-6">
-                <h3 className="text-lg font-semibold text-red-800 mb-3 flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
-                  </svg>
-                  Tentang Informasi Serta Merta
-                </h3>
-                <p className="text-gray-800 leading-relaxed font-medium">
-                  Informasi yang wajib diumumkan atau disediakan secara serta merta yang dapat mengancam hajat hidup orang banyak dan ketertiban umum.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Alert Types */}
-          <div className="grid gap-6 md:grid-cols-3 mb-8">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
-                <h3 className="font-semibold flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clipRule="evenodd"/>
-                  </svg>
-                  Keamanan Pangan
-                </h3>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-800 text-sm mb-3 font-medium">
-                  Informasi terkait kontaminasi, recall produk, atau masalah keamanan pangan lainnya.
-                </p>
-                <div className="bg-blue-50 p-3 rounded text-sm text-blue-800 font-semibold">
-                  <strong>Status:</strong> Pemantauan Aktif
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-r from-amber-600 to-amber-700 text-white p-4">
-                <h3 className="font-semibold flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2 1 1 0 000-2zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1z" clipRule="evenodd"/>
-                  </svg>
-                  Ketahanan Pangan
-                </h3>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-800 text-sm mb-3 font-medium">
-                  Informasi ketersediaan, akses, dan stabilitas pangan di daerah.
-                </p>
-                <div className="bg-amber-50 p-3 rounded text-sm text-amber-800 font-semibold">
-                  <strong>Status:</strong> Stabil Terkendali
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-4">
-                <h3 className="font-semibold flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
-                  </svg>
-                  Bencana & Darurat
-                </h3>
-              </div>
-              <div className="p-4">
-                <p className="text-gray-800 text-sm mb-3 font-medium">
-                  Informasi kondisi darurat yang mempengaruhi ketersediaan dan distribusi pangan.
-                </p>
-                <div className="bg-red-50 p-3 rounded text-sm text-red-800 font-semibold">
-                  <strong>Status:</strong> Siaga Normal
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Recent Alerts */}
-          <div className="bg-white rounded-lg shadow-lg mb-8">
-            <div className="bg-gradient-to-r from-[#1B4332] to-[#2D5A27] px-6 py-4">
-              <h3 className="text-lg font-semibold text-white flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-                </svg>
-                Peringatan Terkini
-              </h3>
-              <p className="text-green-100 text-sm mt-1">Informasi terbaru yang perlu diketahui masyarakat</p>
-            </div>
-
-            <div className="p-6">
-              <div className="space-y-4">
-                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <svg className="w-5 h-5 text-yellow-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div className="ml-3 flex-1">
-                      <h4 className="text-sm font-semibold text-yellow-800">Himbauan Cuaca Ekstrem</h4>
-                      <p className="text-sm text-yellow-700 mt-1">
-                        Waspadai dampak cuaca ekstrem terhadap distribusi dan ketersediaan pangan. Pastikan stok pangan keluarga mencukupi.
-                      </p>
-                      <p className="text-xs text-yellow-600 mt-2">25 Agustus 2025, 10:30 WIB</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <svg className="w-5 h-5 text-blue-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div className="ml-3 flex-1">
-                      <h4 className="text-sm font-semibold text-blue-800">Update Harga Pangan Strategis</h4>
-                      <p className="text-sm text-blue-700 mt-1">
-                        Pemantauan harga beras, gula, minyak goreng, dan komoditas strategis lainnya menunjukkan kondisi stabil.
-                      </p>
-                      <p className="text-xs text-blue-600 mt-2">24 Agustus 2025, 14:15 WIB</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <svg className="w-5 h-5 text-green-600 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div className="ml-3 flex-1">
-                      <h4 className="text-sm font-semibold text-green-800">Ketersediaan Pangan Aman</h4>
-                      <p className="text-sm text-green-700 mt-1">
-                        Stok pangan pokok di seluruh Sumatera Barat dalam kondisi aman dan memadai untuk 3 bulan ke depan.
-                      </p>
-                      <p className="text-xs text-green-600 mt-2">23 Agustus 2025, 09:00 WIB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Emergency Contacts */}
-          <div className="bg-white rounded-lg shadow-lg">
-            <div className="bg-gradient-to-r from-red-600 to-red-700 px-6 py-4">
-              <h3 className="text-lg font-semibold text-white flex items-center">
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-                Kontak Darurat
-              </h3>
-              <p className="text-red-100 text-sm mt-1">Hubungi segera jika menemukan masalah pangan yang mengancam masyarakat</p>
-            </div>
-
-            <div className="p-6">
-              <div className="grid gap-6 md:grid-cols-3">
-                <div className="bg-red-50 p-6 rounded-lg border border-red-200">
-                  <div className="text-center">
-                    <div className="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                      </svg>
-                    </div>
-                    <h4 className="font-semibold text-red-800 mb-2">Hotline Darurat</h4>
-                    <p className="text-2xl font-bold text-red-600 mb-2">119</p>
-                    <p className="text-sm text-gray-600">24 Jam Siaga</p>
-                  </div>
-                </div>
-
-                <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
-                  <div className="text-center">
-                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                      </svg>
-                    </div>
-                    <h4 className="font-semibold text-blue-800 mb-2">Email Darurat</h4>
-                    <p className="text-sm font-medium text-blue-600 mb-2">darurat@disanpangan.sumbar.go.id</p>
-                    <p className="text-sm text-gray-600">Respons Cepat</p>
-                  </div>
-                </div>
-
-                <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-                  <div className="text-center">
-                    <div className="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <h4 className="font-semibold text-green-800 mb-2">Kantor PPID</h4>
-                    <p className="text-sm font-medium text-green-600 mb-2">(0751) 123456</p>
-                    <p className="text-sm text-gray-600">Senin - Jumat, 08:00 - 16:00</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-gray-800 mb-2">📍 Alamat Kantor</h4>
-                <p className="text-gray-700 text-sm">
-                  Jl. Khatib Sulaiman No. 45, Padang Utara, Kota Padang, Sumatera Barat 25173
-                </p>
-              </div>
-            </div>
-          </div>
+      
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            Informasi Serta Merta
+          </h1>
+          <div className="w-32 h-1 bg-purple-600 mb-6"></div>
+          <p className="text-gray-600 text-lg">Informasi yang harus segera diumumkan karena bersifat mendesak</p>
         </div>
-      </main>
+
+        {/* Content */}
+        <div className="space-y-6">
+          {informasiItems.map((item) => (
+            <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="flex">
+                {/* Document Icon */}
+                <div className="w-48 h-40 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center flex-shrink-0">
+                  <div className="relative">
+                    <svg className="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z" />
+                    </svg>
+                    {/* Small icon overlay */}
+                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,17H11V15H13V17M13,13H11V7H13V13Z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <div className="flex-1">
+                      <div className="mb-2">
+                        <span className="inline-block bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">
+                          {item.category}
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {item.content}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4 text-sm text-gray-600">
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <span>Dokumen Resmi</span>
+                      </div>
+                      <div className="flex items-center">
+                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        <span>Mendesak</span>
+                      </div>
+                    </div>
+
+                    <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      </svg>
+                      READ MORE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
       <Footer />
     </div>
   );
