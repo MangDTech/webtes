@@ -47,13 +47,13 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/kegiatan-ldpm" element={<KegiatanLDPM />} />
-        <Route path="/kegiatan-krpl" element={<KegiatanKRPL />} />
-        <Route path="/kegiatan-lumbung-pangan" element={<KegiatanLumbungPangan />} />
-        <Route path="/kegiatan-demapan" element={<KegiatanDemapan />} />
-        <Route path="/kegiatan-pdrp" element={<KegiatanPDRP />} />
-        <Route path="/kegiatan-sertifikasi" element={<KegiatanSertifikasi />} />
-        <Route path="/kegiatan-skpg" element={<KegiatanSKPG />} />
+        <Route path="/kegiatan/ldpm" element={<KegiatanLDPM />} />
+        <Route path="/kegiatan/krpl" element={<KegiatanKRPL />} />
+        <Route path="/kegiatan/lumbung-pangan" element={<KegiatanLumbungPangan />} />
+        <Route path="/kegiatan/demapan" element={<KegiatanDemapan />} />
+        <Route path="/kegiatan/pdrp" element={<KegiatanPDRP />} />
+        <Route path="/kegiatan/sertifikasi" element={<KegiatanSertifikasi />} />
+        <Route path="/kegiatan/skpg" element={<KegiatanSKPG />} />
         <Route path="/profil/visi-misi-tupoksi" element={<VisiMisiTupoksi />} />
         <Route path="/profil/sekapur-sirih" element={<SekapurSirih />} />
         <Route path="/profil/struktur-organisasi" element={<StrukturOrganisasi />} />

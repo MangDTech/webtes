@@ -29,13 +29,13 @@ function Breadcrumb() {
     
     // Kegiatan
     'kegiatan': 'Kegiatan',
-    'kegiatan-ldpm': 'LDPM',
-    'kegiatan-krpl': 'KRPL',
-    'kegiatan-lumbung-pangan': 'Lumbung Pangan',
-    'kegiatan-demapan': 'Demapan',
-    'kegiatan-pdrp': 'PDRP',
-    'kegiatan-sertifikasi': 'Sertifikasi',
-    'kegiatan-skpg': 'SKPG',
+    'ldpm': 'LDPM',
+    'krpl': 'KRPL',
+    'lumbung-pangan': 'Lumbung Pangan',
+    'demapan': 'Demapan',
+    'pdrp': 'PDRP',
+    'sertifikasi': 'Sertifikasi',
+    'skpg': 'SKPG',
     
     // Data
     'data': 'Data',
@@ -89,13 +89,13 @@ function Breadcrumb() {
     '/media/video': ['Home', 'Media', 'Video'],
     '/media/kegiatan': ['Home', 'Media', 'Kegiatan'],
     
-    '/kegiatan/kegiatan-ldpm': ['Home', 'Kegiatan', 'LDPM'],
-    '/kegiatan/kegiatan-krpl': ['Home', 'Kegiatan', 'KRPL'],
-    '/kegiatan/kegiatan-lumbung-pangan': ['Home', 'Kegiatan', 'Lumbung Pangan'],
-    '/kegiatan/kegiatan-demapan': ['Home', 'Kegiatan', 'Demapan'],
-    '/kegiatan/kegiatan-pdrp': ['Home', 'Kegiatan', 'PDRP'],
-    '/kegiatan/kegiatan-sertifikasi': ['Home', 'Kegiatan', 'Sertifikasi'],
-    '/kegiatan/kegiatan-skpg': ['Home', 'Kegiatan', 'SKPG'],
+    '/kegiatan/ldpm': ['Home', 'Kegiatan', 'LDPM'],
+    '/kegiatan/krpl': ['Home', 'Kegiatan', 'KRPL'],
+    '/kegiatan/lumbung-pangan': ['Home', 'Kegiatan', 'Lumbung Pangan'],
+    '/kegiatan/demapan': ['Home', 'Kegiatan', 'Demapan'],
+    '/kegiatan/pdrp': ['Home', 'Kegiatan', 'PDRP'],
+    '/kegiatan/sertifikasi': ['Home', 'Kegiatan', 'Sertifikasi'],
+    '/kegiatan/skpg': ['Home', 'Kegiatan', 'SKPG'],
     
     '/data/berita': ['Home', 'Data', 'Berita'],
     '/data/download': ['Home', 'Data', 'Download'],

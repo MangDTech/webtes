@@ -32,7 +32,7 @@ function SearchPage() {
       title: 'Kegiatan LDPM (Lahan Pertanian Pangan Berkelanjutan)',
       content: 'Program kegiatan LDPM untuk mendukung pertanian pangan berkelanjutan di Sumatera Barat dan meningkatkan produktivitas lahan',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-ldpm',
+      url: '/kegiatan/ldpm',
       type: 'page'
     },
     {
@@ -40,7 +40,7 @@ function SearchPage() {
       title: 'Kegiatan KRPL (Kawasan Rumah Pangan Lestari)',
       content: 'Program KRPL untuk mengembangkan kawasan rumah pangan lestari dan pemberdayaan masyarakat dalam ketahanan pangan',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-krpl',
+      url: '/kegiatan/krpl',
       type: 'page'
     },
     {
@@ -112,7 +112,7 @@ function SearchPage() {
       title: 'Kegiatan Lumbung Pangan',
       content: 'Program pembangunan dan pengelolaan lumbung pangan untuk stabilisasi harga dan ketersediaan pangan',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-lumbung-pangan',
+      url: '/kegiatan/lumbung-pangan',
       type: 'page'
     },
     {
@@ -120,7 +120,7 @@ function SearchPage() {
       title: 'Sertifikasi Pangan',
       content: 'Program sertifikasi dan standarisasi produk pangan untuk menjamin kualitas dan keamanan pangan konsumen',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-sertifikasi',
+      url: '/kegiatan/sertifikasi',
       type: 'page'
     },
     {
@@ -153,65 +153,6 @@ function SearchPage() {
       content: 'Standar pelayanan publik Dinas Pangan dalam memberikan layanan kepada masyarakat dan stakeholder',
       category: 'Informasi Layanan',
       url: '/informasi-layanan/standar-pelayanan-publik',
-      type: 'page'
-    }
-  ];
-      type: 'page'
-    },
-    {
-      id: 6,
-      title: 'Konsumsi dan Keamanan Pangan',
-      content: 'Bidang yang mengawasi konsumsi dan keamanan pangan masyarakat',
-      category: 'Bidang',
-      url: '/bidang/konsumsi-keamanan-pangan',
-      type: 'page'
-    },
-    {
-      id: 7,
-      title: 'Informasi Berkala PPID',
-      content: 'Informasi yang disediakan secara berkala oleh PPID Dinas Pangan',
-      category: 'PPID',
-      url: '/ppid/informasi-berkala',
-      type: 'page'
-    },
-    {
-      id: 8,
-      title: 'Pedoman Umum Ketahanan Pangan',
-      content: 'Pedoman umum untuk menjaga ketahanan pangan di wilayah Sumatera Barat',
-      category: 'Informasi',
-      url: '/informasi/pedoman-umum',
-      type: 'page'
-    },
-    {
-      id: 9,
-      title: 'Laporan Kinerja Tahunan',
-      content: 'Laporan kinerja tahunan Dinas Pangan Provinsi Sumatera Barat',
-      category: 'Informasi',
-      url: '/informasi/laporan-kinerja',
-      type: 'page'
-    },
-    {
-      id: 10,
-      title: 'Berita Terbaru Dinas Pangan',
-      content: 'Kumpulan berita dan informasi terbaru dari Dinas Pangan',
-      category: 'Data',
-      url: '/data/berita',
-      type: 'page'
-    },
-    {
-      id: 11,
-      title: 'Download Dokumen',
-      content: 'Kumpulan dokumen yang dapat diunduh terkait Dinas Pangan',
-      category: 'Data',
-      url: '/data/download',
-      type: 'page'
-    },
-    {
-      id: 12,
-      title: 'Program APBN Ketahanan Pangan',
-      content: 'Program-program yang didanai APBN untuk ketahanan pangan',
-      category: 'Program',
-      url: '/program/apbn',
       type: 'page'
     }
   ];

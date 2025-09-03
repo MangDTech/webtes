@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
 import QuickSearch from "../../components/QuickSearch"
@@ -74,12 +75,12 @@ function Home() {
                         </p>
                       )}
                       <div className="mt-3 md:mt-6 flex items-center justify-center gap-3">
-                        <a href="/profil/sekapur-sirih" className="px-3 py-2 md:px-5 md:py-3 bg-footer text-white rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition">
+                        <Link to="/profil/sekapur-sirih" className="px-3 py-2 md:px-5 md:py-3 bg-footer text-white rounded-lg text-xs md:text-sm font-semibold hover:opacity-90 transition">
                           Lihat Profil
-                        </a>
-                        <a href="/profil/hubungi-kami" className="px-3 py-2 md:px-5 md:py-3 bg-white/10 border border-white/30 text-white rounded-lg text-xs md:text-sm font-semibold hover:bg-white/20 transition">
+                        </Link>
+                        <Link to="/profil/hubungi-kami" className="px-3 py-2 md:px-5 md:py-3 bg-white/10 border border-white/30 text-white rounded-lg text-xs md:text-sm font-semibold hover:bg-white/20 transition">
                           Kontak Kami
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -139,36 +140,36 @@ function Home() {
                 yang berkelanjutan dan gizi seimbang untuk masyarakat. Kami menjalankan program
                 strategis mulai dari ketersediaan, distribusi, hingga keamanan pangan.
               </p>
-              <a href="/profil/sekapur-sirih" className="inline-flex items-center gap-2 px-5 py-3 bg-footer text-white rounded-lg font-semibold hover:opacity-95 transition">
+              <Link to="/profil/sekapur-sirih" className="inline-flex items-center gap-2 px-5 py-3 bg-footer text-white rounded-lg font-semibold hover:opacity-95 transition">
                 Lihat Profile
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
-              </a>
+              </Link>
             </div>
 
             {/* Layanan Kami */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-5">Layanan Kami</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a href="/informasi/info-pengadaan" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition bg-gradient-to-br from-green-50 to-white">
+                <Link to="/informasi/info-pengadaan" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition bg-gradient-to-br from-green-50 to-white">
                   <div className="text-green-700 text-2xl mb-2">📄</div>
                   <div className="font-semibold text-gray-900 mb-1">Info Pengadaan</div>
                   <div className="text-sm text-gray-600">Informasi pengadaan barang dan jasa</div>
-                </a>
-                <a href="/informasi/laporan-kinerja" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
+                </Link>
+                <Link to="/informasi/laporan-kinerja" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
                   <div className="text-blue-700 text-2xl mb-2">📊</div>
                   <div className="font-semibold text-gray-900 mb-1">Laporan Kinerja</div>
                   <div className="text-sm text-gray-600">Capaian kinerja dinas secara berkala</div>
-                </a>
-                <a href="/media/kegiatan" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
+                </Link>
+                <Link to="/media/kegiatan" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition">
                   <div className="text-orange-700 text-2xl mb-2">🖼️</div>
                   <div className="font-semibold text-gray-900 mb-1">Galeri Kegiatan</div>
                   <div className="text-sm text-gray-600">Dokumentasi foto dan video kegiatan</div>
-                </a>
-                <a href="/profil/hubungi-kami" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition bg-gradient-to-br from-green-50 to-white">
+                </Link>
+                <Link to="/profil/hubungi-kami" className="group border border-gray-200 rounded-lg p-5 hover:shadow-md transition bg-gradient-to-br from-green-50 to-white">
                   <div className="text-red-700 text-2xl mb-2">📞</div>
                   <div className="font-semibold text-gray-900 mb-1">Hubungi Kami</div>
                   <div className="text-sm text-gray-600">Informasi kontak dan alamat</div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

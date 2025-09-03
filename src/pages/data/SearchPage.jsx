@@ -32,7 +32,7 @@ function SearchPage() {
       title: 'Kegiatan LDPM (Lahan Pertanian Pangan Berkelanjutan)',
       content: 'Program kegiatan LDPM untuk mendukung pertanian pangan berkelanjutan di Sumatera Barat dan meningkatkan produktivitas lahan',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-ldpm',
+      url: '/kegiatan/ldpm',
       type: 'page'
     },
     {
@@ -40,7 +40,7 @@ function SearchPage() {
       title: 'Kegiatan KRPL (Kawasan Rumah Pangan Lestari)',
       content: 'Program KRPL untuk mengembangkan kawasan rumah pangan lestari dan pemberdayaan masyarakat dalam ketahanan pangan',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-krpl',
+      url: '/kegiatan/krpl',
       type: 'page'
     },
     {
@@ -112,7 +112,7 @@ function SearchPage() {
       title: 'Kegiatan Lumbung Pangan',
       content: 'Program pembangunan dan pengelolaan lumbung pangan untuk stabilisasi harga dan ketersediaan pangan',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-lumbung-pangan',
+      url: '/kegiatan/lumbung-pangan',
       type: 'page'
     },
     {
@@ -120,7 +120,7 @@ function SearchPage() {
       title: 'Sertifikasi Pangan',
       content: 'Program sertifikasi dan standarisasi produk pangan untuk menjamin kualitas dan keamanan pangan konsumen',
       category: 'Kegiatan',
-      url: '/kegiatan/kegiatan-sertifikasi',
+      url: '/kegiatan/sertifikasi',
       type: 'page'
     },
     {
