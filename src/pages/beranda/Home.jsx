@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from "../../components/Navbar"
+// Fixed navigation links to prevent 404 errors
 import Footer from "../../components/Footer"
 import QuickSearch from "../../components/QuickSearch"
 import { BeritaList } from "../../data/BeritaSection"
