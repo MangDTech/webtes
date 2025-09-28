@@ -8,19 +8,19 @@ import { BeritaList } from "../../data/BeritaSection"
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const slides = [
+  const slides = [    
     {
       id: 1,
-  image: "/slide1.png",
-  title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
-  description: "Mewujudkan ketahanan pangan yang berkelanjutan, aman, dan bergizi untuk masyarakat"
+  image: "/slide1.png", 
+  title: "DISTRIBUSI DAN CADANGAN PANGAN",
+  description: "Program inovatif untuk meningkatkan ketersediaan, distribusi, dan kualitas pangan"
     },
     {
       id: 2,
-  image: "/slide2.png", 
-  title: "DISTRIBUSI DAN CADANGAN PANGAN",
-  description: "Program inovatif untuk meningkatkan ketersediaan, distribusi, dan kualitas pangan"
-    }
+  image: "/slide2.png",
+  title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
+  description: "Mewujudkan ketahanan pangan yang berkelanjutan, aman, dan bergizi untuk masyarakat"
+    },    
   ];
 
   // Auto slide every 5 seconds
