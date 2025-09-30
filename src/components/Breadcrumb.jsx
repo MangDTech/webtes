@@ -11,7 +11,7 @@ function Breadcrumb() {
     'visi-misi-tupoksi': 'Visi, Misi dan Tupoksi',
     'sekapur-sirih': 'Sekapur Sirih',
     'struktur-organisasi': 'Struktur Organisasi',
-    'pejabat-pangan': 'Pejabat Pangan',
+    'pejabat-struktural': 'Pejabat Struktural',
     'hubungi-kami': 'Hubungi Kami',
     
     // Bidang
@@ -76,7 +76,7 @@ function Breadcrumb() {
     '/profil/visi-misi-tupoksi': ['Home', 'Profil', 'Visi, Misi dan Tupoksi'],
     '/profil/sekapur-sirih': ['Home', 'Profil', 'Sekapur Sirih'],
     '/profil/struktur-organisasi': ['Home', 'Profil', 'Struktur Organisasi'],
-    '/profil/pejabat-pangan': ['Home', 'Profil', 'Pejabat Pangan'],
+    '/profil/pejabat-struktural': ['Home', 'Profil', 'Pejabat Struktural'],
     '/profil/hubungi-kami': ['Home', 'Profil', 'Hubungi Kami'],
     
     '/bidang/sekretariat': ['Home', 'Bidang', 'Sekretariat'],

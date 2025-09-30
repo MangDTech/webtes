@@ -48,7 +48,7 @@ function Navbar() {
                   <Link to="/profil/visi-misi-tupoksi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Visi, Misi dan Tupoksi</Link>
                   <Link to="/profil/sekapur-sirih" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Sekapur Sirih</Link>
                   <Link to="/profil/struktur-organisasi" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Struktur organisasi</Link>
-                  <Link to="/profil/pejabat-pangan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Pejabat Pangan</Link>
+                  <Link to="/profil/pejabat-struktural" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Pejabat Struktural</Link>
                   <Link to="/profil/hubungi-kami" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#1B4332] hover:text-white transition-colors">Hubungi Kami</Link>
                 </div>
               </li>
@@ -235,15 +235,16 @@ function Navbar() {
                   <Link to="/profil/visi-misi-tupoksi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Visi, Misi dan Tupoksi</Link>
                   <Link to="/profil/sekapur-sirih" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Sekapur Sirih</Link>
                   <Link to="/profil/struktur-organisasi" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Struktur organisasi</Link>
-                  <Link to="/profil/pejabat-pangan" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pejabat Pangan</Link>                
+                  <Link to="/profil/pejabat-struktural" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pejabat Struktural</Link>
                   <Link to="/profil/hubungi-kami" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Hubungi Kami</Link>
                 </div>
 
                 {/* Data Mobile */}
                 <div className="border-t border-gray-200 pt-2">
                   <div className="px-3 py-2 text-sm font-semibold text-gray-800">Data</div>
-                  <Link to="/berita" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Berita</Link>
-                  <Link to="/download" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Download</Link>
+                  <Link to="/data/search" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Pencarian Data</Link>
+                  <Link to="/data/berita" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Berita</Link>
+                  <Link to="/data/download" className="block px-6 py-1 text-sm text-gray-600 hover:bg-[#1B4332] hover:text-white rounded transition-colors" onClick={() => setIsMenuOpen(false)}>Download</Link>
                 </div>
 
                 {/* Bidang Mobile */}

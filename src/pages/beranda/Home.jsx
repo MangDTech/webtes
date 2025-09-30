@@ -12,14 +12,14 @@ function Home() {
     {
       id: 1,
   image: "/slide1.png", 
-  title: "DISTRIBUSI DAN CADANGAN PANGAN",
-  description: "Program inovatif untuk meningkatkan ketersediaan, distribusi, dan kualitas pangan"
+  title: ".",
+  // description: "Program inovatif untuk meningkatkan ketersediaan, distribusi, dan kualitas pangan"
     },
     {
       id: 2,
   image: "/slide2.png",
-  title: "DINAS PANGAN PROVINSI SUMATERA BARAT",
-  description: "Mewujudkan ketahanan pangan yang berkelanjutan, aman, dan bergizi untuk masyarakat"
+  title: ".",
+  // description: "Mewujudkan ketahanan pangan yang berkelanjutan, aman, dan bergizi untuk masyarakat"
     },    
   ];
 
@@ -259,21 +259,7 @@ function Home() {
             </div>
 
             {/* Right Sidebar */}
-            <div className="lg:col-span-1">
-              {/* Gubernur dan Wagub */}
-              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
-                <div className="bg-footer text-white p-3">
-                  <h3 className="font-semibold">Gubernur dan Wakil Gubernur</h3>
-                </div>
-                <div className="p-4 text-center">
-                  <img 
-                    src="/pimpinan.webp" 
-                    alt="Gubernur dan Wagub Sumatera Barat"
-                    className="w-full h-auto object-cover rounded mb-3"
-                  />                  
-                </div>
-              </div>
-
+            <div className="lg:col-span-1">                           
               {/* Pengumuman */}
               <div className="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
                 <div className="bg-footer text-white p-3">
@@ -323,26 +309,7 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Aplikasi Kami */}
-      <section className="bg-white py-10 md:py-14">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            <div className="md:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">Aplikasi Kami</h2>
-              <p className="text-gray-700 mb-5">Pantau harga pangan dan informasi strategis melalui aplikasi web resmi kami.</p>
-              <a href="https://sipangan-provsumbar.badanpangan.go.id/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 bg-footer text-white rounded-lg font-semibold hover:opacity-95 transition">
-                Buka Aplikasi
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-            <div className="w-full h-48 md:h-60 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center shadow-inner">
-              <img src="/logo-sumbar.png" alt="Logo" className="w-28 h-28 object-contain opacity-90"/>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Additional Content Sections (tetap ada) */}
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4">
@@ -481,30 +448,7 @@ function Home() {
 
           </div>
         </div>
-      </section>    
-
-      {/* FAQ */}
-      <section className="bg-white py-10 md:py-14">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">Pertanyaan yang Sering Diajukan</h2>
-          <div className="space-y-3">
-            {[
-              {q: 'Apa itu Dinas Pangan Provinsi Sumatera Barat?', a: 'Lembaga pemerintahan daerah yang bertanggung jawab dalam urusan ketahanan pangan dan distribusi bahan pangan di wilayah Provinsi Sumatera Barat.'},
-              {q: 'Bagaimana cara menghubungi Dinas Pangan?', a: 'Anda dapat menghubungi melalui telepon (0751) 7051526 atau email pangan@sumbarprov.go.id, serta kunjungi halaman Hubungi Kami.'},
-              {q: 'Apa saja layanan yang disediakan?', a: 'Informasi pengadaan, laporan kinerja, data dan statistik pangan, publikasi kegiatan, serta layanan pengaduan dan informasi publik.'},
-            ].map((item, idx) => (
-              <details key={idx} className="group border border-gray-200 rounded-lg p-4 open:shadow-sm">
-                <summary className="list-none cursor-pointer flex items-center justify-between font-semibold text-gray-900">
-                  {item.q}
-                  <span className="ml-2 text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
-                </summary>
-                <p className="mt-2 text-gray-700 leading-relaxed">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      </section>          
       {/* Footer */}
       <Footer />
     </div>

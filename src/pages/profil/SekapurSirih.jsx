@@ -14,9 +14,9 @@ function SekapurSirih() {
         {/* Image Section */}
         <div className="flex justify-center mb-8">
           <img 
-            src="/kepaladps.jpeg" 
+            src="/12.jpeg" 
             alt="Kepala Dinas Pangan Provinsi Sumatera Barat" 
-            className="w-80 h-100 object-cover rounded-lg shadow-lg"
+            className="w-120 h-140 object-cover rounded-lg shadow-lg"
           />
         </div>
 

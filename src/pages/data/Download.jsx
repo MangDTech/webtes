@@ -8,6 +8,8 @@ function Download() {
   const { addToast } = useToast();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   // Data download dummy
   const downloadData = [
@@ -111,6 +113,17 @@ function Download() {
     return matchesCategory && matchesSearch;
   });
 
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredDownloads.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedDownloads = filteredDownloads.slice(startIndex, endIndex);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchTerm]);
+
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('id-ID', options);
@@ -199,33 +212,13 @@ function Download() {
                     </button>
                   ))}
                 </div>
-              </div>
-
-              {/* Statistics */}
-              <div className="bg-[#0C3823] text-white rounded-lg p-6">
-                <h4 className="font-semibold mb-3">Statistik Download</h4>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <div className="font-medium">Total File:</div>
-                    <div>{downloadData.length} dokumen</div>
-                  </div>
-                  <div>
-                    <div className="font-medium">Total Download:</div>
-                    <div>{downloadData.reduce((total, item) => total + item.downloadCount, 0)} kali</div>
-                  </div>
-                  <div>
-                    <div className="font-medium">Terakhir Update:</div>
-                    <div>{formatDate('2024-01-15')}</div>
-                  </div>
-                </div>
-              </div>
+              </div>            
             </div>
-
             {/* Main Content */}
             <div className="lg:w-3/4">
               {/* File List */}
               <div className="space-y-4">
-                {filteredDownloads.map((file) => (
+                {paginatedDownloads.map((file) => (
                   <div key={file.id} className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0">
@@ -277,6 +270,79 @@ function Download() {
                 ))}
               </div>
 
+              {/* Pagination */}
+              {filteredDownloads.length > 0 && totalPages > 1 && (
+                <div className="flex justify-center items-center mt-8 space-x-2">
+                  {/* Previous Button */}
+                  <button
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      currentPage === 1
+                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                        : 'bg-white text-[#0C3823] border border-gray-300 hover:bg-[#0C3823] hover:text-white'
+                    }`}
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+
+                  {/* Page Numbers */}
+                  {Array.from({ length: totalPages }, (_, index) => {
+                    const pageNumber = index + 1;
+                    const isCurrentPage = pageNumber === currentPage;
+                    
+                    // Show first page, last page, current page, and pages around current page
+                    const showPage = 
+                      pageNumber === 1 ||
+                      pageNumber === totalPages ||
+                      (pageNumber >= currentPage - 1 && pageNumber <= currentPage + 1);
+                    
+                    if (!showPage) {
+                      // Show ellipsis for gaps
+                      if (pageNumber === currentPage - 2 || pageNumber === currentPage + 2) {
+                        return (
+                          <span key={pageNumber} className="px-2 py-2 text-gray-500">
+                            ...
+                          </span>
+                        );
+                      }
+                      return null;
+                    }
+
+                    return (
+                      <button
+                        key={pageNumber}
+                        onClick={() => setCurrentPage(pageNumber)}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                          isCurrentPage
+                            ? 'bg-[#0C3823] text-white'
+                            : 'bg-white text-[#0C3823] border border-gray-300 hover:bg-[#0C3823] hover:text-white'
+                        }`}
+                      >
+                        {pageNumber}
+                      </button>
+                    );
+                  })}
+
+                  {/* Next Button */}
+                  <button
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      currentPage === totalPages
+                        ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                        : 'bg-white text-[#0C3823] border border-gray-300 hover:bg-[#0C3823] hover:text-white'
+                    }`}
+                  >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              )}
+             
               {/* No Results */}
               {filteredDownloads.length === 0 && (
                 <div className="bg-white rounded-lg shadow-sm p-8 text-center">

@@ -13,35 +13,7 @@ function QuickSearch() {
 
   return (
     <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Cari Informasi yang Anda Butuhkan
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Temukan data, dokumen, dan informasi terkait Dinas Pangan Provinsi Sumatera Barat dengan mudah
-          </p>
-        </div>
-
-        {/* Search Box */}
-        <div className="max-w-2xl mx-auto mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <SearchBox 
-              placeholder="Masukkan kata kunci pencarian..." 
-              size="lg"
-              className="w-full"
-            />
-            <div className="mt-4 text-center">
-              <Link 
-                to="/data/search" 
-                className="text-green-600 hover:text-green-700 text-sm font-medium"
-              >
-                Pencarian Lanjutan →
-              </Link>
-            </div>
-          </div>
-        </div>
-
+      <div className="max-w-7xl mx-auto px-4">                
         {/* Popular Searches */}
         <div className="max-w-6xl mx-auto">
           <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">

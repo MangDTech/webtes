@@ -152,29 +152,8 @@ function PedomanUmum() {
               </ul>
             </div>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-8 bg-gradient-to-r from-purple-50 to-orange-50 rounded-lg p-6 border border-purple-200">
-          <div className="text-center">
-            <h3 className="text-lg font-bold text-gray-800 mb-2">
-              Butuh Bantuan dengan Pedoman?
-            </h3>
-            <p className="text-gray-600 mb-4 text-sm">
-              Untuk informasi lebih lanjut atau bantuan terkait pedoman teknis, silakan hubungi bagian informasi kami.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-                Hubungi Kami
-              </button>
-              <button className="bg-white border border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-                Download Semua
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+        </div>      
+      </div>    
       <Footer />
     </div>
   );

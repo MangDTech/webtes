@@ -147,12 +147,11 @@ function Foto() {
       paginate(currentPage - 1);
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
-      <Breadcrumb />
-      
+      <Breadcrumb />    
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -162,7 +161,6 @@ function Foto() {
             Dokumentasi kegiatan dan program-program Dinas Pangan Provinsi Sumatera Barat dalam mendukung ketahanan pangan daerah.
           </p>
         </div>
-
         {/* Gallery Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {currentItems.map((item) => (
@@ -172,18 +170,15 @@ function Foto() {
                 <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-              </div>
-              
+              </div>              
               {/* Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-blue-600 mb-3 hover:text-blue-800 cursor-pointer">
                   {item.title}
-                </h3>
-                
+                </h3>                
                 <p className="text-gray-700 text-sm mb-4 line-clamp-3">
                   {item.description}
-                </p>
-                
+                </p>                
                 {/* Meta Information (date only) */}
                 <div className="text-xs text-gray-500 space-y-1 mb-4">
                   <div className="flex items-center">
@@ -207,7 +202,6 @@ function Foto() {
             </div>
           ))}
         </div>
-
         {/* Pagination */}
         <div className="flex justify-center mt-12">
           <nav className="flex items-center space-x-2">
@@ -219,8 +213,7 @@ function Foto() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-            </button>
-            
+            </button>            
             {/* Render nomor halaman */}
             {Array.from({ length: totalPages }, (_, index) => (
               <button
@@ -234,8 +227,7 @@ function Foto() {
               >
                 {index + 1}
               </button>
-            ))}
-            
+            ))}          
             <button 
               onClick={nextPage}
               disabled={currentPage === totalPages}
@@ -246,8 +238,7 @@ function Foto() {
               }`}
             >
               Next
-            </button>
-            
+            </button>            
             <button 
               onClick={nextPage}
               disabled={currentPage === totalPages}
@@ -258,40 +249,10 @@ function Foto() {
               </svg>
             </button>
           </nav>
-        </div>
-
-        {/* Pagination Info
-        <div className="flex justify-center mt-4 text-sm text-gray-600">
-          Menampilkan {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, galleryItems.length)} dari {galleryItems.length} foto
-        </div> */}
-
-        {/* Statistics */}
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-6">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Statistik Gallery</h3>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600">{galleryItems.length}+</div>
-              <div className="text-sm text-gray-600">Total Foto</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">50+</div>
-              <div className="text-sm text-gray-600">Event Terdokumentasi</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-600">25+</div>
-              <div className="text-sm text-gray-600">Program Kegiatan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-red-600">10K+</div>
-              <div className="text-sm text-gray-600">Total Views</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+        </div>       
+      </div>      
       <Footer />
     </div>
   );
 }
-
 export default Foto;

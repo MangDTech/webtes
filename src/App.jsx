@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import VisiMisiTupoksi from './pages/profil/VisiMisiTupoksi';
 import SekapurSirih from './pages/profil/SekapurSirih';
 import StrukturOrganisasi from './pages/profil/StrukturOrganisasi';
-import PejabatPangan from './pages/profil/PejabatPangan';
+import PejabatStruktural from './pages/profil/PejabatStruktural';
 import HubungiKami from './pages/profil/HubungiKami';
 import Sekretariat from './pages/bidang/Sekretariat';
 import DistribusiCadanganPangan from './pages/bidang/DistribusiCadanganPangan';
@@ -57,7 +57,7 @@ function App() {
         <Route path="/profil/visi-misi-tupoksi" element={<VisiMisiTupoksi />} />
         <Route path="/profil/sekapur-sirih" element={<SekapurSirih />} />
         <Route path="/profil/struktur-organisasi" element={<StrukturOrganisasi />} />
-        <Route path="/profil/pejabat-pangan" element={<PejabatPangan />} />
+        <Route path="/profil/pejabat-struktural" element={<PejabatStruktural />} />
         <Route path="/profil/hubungi-kami" element={<HubungiKami />} />
         <Route path="/bidang/sekretariat" element={<Sekretariat />} />
         <Route path="/bidang/distribusi-cadangan-pangan" element={<DistribusiCadanganPangan />} />

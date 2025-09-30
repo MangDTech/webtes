@@ -13,7 +13,7 @@ function VisiMisiTupoksi() {
         {/* Image Section */}
         <div className="flex justify-center mb-8">
           <img 
-            src="/Poster_Visi_Misi_Dinas_Pangan.png" 
+            src="/TUPOKSI.jpeg" 
             alt="Kepala Dinas Pangan Provinsi Sumatera Barat" 
             className="w-150 h-250 object-cover rounded-lg shadow-lg"
           />

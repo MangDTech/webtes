@@ -109,7 +109,7 @@ function HubungiKami() {
               <div>
                 <span className="font-medium">Email:</span>
                 <a href="mailto:dinaspangansumbar@gmail.com" className="text-blue-600 hover:underline ml-1">
-                  dinaspangansumbar@gmail.com
+                  dinaspangansumbar0@gmail.com
                 </a>
               </div>
               <div>
@@ -121,83 +121,7 @@ function HubungiKami() {
             </div>
           </div>
         </div>
-
-        {/* Contact Form */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-8 mt-8">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Leave a reply</h2>
-          
-          <form onSubmit={handleSubmit} className="space-y-6 mt-4">
-            {/* Email Field */}
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Name Field */}
-            <div>
-              <label htmlFor="nama" className="block text-sm font-medium text-gray-700 mb-2">
-                Nama
-              </label>
-              <input
-                type="text"
-                id="nama"
-                name="nama"
-                placeholder="Nama"
-                value={formData.nama}
-                onChange={handleInputChange}
-                required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Comment Field */}
-            <div>
-              <label htmlFor="komentar" className="block text-sm font-medium text-gray-700 mb-2">
-                Komentar
-              </label>
-              <textarea
-                id="komentar"
-                name="komentar"
-                placeholder="Komentar Anda *"
-                value={formData.komentar}
-                onChange={handleInputChange}
-                required
-                rows={6}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-              />
-            </div>
-
-            {/* Buttons */}
-            <div className="flex gap-3 mt-6">
-              <button
-                type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-2 rounded transition-colors"
-              >
-                KIRIM
-              </button>
-              <button
-                type="button"
-                onClick={handleReset}
-                className="bg-red-500 hover:bg-red-600 text-white font-medium px-6 py-2 rounded transition-colors"
-              >
-                BATAL
-              </button>
-            </div>
-          </form>
-        </div> 
-
-      </div>
-      
+      </div>     
       <Footer />
     </div>
   );

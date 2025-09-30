@@ -266,37 +266,8 @@ function Kegiatan() {
               </svg>
             </button>
           </nav>
-        </div>
-
-        {/* Pagination Info
-        <div className="flex justify-center mt-4 text-sm text-gray-600">
-          Menampilkan {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, kegiatanItems.length)} dari {kegiatanItems.length} kegiatan
-        </div> */}
-
-        {/* Statistics */}
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-6">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Statistik Kegiatan</h3>
-          <div className="grid md:grid-cols-4 gap-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600">{kegiatanItems.length}+</div>
-              <div className="text-sm text-gray-600">Total Kegiatan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600">50+</div>
-              <div className="text-sm text-gray-600">Program Dilaksanakan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-600">20+</div>
-              <div className="text-sm text-gray-600">Kategori Kegiatan</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-red-600">100K+</div>
-              <div className="text-sm text-gray-600">Peserta Terlibat</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+        </div>      
+      </div>  
       <Footer />
     </div>
   );

@@ -206,29 +206,8 @@ function LaporanKinerja() {
               </ul>
             </div>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg p-6 border border-green-200">
-          <div className="text-center">
-            <h3 className="text-lg font-bold text-gray-800 mb-2">
-              Evaluasi dan Feedback
-            </h3>
-            <p className="text-gray-600 mb-4 text-sm">
-              Kami terbuka untuk masukan dan saran guna meningkatkan kinerja pelayanan ketahanan pangan di Sumatera Barat.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-                Berikan Feedback
-              </button>
-              <button className="bg-white border border-green-600 text-green-600 hover:bg-green-50 px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-                Download Laporan
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+        </div>     
+      </div>      
       <Footer />
     </div>
   );
