@@ -38,7 +38,7 @@ const StrukturOrganisasiPPID = () => {
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-xl font-semibold mb-2 text-footer">
             Struktur Organisasi PPID
           </h1>
           <div className="w-32 h-1 bg-purple-600 mb-6"></div>

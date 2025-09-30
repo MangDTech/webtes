@@ -49,20 +49,20 @@ function HubungiKami() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-xl font-semibold mb-2 text-footer">
             Dinas Pangan Provinsi Sumatera Barat.
           </h1>                    
         </div>
         
         {/* Additional Information */}
         <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Sekilas Info</h3>
+          <h3 className="text-xl font-semibold mb-2 text-footer">Sekilas Info</h3>
           <div className="space-y-2 text-sm text-gray-700">
             <div>
-              <span className="text-blue-600">📧 e_mail :</span>
+              <span className="text-blue-600">email :</span>
               <span className="ml-2">
-                <a href="mailto:dinaspangansumbar@gmail.com" className="text-blue-600 hover:underline">
-                  dinaspangansumbar@gmail.com
+                <a href="mailto:dinaspangansumbar0@gmail.com" className="text-blue-600 hover:underline">
+                  dinaspangansumbar0@gmail.com
                 </a>
                 , website : 
                 <a href="https://dinaspangan.sumbarprov.go.id" className="text-blue-600 hover:underline ml-1">
@@ -71,13 +71,13 @@ function HubungiKami() {
               </span>
             </div>
             <div>
-              <span className="text-blue-600">🏢 Dinas Pangan Provinsi Sumatera Barat</span>
+              <span className="text-blue-600">Dinas Pangan Provinsi Sumatera Barat</span>
             </div>
           </div>
         </div>
         {/* Location Map */}
         <div className="bg-white rounded-lg shadow-lg p-6">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Lokasi Dinas Pangan</h3>
+          <h3 className="text-xl font-semibold mb-2 text-footer">Lokasi Dinas Pangan</h3>
           <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
             {/* Google Maps Embed - Dinas Pangan Provinsi Sumatera Barat */}
             <iframe
@@ -95,7 +95,7 @@ function HubungiKami() {
           
           {/* Address Details */}
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <h4 className="font-semibold text-gray-800 mb-2">Alamat Lengkap:</h4>
+            <h4 className="text-xl font-semibold mb-2 text-footer">Alamat Lengkap:</h4>
             <p className="text-gray-700">
               Jl. Jaksa Agung R.Soeprapto No.4, Flamboyan Baru, Kec. Padang Bar., Kota Padang, Sumatera Barat 25114
             </p>

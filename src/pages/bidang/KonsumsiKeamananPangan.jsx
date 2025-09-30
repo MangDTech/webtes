@@ -11,25 +11,25 @@ function KonsumsiKeamananPangan() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="page-title">
             Tupoksi Bidang Konsumsi dan Keamanan Pangan
           </h1>
         </div>
 
         {/* Content */}
-        <div className="bg-white rounded-lg shadow-lg p-8">
+        <div className="content-card">
           {/* Tugas */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Tugas :</h2>
-            <p className="text-gray-700 leading-relaxed">
+            <h2 className="section-title">Tugas :</h2>
+            <p className="content-text">
               Melaksanakan penyusunan dan pelaksanaan kebijakan, pemberian bimbingan teknis, pemantauan dan evaluasi di bidang Konsumsi dan Keamanan Pangan.
             </p>
           </div>
 
           {/* Fungsi */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Fungsi :</h2>
-            <ul className="space-y-3 text-gray-700">
+            <h2 className="section-title">Fungsi :</h2>
+            <ul className="content-list custom-bullet-list">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-amber-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                 <span>Penyiapan sarana dan prasarana dalam rangka penyelenggaraan Konsumsi dan Keamanan Pangan;</span>
@@ -67,7 +67,7 @@ function KonsumsiKeamananPangan() {
 
           {/* Struktur Bidang */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Bidang Konsumsi dan Keamanan Pangan terdiri dari :</h2>
+            <h2 className="text-xl font-semibold mb-2 text-footer">Bidang Konsumsi dan Keamanan Pangan terdiri dari :</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500">
                 <div className="flex items-center mb-2">

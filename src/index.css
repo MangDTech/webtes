@@ -13,14 +13,37 @@
 }
 
 @layer components {
-  .deskripsi {
-    @apply text-xl font-bold text-primary mb-4;
+  /* Standard Page Headers */
+  .page-title {
+    @apply text-3xl font-bold mb-6 text-footer;
   }
   
-  h2 {
-    @apply text-4xl font-extrabold text-primary mb-5 leading-tight;
+  .section-title {
+    @apply text-xl font-semibold mb-4 text-footer;
   }
   
+  .subsection-title {
+    @apply text-lg font-semibold mb-3 text-footer;
+  }
+  
+  /* Content Styling */
+  .content-text {
+    @apply text-gray-700 leading-relaxed;
+  }
+  
+  .content-list {
+    @apply space-y-3 text-gray-700;
+  }
+  
+  .content-card {
+    @apply bg-white rounded-lg shadow-lg p-8;
+  }
+  
+  .info-box {
+    @apply p-4 bg-gray-50 rounded-lg;
+  }
+  
+  /* Button Styles */
   .tbl-pink {
     @apply bg-accent text-white px-5 py-3 rounded-full font-bold hover:bg-secondary transition-colors inline-block mt-5 no-underline;
   }
@@ -29,8 +52,34 @@
     @apply bg-secondary text-white px-5 py-3 rounded-full font-bold hover:bg-accent transition-colors inline-block mt-5 no-underline;
   }
   
+  /* Legacy styles - keeping for compatibility */
+  .deskripsi {
+    @apply text-xl font-bold text-primary mb-4;
+  }
+  
+  h2 {
+    @apply text-4xl font-extrabold text-primary mb-5 leading-tight;
+  }
+  
   .tengah {
     @apply text-center w-full;
+  }
+  
+  /* List styling utilities */
+  .bullet-list {
+    @apply list-disc list-inside ml-4 space-y-2;
+  }
+  
+  .numbered-list {
+    @apply list-decimal list-inside ml-4 space-y-2;
+  }
+  
+  .custom-bullet-list li {
+    @apply flex items-start;
+  }
+  
+  .custom-bullet {
+    @apply w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0;
   }
 }
 

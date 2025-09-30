@@ -184,7 +184,7 @@ function Home() {
             {/* Left Content - Berita Utama */}
             <div className="lg:col-span-2">
               <div className="mb-6">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b-2 border-footer">
+                <h2 className="text-xl font-semibold mb-2 text-footer pb-2 border-b-2 border-footer">
                   Berita Utama
                 </h2>
               </div>

@@ -11,7 +11,7 @@ function APBN() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-xl font-semibold mb-2 text-footer">
             Program APBN
           </h1>
           {/* Meta removed as requested */}

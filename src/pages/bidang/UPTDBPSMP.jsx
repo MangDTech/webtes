@@ -11,7 +11,7 @@ function UPTDBPSMP() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          <h1 className="text-xl font-semibold mb-2 text-footer">
             Tupoksi UPTD - BPSMP
           </h1>
         </div>
@@ -20,7 +20,7 @@ function UPTDBPSMP() {
         <div className="bg-white rounded-lg shadow-lg p-8">
           {/* Dasar Hukum */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Dasar Hukum :</h2>
+            <h2 className="text-xl font-semibold mb-2 text-footer">Dasar Hukum :</h2>
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
               <p className="text-gray-700 leading-relaxed mb-4">
                 Berdasarkan <strong>Peraturan Gubernur Sumatera Barat Nomor 66 Tahun 2009</strong>, tentang Organisasi dan Tata Kerja Unit Pelaksana Teknis Badan (UPTB) Ketahanan Pangan Provinsi Sumatera Barat, dan <strong>Keputusan Kepala Badan Ketahanan Pangan Provinsi Sumatera Barat No. 521/1601/BKP/2010, tanggal 29 Juni 2010</strong> tentang Tugas Pokok dan Fungsi serta Uraian Tugas Esselon III dan IV dilingkungan UPTB-BPSMP Provinsi Sumatera Barat memiliki struktur organisasi sebagai berikut :
@@ -30,7 +30,7 @@ function UPTDBPSMP() {
 
           {/* Struktur Organisasi */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Struktur Organisasi :</h2>
+            <h2 className="text-xl font-semibold mb-2 text-footer">Struktur Organisasi :</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
                 <div className="flex items-center mb-2">
@@ -73,7 +73,7 @@ function UPTDBPSMP() {
 
           {/* Tugas */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">UPTD-BPSMP mempunyai tugas :</h2>
+            <h2 className="text-xl font-semibold mb-2 text-footer">UPTD-BPSMP mempunyai tugas :</h2>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-cyan-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -88,7 +88,7 @@ function UPTDBPSMP() {
 
           {/* Fungsi */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Sedangkan fungsi UPTD-BPSMP adalah sebagai berikut :</h2>
+            <h2 className="text-xl font-semibold mb-2 text-footer">Sedangkan fungsi UPTD-BPSMP adalah sebagai berikut :</h2>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start">
                 <span className="w-2 h-2 bg-cyan-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
