@@ -11,7 +11,7 @@ function SearchBox({ placeholder = "Pencarian Data", className = "", compact = f
       // Navigate to search page with query parameter
       navigate(`/data/search?q=${encodeURIComponent(searchQuery.trim())}`);
     } else {
-      alert("Kolom tidak boleh kosong"); // Warning message for empty input
+      alert("Kolom tidak boleh kosong."); // Warning message for empty input
     }
   };
 
