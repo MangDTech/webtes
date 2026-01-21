@@ -10,6 +10,8 @@ function SearchBox({ placeholder = "Pencarian Data", className = "", compact = f
     if (searchQuery.trim()) {
       // Navigate to search page with query parameter
       navigate(`/data/search?q=${encodeURIComponent(searchQuery.trim())}`);
+    } else {
+      alert("Kolom tidak boleh kosong"); // Warning message for empty input
     }
   };
 
